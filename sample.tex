@@ -1,0 +1,165 @@
+%#!lualatex
+
+\begin{filecontents*}{\jobname.xmpdata}
+  \Author{Sho Iwamoto / Misho}
+  \Title{Sample Text}
+  \Language{en-US}
+\end{filecontents*}
+
+\documentclass{MishoText}
+\usepackage{lipsum}
+\setotherlanguage{latin}
+
+\makeatletter
+\title{\xmp@Title}
+\author{\xmp@Author}
+\makeatother
+
+\begin{document}
+\maketitle
+
+
+\chapter{Basic information}
+\label{cha:basic-information}
+
+This is a sample file.
+
+\begin{itemize}
+ \item Baselineskip: \ShowLength{\baselineskip}
+ \item TextWidth: \ShowLength{\textwidth} among 210mm
+ \item TextHeight: \ShowLength{\textheight} among 297mm
+\end{itemize}
+
+\makeatletter\ShowLength{\@total@headsep}\makeatother
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+And Hyperlink:~\ref{cha:basic-information} and \url{https://www.misho-web.com/} \cite{hogehoge}.
+
+Color samples: \BLUE{abc}\PINK{abc}\GREEN{abc}\C{$\int x$ and y}\C*{$\gamma$ not true}
+
+(orange!30) \colorbox{pLightOrange!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}\C*{$\gamma$ not true}}
+
+(purple!30) \colorbox{pLightPurple!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}\C*{$\gamma$ not true}}
+
+(green!30) \colorbox{pLightGreen!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}\C*{$\gamma$ not true}}
+
+\chapter{Fonts and Symbols}
+
+\section{Font families for Latin}
+
+\def\w#1{#1\textsf{#1}\texttt{#1} }
+\w a\w b\w c\w d\w e\w f\w g\w h\w i\w j\w k\w l\w m\w n\w o\w p\w q\w r\w s\w t\w u\w v\w w\w x\w y\w z\w 1\w 2\w 3\w 4\w 5\w 6\w 7\w 8\w 9\w0 \w+\w-
+
+\section{Greek letters}
+\subsection{Unicode text}
+\begin{itemize}
+  \item normal: αβγδϵζηθικλμνξoπρστυϕχψω
+  \item italic: \textit{αβγδϵζηθικλμνξoπρστυϕχψω}
+  \item bold: \textbf{αβγδϵζηθικλμνξoπρστυϕχψω}
+  \item bold italic: \textbf{\textit{αβγδϵζηθικλμνξoπρστυϕχψω}}
+\end{itemize}
+
+\subsection{Big math and Math symbols}
+\[
+  \text{normal: }\Gamma \Delta \Theta \Lambda \Xi \Pi \Sigma \Upsilon \Phi \Chi \Psi \Omega
+  \alpha \beta \gamma \delta \epsilon \zeta \eta \theta \iota \kappa \lambda \mu \nu \xi \pi \rho \sigma \tau \upsilon \phi \chi \psi \omega
+  \varphi\varepsilon\varsigma
+\]
+\[\mathbf{
+  \text{bf: }
+  \Gamma \Delta \Theta \Lambda \Xi \Pi \Sigma \Upsilon \Phi \Chi \Psi \Omega
+  \alpha \beta \gamma \delta \epsilon \zeta \eta \theta \iota \kappa \lambda \mu \nu \xi \pi \rho \sigma \tau \upsilon \phi \chi \psi \omega
+  \varphi\varepsilon\varsigma
+}\]
+\[\mathup{
+  \text{upright: }
+  \alpha \beta \gamma \delta \epsilon \zeta \eta \theta \iota \kappa \lambda \mu \nu \xi \pi \rho \sigma \tau \upsilon \phi \chi \psi \omega
+  \varphi\varepsilon\varsigma
+}\]
+\[\mathbf{\mathbfup{
+  \text{bfup: }
+  \Gamma \Delta \Theta \Lambda \Xi \Pi \Sigma \Upsilon \Phi \Chi \Psi \Omega
+  \alpha \beta \gamma \delta \epsilon \zeta \eta \theta \iota \kappa \lambda \mu \nu \xi \pi \rho \sigma \tau \upsilon \phi \chi \psi \omega
+  \varphi\varepsilon\varsigma
+}}\]
+
+\section{Math accents}
+\begin{equation}
+ \sqrt{\sqrt{\sqrt{\sqrt{\sqrt{\sqrt{\sqrt{\sqrt{\frac ab}}}}}}}} \bar v=\iiint\overline{v}
+\end{equation}
+\begin{equation}
+ \hat{\bar{x}} + \overline{\acute{y}} = ☉♁☾⛢♂
+\end{equation}
+
+\section{Notes}
+\lipsum[1]
+
+\Note{hogehogei $h^{h^h}$ \lipsum[1]}
+
+\Remark{hogehoge!}
+
+\begin{DownPara}
+\lipsum[2]
+
+\lipsum[1]
+\end{DownPara}
+
+\lipsum[1]
+
+Automatic note after this paragraph\addnote{Automatic note after this paragraph}.
+Multiple notes\addnote{ more than two, as well} is possible.
+
+\OutputNote
+
+Automatic note after this paragraph\addnote{Automatic note after this paragraph}.
+Multiple notes\addnote{more than two, as well} is possible.
+
+\OutputNote
+\OutputNote
+\OutputNote
+\OutputNote
+
+\begin{align}
+1+1=2\addnote*{even in eqs, but only once}
+\end{align}
+\OutputNote
+
+
+\begin{DownPara}
+\paragraph{Lipsum}\lipsum[2]
+
+\lipsum[1]
+\end{DownPara}
+
+\paragraph{Lipsum}
+\lipsum\lipsum\lipsum
+
+
+\chapter{Minted}
+
+\lipsum[1]
+
+\texttt{This is a code with typewriter font.}
+\begin{minted}{wolfram}
+ClearProcess[];
+topologies = CreateTopologies[1, 1->2, ExcludeTopologies->{Internal}];
+diagrams = InsertFields[topologies, {F[2,{2}]}->{F[2,{2}], V[1]}, ExcludeParticles->{S, V[2|3|4|10]}];
+oneQED = CalcFeynAmp[OffShell[CreateFeynAmp[diagrams],3->q]];
+!$R_{\epsilon''}$! = RotationMatrix[!$\epsilon''$!, {0, 1, 0}];
+!$R_{\theta}$!  = RotationMatrix[!$\theta$!, {0, 0, 1}];
+!$R_{\delta}$!  = RotationMatrix[!$\delta$!, {1, 0, 0}];
+\end{minted}
+\begin{DownPara}
+ The code should be aligned with \code|DownPara| env.
+\end{DownPara}
+\Note{And \code|Note| env.}
+
+
+
+\begin{thebibliography}{9}
+\bibitem{hogehoge}
+Donald E. Knuth (1986) \emph{The \TeX{} Book}, Addison-Wesley Professional.
+\end{thebibliography}
+
+\end{document}
+
