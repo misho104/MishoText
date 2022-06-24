@@ -1,17 +1,19 @@
-% Time-Stamp: <2022-06-24 17:54:27>
+% Time-Stamp: <2022-06-24 23:47:03>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{MishoNote}[2022/05/10 Sho Iwamoto]
+\ProvidesClass{MishoNote}[2022/06/24 Sho Iwamoto]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newif\if@pdf@a
+\newif\ifmisho@cmyk
+\newif\ifmisho@reloadhyper
 \DeclareOption{10pt}{\def\misho@font@size{10pt}}
 \DeclareOption{11pt}{\def\misho@font@size{11pt}}
 \DeclareOption{draft}{\def\misho@isdraft{draft}}
 \DeclareOption{final}{\def\misho@isdraft{final}}
-\DeclareOption{pdfx}{\@pdf@afalse}
-\DeclareOption{pdfa}{\@pdf@atrue}
-\ExecuteOptions{11pt,final}
+\DeclareOption{pdf0}{\misho@cmyktrue \def\misho@pdfx{x-4} \misho@reloadhypertrue}
+\DeclareOption{pdfx}{\misho@cmyktrue \def\misho@pdfx{x-4} \misho@reloadhyperfalse}
+\DeclareOption{pdfa}{\misho@cmykfalse\def\misho@pdfx{a-2u}\misho@reloadhyperfalse}
+\ExecuteOptions{11pt,final,pdf0}
 \ProcessOptions
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,7 +22,32 @@
 \pdfminorversion=6
 \pdfvariable omitcidset=1
 \LoadClass[a4paper,\misho@font@size,\misho@isdraft]{article}
-\usepackage[mathxmp,\if@pdf@a a-2u\else x-4\fi]{pdfx}
+
+\ifmisho@reloadhyper
+  \usepackage[pdfversion=1.6]{hyperref}
+  \let\misho@linkfile \hyper@linkfile
+  \let\misho@linkurl  \hyper@linkurl
+  \let\misho@linkstart\hyper@linkstart
+  \let\misho@linkend  \hyper@linkend
+  \let\misho@SLN      \Hy@StartlinkName
+  \let\misho@CPL      \close@pdflink
+  \let\misho@AM       \AcrobatMenu
+  \usepackage[pdf16,mathxmp,\misho@pdfx]{pdfx}
+  \let\hyper@linkfile \misho@linkfile
+  \let\hyper@linkurl  \misho@linkurl
+  \let\hyper@linkstart\misho@linkstart
+  \let\hyper@linkend  \misho@linkend
+  \let\Hy@StartlinkName\misho@SLN
+  \let\close@pdflink   \misho@CPL
+  \let\AcrobatMenu     \misho@AM
+\else
+  \usepackage[pdf16,mathxmp,\misho@pdfx]{pdfx}
+\fi
+
+\hypersetup{
+  final, breaklinks=True, bookmarks=True,
+  pdfborder=0 0 0,
+  colorlinks=true, urlcolor=pBlue, linkcolor=pBlue, citecolor=pGreen}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -118,57 +145,49 @@
 \usepackage[hhmmss]{datetime}
 \newdateformat{mydate}{\THEDAY-\shortmonthname-\THEYEAR}
 
+%\newdimen\head@colwidth
+%\head@colwidth\textwidth
+%\advance\head@colwidth -11em % for datetime region
+%\divide\head@colwidth by 2
+
+\def\leftmark{\expandafter\@leftmark\firstmark\@empty\@empty}
+\def\rightmark{\expandafter\@rightmark\botmark\@empty\@empty}
+
+\def\head@hrule{} % \lower1mm\null\vadjust{{\color{lightgray}\hrule height .7mm}\vskip-2mm}
+\def\head@h{}     % \ifnum \c@secnumdepth >\z@ \leftmark\fi
+\def\head@j{[\jobname\,@\,\mydate\today~\currenttime]}
+\def\head@hstyle{\sffamily\small}
+\def\head@jstyle{\fontsize{9}{12}\selectfont\color{lightgray}\texttt}
+\def\head@pstyle{\fontsize{12}{12}\selectfont\sffamily\bfseries}
 \def\ps@plain{%
-  \def\@evenfoot{}
+  \def\@evenfoot{} % {\reset@font\hfil\thepage\hfil}
   \let\@oddfoot\@evenfoot
   \def\@evenhead{%
-  \kern2mm{}\hfil{\fontsize{9}{12}\selectfont\color{lightgray}\texttt{[\jobname\,@\,\mydate\today~\currenttime]}}%
-  \makebox[4em][r]{\fontsize{12}{12}\selectfont\sffamily\bfseries\thepage}\kern2mm}
+    \kern2mm{\head@hstyle{\head@h}}\hfil{\head@jstyle{\head@j}}%
+    \makebox[3em][r]{\head@pstyle\thepage}\kern2mm%
+    \aftergroup\head@hrule}%
   \let\@oddhead\@evenhead
 }
+\def\sectionmark#1{\markright{\ifnum \c@secnumdepth >\z@ %
+  {\thesection}\hskip1em
+\fi #1}}%
 \pagestyle{plain}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\maketitle{%
-\begin{titlepage}%
-  \setcounter{page}{0}
-  \let\footnoterule\relax
-  \let \footnote \thanks
+\def\@headframebox#1{
   \setlength\@tempdima{25.5mm}%
   \advance\@tempdima 32mm%
   \begin{tikzpicture}[remember picture,overlay]
     \node[xshift=\@total@leftsep,yshift=-\@tempdima] at (current page.north west) {%
       \begin{tikzpicture}[remember picture, overlay]
         \fill[lightgray!50] (0,0) rectangle (\textwidth,32mm); % (2,16,2)mm plus 12mm space
-        \draw (2mm,20mm) rectangle (\textwidth-2mm, 30mm) {};
-        \node[fill=lightgray!50,anchor=south west,xshift= 5mm,yshift=15.7mm]
-          {\normalfont\fontsize{24}{24}\selectfont\bfseries\strut\xmp@Title};
-        \node[anchor=south west,xshift=85mm,yshift=7.5mm]
-          {\headfont\fontsize{16}{16}\selectfont \xmp@Author\strut};
-        \node[anchor=south west,xshift=85mm,yshift=3mm]
-          {\ttfamily\mydate\today~\currenttime\strut};
-        \node[anchor=south west,xshift=85mm,yshift=-1mm]
-          {\href{\xmp@CopyrightURL}{\sffamily\small\color{gray}\copyright\xmp@Copyright}\strut};
+        \draw (2mm,20mm) rectangle (\textwidth-2mm, 30mm) {}; #1 %
       \end{tikzpicture}
-    };
-    \node[xshift=\@total@leftsep,yshift=25.5mm,anchor=south west,align=left,text width=\textwidth] at (current page.south west) {%
-      \href{https://creativecommons.org/licenses/by-nc/4.0/}{\includegraphics[width=2.2cm]{figs/by-nc.pdf}}\\[.4em]
-      \noindent\textsf{\color{gray}\small%
-      Visit \url{https://github.com/misho104/hepphCheatSheet} for further information, updates, and reporting issues.}
-    };
-    \node[xshift=-\@total@leftsep+26mm,yshift=32mm,align=left,text width=\textwidth,anchor=south east] at (current page.south east) {%
-      \noindent\textsf{\small\color{gray}%
-      This document is licensed under
-      \href{https://creativecommons.org/licenses/by-nc/4.0/}{the Creative Commons CC--BY--NC 4.0 International Public License.}\\
-      You may use this document only if you do in compliance with the license.}
     };
   \end{tikzpicture}%
   \vskip28mm%
 }
-\def\endmaketitle{\par\vfil\null\end{titlepage}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-3.5ex \@plus -1ex \@minus -.2ex}%
@@ -191,16 +210,37 @@
                                        {-1em}%
                                       {\headfont\normalsize\bfseries}}
 
+\def\link@ifurl#1#2{\IfStrEq{#1}{}{#2}{\href{#1}{#2}}}
+\def\maketitle{%
+\begin{titlepage}%
+  \IfStrEq{\xmp@Copyright}{}{\setlength\@tempdimb{6mm}}{\setlength\@tempdimb{7.5mm}}
+  \setcounter{page}{0}
+  \let\footnoterule\relax
+  \let\footnote\thanks
+  \@headframebox{%
+    \node[fill=lightgray!50,anchor=south west,xshift= 5mm,yshift=15.7mm]
+      {\normalfont\fontsize{24}{24}\selectfont\bfseries\strut\xmp@Title};
+    \node[anchor=south west,xshift=85mm,yshift=\@tempdimb]
+      {\headfont\fontsize{16}{16}\selectfont \xmp@Author\strut};
+    \advance\@tempdimb -4.5mm%
+    \node[anchor=south west,xshift=85mm,yshift=\@tempdimb]
+      {\ttfamily\mydate\today~\currenttime\strut};
+    \IfStrEq{\xmp@Copyright}{}{}{%
+      \node[anchor=south west,xshift=85mm,yshift=-1mm]{%
+        \link@ifurl{\xmp@CopyrightURL}{\sffamily\small\color{gray}\copyright\xmp@Copyright}\strut};
+    }
+}}
+\def\endmaketitle{\par\vfil\null\end{titlepage}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % technical modification of URL fields in bibliography
 \let\original@thebibliography\thebibliography
 \let\original@bibitem\bibitem
-\def\thebibliography{%
-  \gdef\url##1{\rightskip 1em plus 1fil\linebreak[0]\mbox{\href{##1}{\hyper@normalise{\ttfamily{##1}}}}}%
-  \original@thebibliography%
-}
+%\def\thebibliography{%
+%  \gdef\url##1{\rightskip 1em plus 1fil\linebreak[0]\mbox{\href{##1}{\hyper@normalise{\ttfamily{##1}}}}}%
+%  \original@thebibliography%
+%}
 \def\bibitem{\rightskip0em\original@bibitem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -208,16 +248,7 @@
 \definecolor{gray}         {gray}{0.5}
 \definecolor{lightgray}    {gray}{0.8}
 \definecolor{dimgray}      {gray}{0.9}
-\if@pdf@a  % RGB
-  \definecolor{pBlue}        {rgb}{0.0549,0.3176,0.7882} % #0e51c9
-  \definecolor{pPink}        {rgb}{1.0000,0.2706,0.6275} % #ff45a0
-  \definecolor{pGreen}       {rgb}{0.2039,0.5529,0.1059} % #348d1b
-  \definecolor{pLightOrange} {rgb}{1.0000,0.8392,0.6157} % #ffd69d
-  \definecolor{pLightPurple} {rgb}{0.6667,0.4706,0.8392} % #aa78d6
-  \definecolor{pLightGreen}  {rgb}{0.0000,1.0000,0.8157} % #00ffd0
-  \definecolor{AltDefA}      {rgb}{1.0000,0.2000,0.0000}
-  \definecolor{AltDefB}      {rgb}{0.1500,0.5000,0.7000} % but not to abuse
-\else      % CMYK
+\ifmisho@cmyk  % CMYK
   \definecolor{pBlue}        {cmyk}{0.894,0.688,0.000,0} % #0e51c9
   \definecolor{pPink}        {cmyk}{0.000,0.834,0.000,0} % #ff45a0
   \definecolor{pGreen}       {cmyk}{0.782,0.314,1.000,0} % #348d1b
@@ -226,6 +257,15 @@
   \definecolor{pLightGreen}  {cmyk}{0.570,0.000,0.374,0} % #00ffd0
   \definecolor{AltDefA}      {cmyk}{0.000,0.892,0.946,0}
   \definecolor{AltDefB}      {cmyk}{0.911,0.788,0.000,0} % but not to abuse
+\else          % RGB
+  \definecolor{pBlue}        {rgb}{0.0549,0.3176,0.7882} % #0e51c9
+  \definecolor{pPink}        {rgb}{1.0000,0.2706,0.6275} % #ff45a0
+  \definecolor{pGreen}       {rgb}{0.2039,0.5529,0.1059} % #348d1b
+  \definecolor{pLightOrange} {rgb}{1.0000,0.8392,0.6157} % #ffd69d
+  \definecolor{pLightPurple} {rgb}{0.6667,0.4706,0.8392} % #aa78d6
+  \definecolor{pLightGreen}  {rgb}{0.0000,1.0000,0.8157} % #00ffd0
+  \definecolor{AltDefA}      {rgb}{1.0000,0.2000,0.0000}
+  \definecolor{AltDefB}      {rgb}{0.1500,0.5000,0.7000} % but not to abuse
 \fi
 % these are color command but should be considered as emphasize commands
 \newcommand\@colored[2]{{\color{#1}#2}}
@@ -234,11 +274,6 @@
 \newcommand\PINK {\@colored{pPink}}
 \newcommand\GREEN{\@colored{pGreen}}
 \newcommand\C    {\@ifstar{\@colored{AltDefB}}{\@colored{AltDefA}}}
-
-\usepackage{hyperref}
-\hypersetup{
-  pdfborder=0 0 0,
-  colorlinks=true, urlcolor=pBlue, linkcolor=pBlue, citecolor=pGreen}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -431,7 +466,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{subcaption,booktabs,wrapfig,slashed,xspace,xstring,braket,cancel}
-\def\url#1{\href{#1}{\hyper@normalise{\ttfamily{#1}}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
