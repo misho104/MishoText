@@ -1,6 +1,6 @@
-% Time-Stamp: <2022-06-25 16:21:56>
+% Time-Stamp: <2022-06-27 13:45:03>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{MishoText}[2022/06/24 Sho Iwamoto]
+\ProvidesClass{MishoText}[2022/06/27 Sho Iwamoto]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -107,8 +107,9 @@
 \newfontfamily{\englishfonttt}[Scale=0.85]{\misho@font@tt}
 \newfontfamily{\japanesefont}[
   ItalicFont=HaranoAjiMincho-Regular.otf,
-  ItalicFeatures={FakeSlant}
+  ItalicFeatures={FakeSlant},
 ]{HaranoAjiMincho-Regular.otf}
+\newfontfamily{\japanesefontsf}{HaranoAjiGothic-Regular.otf}
 \setdefaultlanguage[variant=us]{english}
 \setmainfont{\misho@font@english}
 \setsansfont[Scale=0.91]{\misho@font@sf}
@@ -197,7 +198,7 @@
 \def\head@hrule{\lower1mm\null\vadjust{{\color{lightgray}\hrule height .7mm}\vskip-2mm}}
 \def\head@h{\ifnum \c@secnumdepth >\z@ \leftmark\fi}
 \def\head@j{\mydate\today~\currenttime}
-\def\head@hstyle{\sffamily\small}
+\def\head@hstyle{\fontsize{9}{12}\selectfont\color{lightgray}\sffamily}
 \def\head@jstyle{\fontsize{9}{12}\selectfont\color{dimgray}\texttt}
 \def\head@pstyle{\fontsize{12}{12}\selectfont\sffamily\bfseries}
 \def\ps@plain{%
@@ -330,6 +331,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[xparse,skins]{tcolorbox}
+\tcbuselibrary{breakable,theorems}
 \tcbsetforeverylayer{
   parbox=false,
   boxsep=0mm,
@@ -360,9 +362,9 @@
 }
 \newcommand\Note[1]{\begin{NoteBox}#1\end{NoteBox}}
 
-\DeclareTColorBox[use counter=NoteBox]{RemarkBox}{O{}}{%
+\DeclareTColorBox{RemarkBox}{O{}}{%
   reset,enhanced,
-  title={Remark \theNoteBox},
+  title={Remark},
   boxrule=0pt,frame hidden,
   borderline west={2mm}{\z@}{gray!50},colback=gray!10,
   left skip=15mm, left=4mm,
@@ -395,11 +397,99 @@
   \stepcounter{NoteAnchor}%
   \IfValueTF{#2}{\def\notetag{#2}}{\let\notetag\theNoteAnchor}%
   \IfBooleanTF{#1}{\def\@NoteBoxStack{}}{\let\@NoteBoxStack\NoteBoxStack}%
-  \global\edef\NoteBoxStack{\@NoteBoxStack\noexpand\OutputNote@{\notetag}{#3}}%
+  \protected@xdef\NoteBoxStack{\@NoteBoxStack\noexpand\OutputNote@{\notetag}{#3}}%
   \mbox{$^{\text{\ref{Note:\notetag}}}$}\relax}
 \def\OutputNote@#1#2{{\NoteBox[label=Note:#1]{#2}\endNoteBox}\relax}
 \def\OutputNote{\NoteBoxStack\global\def\NoteBoxStack{}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tcbset{mytheobox/.style={%
+  reset,theorem style=standard,breakable,sharp corners,enhanced,
+  fonttitle=\sffamily\bfseries\upshape,
+  colframe=pBlue,colback=pBlue!10,colbacktitle=pBlue,
+  boxsep=1.5mm,boxrule=0mm,borderline south={.7mm}{-.7mm}{pBlue},
+  left*=3mm,right*=3mm,
+},myproofbox/.style={%
+  reset,enhanced,sidebyside,sidebyside align=top,
+  lefthand width=15mm,lower separated=false,
+  interior hidden,frame hidden,left=0mm,boxrule=0mm,right=0mm,
+  boxsep=0mm,sidebyside gap=0mm,middle=0mm
+},myprobbox/.style={%
+  reset,enhanced,sharp corners,
+  boxrule=.7mm, colframe=pLightOrange,colback=pLightOrange!30,
+  boxsep=4.3mm,top=0mm,bottom=0mm,right=0mm,left=0mm,
+  before skip balanced=24pt plus 3pt minus 21pt,
+},myquizbox/.style={%
+  reset,enhanced,boxrule=0pt,frame hidden,
+  borderline west={2mm}{\z@}{pLightOrange},colback=pLightOrange!30,
+  left skip=15mm, left=4mm,
+}}
+
+\newtcbtheorem[number within=chapter]{theorem}{Theorem}{mytheobox}{thm}
+\newtcbtheorem[use counter from=theorem]{definition}{Definition}{mytheobox}{def}
+
+\newtcbtheorem[use counter from=theorem]{example}{Example}{
+  reset,enhanced,frame hidden,interior hidden,
+  borderline west={0.7mm}{0.65mm}{pBlue},
+  left skip=15mm,left=4mm,top=2mm,bottom=2mm,toptitle=1mm,bottomtitle=1mm,
+  coltitle=pBlue,fonttitle=\headfont,
+  underlay unbroken and first={\draw[line width=1pt,dashed,pBlue]
+      ([xshift=2.5mm]title.south west)--([xshift=-70mm]title.south east);}}{exa}
+
+\newenvironment{proof}{%
+  \begin{tcolorbox}[myproofbox]\hfil\itshape{Proof.}\tcblower%
+}{\qed\end{tcolorbox}}
+\DeclareRobustCommand{\qed}{%
+  \ifmmode $\QED$\else\leavevmode\unskip\penalty9999 \hbox{}\nobreak%
+  \hfill\quad\hbox{$\QED$}\fi}
+
+\newenvironment{problems}{%
+  \begin{tcolorbox}[myprobbox]
+   \list{}{\labelwidth\z@ \itemsep4mm \leftmargin10mm \itemindent-\leftmargin%
+     \let\makelabel\descriptionlabel}
+}{\endlist\end{tcolorbox}}
+
+\newenvironment{quizzes}{%
+  \begin{tcolorbox}[myquizbox]
+   \list{}{\labelwidth\z@ \itemsep4mm \leftmargin0mm \itemindent-\leftmargin%
+     \let\makelabel\descriptionlabel}
+}{\endlist\end{tcolorbox}}
+
+\newcommand*\problem@label[1]{\hspace\labelsep\sffamily\bfseries #1}
+\newcounter{Problem}
+\renewcommand\theProblem{\thesection.\@arabic\c@Problem}
+\@addtoreset{Problem}{section}
+\NewDocumentCommand\new@problem{mmm}{%
+  \stepcounter{Problem}%
+  \item[#1~\theProblem]\IfValueTF{#2}{{\sffamily[$\medblackstar$#2]\kern1em}}{}\relax\relax#3}
+\NewDocumentCommand\Quiz{om}{\new@problem{Quiz}{#1}{#2}}
+\NewDocumentCommand\Problem{som}{\new@problem{\IfBooleanTF{#1}{Problem}{Problem\*}}{#2}{#3}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\theenumi{\@roman\c@enumi}
+\renewcommand\theenumii{\@alph\c@enumii}
+\renewcommand\theenumiii{\@arabic\c@enumiii}
+\renewcommand\theenumiv{\@Alph\c@enumiv}
+\renewcommand\labelenumi{{\sffamily\theenumi.}}
+\renewcommand\labelenumii{{\sffamily(\theenumii)}}
+\renewcommand\labelenumiii{{\sffamily\theenumiii.}}
+\renewcommand\labelenumiv{{\sffamily\theenumiv.}}
+\renewcommand\p@enumii{{\sffamily\theenumi}}
+\renewcommand\p@enumiii{{\sffamily\theenumi(\theenumii)}}
+\renewcommand\p@enumiv{{\sffamily\p@enumiii\theenumiii}}
+
+\DeclareRobustCommand\misho@ref[4]{%
+  #1~\ref{#2#3}\if#4\relax\relax\else.{\sffamily\@roman#4}\fi}
+\newcommand{\thmref}[2][\relax]{\misho@ref{Theorem}{thm:}{#2}{#1}}
+\newcommand{\defref}[2][\relax]{\misho@ref{Definition}{def:}{#2}{#1}}
+\newcommand{\exaref}[2][\relax]{\misho@ref{Example}{exa:}{#2}{#1}}
+
+\NewDocumentCommand\keyref{sm}{%
+  \IfBooleanTF{#1}{{\sffamily\@roman#2}}{{\bfseries\sffamily\@roman#2)}}}
+
+\DeclareRobustCommand\Advanced{\BLUE{$\clubsuit$}~}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{fancyvrb,ifplatform,listings}
@@ -442,6 +532,8 @@
 \newcommand*\DD{{\mathrm{D}}}
 \newcommand*\TT{{\mathrm{T}}}
 \newcommand*\cc{{\mathrm{c}}}
+\newcommand*\NN{{\mathbb{N}}}
+\newcommand*\ZZ{{\mathbb{Z}}}
 \newcommand*\RR{{\mathbb{R}}}
 \newcommand*\CC{{\mathbb{C}}}
 \newcommand*\KK{{\mathbb{K}}}
@@ -525,12 +617,11 @@
 \usepackage[capitalize]{cleveref}
 
 \renewcommand\thefootnote{*\arabic{footnote}}
-\numberwithin{equation}{section}
+\numberwithin{equation}{chapter}
 
 \newcommand\package[2][\relax]{\texttt{#2}\ifx#1\relax\relax\else~\texttt{#1}\fi}
 
-\newcommand{\TODO}[1]{{\color{red}{$\clubsuit$\texttt{TODO:}#1$\clubsuit$}}}
-\newcommand{\TOCHECK}[1][needs proofreeding]{{\color{red}{$\clubsuit$#1$\clubsuit$}}}
+\newcommand{\TODO}[1]{{\color{red}{$\spadesuit$\texttt{TODO:}#1$\spadesuit$}}}
+\newcommand{\TOCHECK}[1][needs proofreeding]{{\color{red}{$\spadesuit$#1$\spadesuit$}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
