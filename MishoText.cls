@@ -1,6 +1,6 @@
-% Time-Stamp: <2022-06-27 13:45:03>
+% Time-Stamp: <2022-11-23 14:59:35>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{MishoText}[2022/06/27 Sho Iwamoto]
+\ProvidesClass{MishoText}[2022/11/23 Sho Iwamoto]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -8,18 +8,30 @@
 \newcount\misho@pdftype
 \DeclareOption{10pt}{\def\misho@font@size{10pt}}
 \DeclareOption{11pt}{\def\misho@font@size{11pt}}
+\DeclareOption{12pt}{\def\misho@font@size{12pt}}
 \DeclareOption{draft}{\def\misho@isdraft{draft}}
 \DeclareOption{final}{\def\misho@isdraft{final}}
 \DeclareOption{pdf0}{\misho@cmyktrue \misho@pdftype=0\def\misho@hropt{bookmarks=True}}
 \DeclareOption{pdfx}{\misho@cmyktrue \misho@pdftype=1\def\misho@hropt{bookmarks=False}}
 \DeclareOption{pdfa}{\misho@cmykfalse\misho@pdftype=2\def\misho@hropt{bookmarks=True}}
-\ExecuteOptions{11pt,final,pdf0}
+
+\newif\ifmisho@japanese\misho@japanesefalse
+\DeclareOption{ja}\misho@japanesetrue
+\DeclareOption{en}\misho@japanesefalse
+
+\ExecuteOptions{11pt,final,pdf0,en}
 \ProcessOptions
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pdfvariable omitcidset=1
-\LoadClass[a4paper,openany,\misho@font@size,\misho@isdraft]{book}
+\ifmisho@japanese
+  \LoadClass[a4paper,openany,\misho@font@size,\misho@isdraft]{ltjsbook}
+  \usepackage{luatexja}
+\else
+  \LoadClass[a4paper,openany,\misho@font@size,\misho@isdraft]{book}
+\fi
+
 \usepackage{hyperxmp}
 \usepackage[final,keeppdfinfo,psdextra,pdfversion=1.6,\misho@hropt]{hyperref}
 \hypersetup{
@@ -96,6 +108,9 @@
 \def\misho@font@english{STIXTwoText}
 \def\misho@font@sf{Roboto}
 \def\misho@font@tt{Roboto Mono}
+\def\misho@font@ja  {HaranoAjiMincho-Regular.otf}
+\def\misho@font@jabf{HaranoAjiGothic-Bold.otf}
+\def\misho@font@jasf{HaranoAjiGothic-Regular.otf}
 %\def\misho@font@math{latinmodern-math.otf}
 \def\misho@font@math{STIXTwoMath-Regular.otf}
 
@@ -105,15 +120,22 @@
 \newfontfamily{\englishfont}[Ligatures={TeX}]{\misho@font@english}
 \newfontfamily{\englishfontsf}[Scale=0.91]{\misho@font@sf}
 \newfontfamily{\englishfonttt}[Scale=0.85]{\misho@font@tt}
-\newfontfamily{\japanesefont}[
-  ItalicFont=HaranoAjiMincho-Regular.otf,
-  ItalicFeatures={FakeSlant},
-]{HaranoAjiMincho-Regular.otf}
-\newfontfamily{\japanesefontsf}{HaranoAjiGothic-Regular.otf}
-\setdefaultlanguage[variant=us]{english}
-\setmainfont{\misho@font@english}
-\setsansfont[Scale=0.91]{\misho@font@sf}
-\setmonofont[Scale=0.85]{\misho@font@tt}
+\newfontfamily{\japanesefont}  [BoldFont=\misho@font@jabf,ItalicFont=\misho@font@ja,  ItalicFeatures={FakeSlant}]{\misho@font@ja}
+\newfontfamily{\japanesefontsf}[BoldFont=\misho@font@jabf,ItalicFont=\misho@font@jasf,ItalicFeatures={FakeSlant}]{\misho@font@jasf}
+\newfontfamily{\japanesefonttt}[BoldFont=\misho@font@jabf,ItalicFont=\misho@font@jasf,ItalicFeatures={FakeSlant}]{\misho@font@jasf}
+\ifmisho@japanese
+  \setdefaultlanguage{japanese}
+  \setotherlanguages{english}
+  \setmainfont[BoldFont=\misho@font@jabf,ItalicFont=\misho@font@ja,  ItalicFeatures={FakeSlant}]{\misho@font@ja}
+  \setsansfont[BoldFont=\misho@font@jabf,ItalicFont=\misho@font@jasf,ItalicFeatures={FakeSlant}]{\misho@font@jasf}
+  \setmonofont[BoldFont=\misho@font@jabf,ItalicFont=\misho@font@jasf,ItalicFeatures={FakeSlant}]{\misho@font@jasf}
+\else
+  \setdefaultlanguage[variant=us]{english}
+  \setotherlanguage{japanese}
+  \setmainfont[Ligatures={TeX}]{\misho@font@english}
+  \setsansfont[Scale=0.91]{\misho@font@sf}
+  \setmonofont[Scale=0.85]{\misho@font@tt}
+\fi
 
 % MathFont setting copied from MySlideFont.sty
   \usepackage{unicode-math}
@@ -139,7 +161,11 @@
   \AtBeginDocument{\renewcommand*\Upsilon{\mupUpsilon}}
 
 % Logical fonts
-\newcommand*{\headfont}{\normalcolor\sffamily\bfseries}
+\ifmisho@japanese
+  \relax
+\else
+  \newcommand*{\headfont}{\normalcolor\sffamily\bfseries}
+\fi
 
 % More math fonts (but not ever used)
 % \usepackage{wasysym}
@@ -236,7 +262,7 @@
   \advance\@tempdima 32mm%
   \begin{tikzpicture}[remember picture,overlay]
     \node[xshift=\@total@leftsep,yshift=-\@tempdima] at (current page.north west) {%
-      \begin{tikzpicture}[remember picture, overlay]
+      \begin{tikzpicture}[overlay]
         \fill[lightgray!50] (0,0) rectangle (\textwidth,32mm); % (2,16,2)mm plus 12mm space
         \draw (2mm,20mm) rectangle (\textwidth-2mm, 30mm) {}; #1 %
       \end{tikzpicture}
@@ -382,11 +408,13 @@
 \renewcommand\theNoteBox{$\sharp$\thechapter.\@arabic\c@NoteBox}
 \@addtoreset{NoteBox}{chapter}
 
-\newcommand\g@bble@put[1]{#1}
-\DeclareDocumentCommand{\RefBox}{O{6cm} O{text width=5cm} > { \TrimSpaces } m}{%
-  \begin{tikzpicture}[overlay,anchor=north east,remember picture,every node/.style={#2}]%
-  \draw [draw=none] (\textwidth,3\baselineskip) node {\hfill\colorbox{pGreen!10}{\small\GREEN{#3}}};%
-  \end{tikzpicture}\g@bble@put}
+\DeclareDocumentCommand{\WithRefBox}{mm}{
+  \begin{tcolorbox}[reset,enhanced,frame hidden,interior hidden,
+    boxrule=0mm,boxsep=0mm,left=0mm,right=0mm,top=0mm,bottom=0mm,
+    overlay={\node[fill=pGreen!10!white,anchor=north east] at ([yshift=-1mm]frame.north east) {\small\GREEN{#2}};}]%
+    #1
+  \end{tcolorbox}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -614,10 +642,12 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[capitalize]{cleveref}
+\usepackage[capitalize,english]{cleveref}
 
 \renewcommand\thefootnote{*\arabic{footnote}}
 \numberwithin{equation}{chapter}
+
+\urlstyle{englishfonttt}
 
 \newcommand\package[2][\relax]{\texttt{#2}\ifx#1\relax\relax\else~\texttt{#1}\fi}
 
