@@ -1,12 +1,12 @@
 %#!lualatex
-\documentclass[11pt,pdfa]{MishoText}
+\documentclass[11pt,pdf0]{MishoNote}
 \usepackage{lipsum}
 \setotherlanguages{japanese}
-\title{Sample for MishoText}
+\title{Sample for MishoNote}
 \author{Sho Iwamoto}
 
 \hypersetup{
-  pdflang={en−US},
+  pdflang={en-US},
   pdfkeywords={Manual},
   pdfsubject={LaTeX},
   pdfcopyright={2022 Sho Iwamoto},
@@ -16,11 +16,12 @@
   pdfpubstatus={AO},
 }
 
-
 \begin{document}
 \maketitle
+hogehoge
+\endmaketitle
 
-\chapter{Basic information}
+\section{Basic information}
 \label{cha:basic-information}
 
 This is a sample file.
@@ -44,7 +45,7 @@ Color samples: \BLUE{abc}\PINK{abc}\GREEN{abc}\C{$\int x$ and y}\C*{$\gamma$ not
 
 (green!30) \colorbox{pLightGreen!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}\C*{$\gamma$ not true}}
 
-\chapter{Fonts and Symbols}
+\section{Fonts and Symbols}
 
 \section{Font families for Latin}
 
@@ -137,7 +138,7 @@ Multiple notes\addnote{more than two, as well} is possible.
 \lipsum\lipsum\lipsum
 
 
-\chapter{Minted}
+\section{Minted}
 
 \lipsum[1]
 
