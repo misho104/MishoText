@@ -1,4 +1,4 @@
-% Time-Stamp: <2022-11-23 15:28:52>
+% Time-Stamp: <2023-05-10 09:45:05>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -18,6 +18,9 @@
 \newif\ifmisho@japanese\misho@japanesefalse
 \DeclareOption{ja}\misho@japanesetrue
 \DeclareOption{en}\misho@japanesefalse
+
+\newif\ifmisho@lastpage\misho@lastpagefalse
+\DeclareOption{lastpage}{\misho@lastpagetrue}
 
 \ExecuteOptions{11pt,final,pdf0,en}
 \ProcessOptions
@@ -164,7 +167,7 @@
 \ifmisho@japanese
   \relax
 \else
-  \newcommand*{\headfont}{\normalcolor\sffamily\bfseries}
+  \newcommand*{\headfont}{\normalcolor\sffamily}
 \fi
 
 % More math fonts (but not ever used)
@@ -203,7 +206,8 @@
 \evensidemargin\oddsidemargin\relax
 
 % baselineskip = 1.242em = 4.77988mm
-\parskip=1mm plus .5mm minus 1mm
+\parskip=0mm plus .5mm
+\parsep=1mm plus .5mm minus 1mm
 
 \abovedisplayskip=12pt plus 3pt minus 9pt
 \belowdisplayskip=12pt plus 3pt minus 9pt
@@ -221,20 +225,30 @@
 \def\leftmark{\expandafter\@leftmark\firstmark\@empty\@empty}
 \def\rightmark{\expandafter\@rightmark\botmark\@empty\@empty}
 
-\def\head@hrule{} % \lower1mm\null\vadjust{{\color{lightgray}\hrule height .7mm}\vskip-2mm}
-\def\head@h{}     % \ifnum \c@secnumdepth >\z@ \leftmark\fi
-\def\head@j{[\jobname\,@\,\mydate\today~\currenttime]}
-\def\head@hstyle{\sffamily\small}
-\def\head@jstyle{\fontsize{9}{12}\selectfont\color{lightgray}\texttt}
+\def\head@hrule{\lower1mm\null\vadjust{{\color{lightgray}\hrule height .7mm}\vskip-2mm}}
+\def\head@h{\ifnum \c@secnumdepth >\z@ \leftmark\fi}
+\def\head@j{\mydate\today~\currenttime}
+\ifmisho@lastpage
+  \usepackage{lastpage}
+  \def\head@p{\thepage/\NoHyper\pageref{LastPage}\endNoHyper}
+\else
+  \def\head@p{\thepage}
+\fi
+
+\def\head@hstyle{\fontsize{9}{12}\selectfont\color{lightgray}\sffamily}
+\def\head@jstyle{\fontsize{9}{12}\selectfont\color{dimgray}\texttt}
 \def\head@pstyle{\fontsize{12}{12}\selectfont\sffamily\bfseries}
 \def\ps@plain{%
   \def\@evenfoot{} % {\reset@font\hfil\thepage\hfil}
   \let\@oddfoot\@evenfoot
   \def\@evenhead{%
     \kern2mm{\head@hstyle{\head@h}}\hfil{\head@jstyle{\head@j}}%
-    \makebox[3em][r]{\head@pstyle\thepage}\kern2mm%
+    \makebox[3em][r]{\head@pstyle\head@p}\kern2mm%
     \aftergroup\head@hrule}%
   \let\@oddhead\@evenhead
+}
+\AtBeginDocument{
+  \markboth{\@title}{\relax}
 }
 \def\sectionmark#1{\markright{\ifnum \c@secnumdepth >\z@ %
   {\thesection}\hskip1em
@@ -270,11 +284,11 @@
                                      {1.5ex \@plus .2ex}%
                                      {\headfont\normalsize\bfseries}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-                                    {3.25ex \@plus1ex \@minus.2ex}%
+                                    {2\parsep}%
                                     {-1em}%
                                     {\headfont\normalsize\bfseries}}
 \renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
-                                       {3.25ex \@plus1ex \@minus .2ex}%
+                                       {2\parsep}%
                                        {-1em}%
                                       {\headfont\normalsize\bfseries}}
 
@@ -371,7 +385,7 @@
   boxrule=0pt,frame hidden,
   borderline west={2mm}{\z@}{gray!50},colback=gray!10,
   left skip=17.647mm, left=4.706mm, width=1.176\NoteBoxWidthA,
-  coltitle=black,fonttitle=\headfont,
+  coltitle=black,fonttitle=\headfont\bfseries,
   scale=0.85,
   attach title to upper,after title={:~},#1
 }
@@ -383,7 +397,7 @@
   boxrule=0pt,frame hidden,
   borderline west={2mm}{\z@}{gray!50},colback=gray!10,
   left skip=15mm, left=4mm,
-  coltitle=black,fonttitle=\headfont,
+  coltitle=black,fonttitle=\headfont\bfseries,
   attach title to upper,after title={:~},#1
 }
 \newcommand*\Remark[1]{\RemarkBox #1\endRemarkBox}
@@ -449,7 +463,7 @@
   reset,enhanced,frame hidden,interior hidden,
   borderline west={0.7mm}{0.65mm}{pBlue},
   left skip=15mm,left=4mm,top=2mm,bottom=2mm,toptitle=1mm,bottomtitle=1mm,
-  coltitle=pBlue,fonttitle=\headfont,
+  coltitle=pBlue,fonttitle=\headfont\bfseries,
   underlay unbroken and first={\draw[line width=1pt,dashed,pBlue]
       ([xshift=2.5mm]title.south west)--([xshift=-70mm]title.south east);}}{exa}
 
@@ -459,6 +473,9 @@
 \DeclareRobustCommand{\qed}{%
   \ifmmode $\QED$\else\leavevmode\unskip\penalty9999 \hbox{}\nobreak%
   \hfill\quad\hbox{$\QED$}\fi}
+
+\newenvironment{ProblemBox}{\begin{tcolorbox}[myprobbox]}{\end{tcolorbox}}
+\newenvironment{QuizBox}   {\begin{tcolorbox}[myquizbox]}{\end{tcolorbox}}
 
 \newenvironment{problems}{%
   \begin{tcolorbox}[myprobbox]
@@ -481,6 +498,8 @@
   \item[#1~\theProblem]\IfValueTF{#2}{{\sffamily[$\medblackstar$#2]\kern1em}}{}\relax\relax#3}
 \NewDocumentCommand\Quiz{om}{\new@problem{Quiz}{#1}{#2}}
 \NewDocumentCommand\Problem{som}{\new@problem{\IfBooleanTF{#1}{Problem}{Problem\*}}{#2}{#3}}
+
+\newenvironment{miniitemize}{\itemize\@topsep=\parsep\parskip=0mm}{\enditemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -506,6 +525,7 @@
   \IfBooleanTF{#1}{{\sffamily\@roman#2}}{{\bfseries\sffamily\@roman#2)}}}
 
 \DeclareRobustCommand\Advanced{\BLUE{$\clubsuit$}~}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{fancyvrb,ifplatform,listings}
@@ -600,7 +620,7 @@
 
 \NewDocumentCommand\pfrac{omm}{\left(\frac{#2}{#3}\right)\IfValueT{#1}{^#1}}
 \NewDocumentCommand\diff{O{\dd}omm}{\IfValueTF{#2}{\frac{#1^#2#3}{#1#4^#2}}{\frac{#1#3}{#1#4}}}
-\newcommand*\pdiff[3][]{\diff{\partial}{#1}{#2}{#3}}
+\NewDocumentCommand\pdiff{omm}{\diff[\partial][#1]{#2}{#3}}
 
 \newcommand*\diracdelta[1][]{\qopname\relax o{\ifx\\#1\\\mathrm{\delta}\else\mathrm{\delta}^{(#1)}\fi}}
 \newcommand*\Kallen    [1][]{\qopname\relax o{\ifx\\#1\\\mathrm{\lambda}\else\mathrm{\lambda}^{#1}\fi}}
@@ -636,6 +656,7 @@
 \numberwithin{equation}{section}
 
 \urlstyle{englishfonttt}
+\DeclareTextFontCommand{\Emph}{\bfseries}
 
 \newcommand\package[2][\relax]{\texttt{#2}\ifx#1\relax\relax\else~\texttt{#1}\fi}
 
