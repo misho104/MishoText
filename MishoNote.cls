@@ -1,4 +1,4 @@
-% Time-Stamp: <2023-05-10 09:45:05>
+% Time-Stamp: <2023-06-26 22:04:41>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -162,6 +162,15 @@
   \setmathfont{latinmodern-math.otf}[range={\mupUpsilon,\mitUpsilon,\mbfUpsilon,\mbfitUpsilon}]
   \setmathfont{\misho@font@math}[range=\int]
   \AtBeginDocument{\renewcommand*\Upsilon{\mupUpsilon}}
+
+% Language Shortcuts
+\let\JA\relax
+\let\EN\relax
+\ifmisho@japanese
+  \def\EN#1{\english{#1}\endenglish}
+\else
+  \def\JA#1{\japanese{#1}\endjapanese}
+\fi
 
 % Logical fonts
 \ifmisho@japanese
