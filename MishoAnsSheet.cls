@@ -1,4 +1,4 @@
-% Time-Stamp: <2023-07-01 10:15:03>
+% Time-Stamp: <2023-10-19 22:00:18>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -41,10 +41,10 @@
 \setlength{\columnseprule}{0.4pt}
 \pagestyle{empty}
 
+\usepackage[final,pdfversion=1.6,\misho@hropt]{hyperref}
 \usepackage{hyperxmp}
-\usepackage[final,keeppdfinfo,psdextra,pdfversion=1.6,\misho@hropt]{hyperref}
 \hypersetup{
-  breaklinks=True, pdfborder=0 0 0,
+  keeppdfinfo,     psdextra,       breaklinks=True, pdfborder=0 0 0,
   colorlinks=true, urlcolor=pBlue, linkcolor=pBlue, citecolor=pGreen}
 
 \ifnum\misho@pdftype=1\relax%
@@ -190,6 +190,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\def\TopLRBox#1#2{\begin{tikzpicture}[remember picture,overlay]%
+  \node[xshift=8mm,yshift=-8mm,anchor=north west] at (current page.north west){#1};%
+  \node[xshift=-8mm,yshift=-8mm,anchor=north east] at (current page.north east){#2};%
+\end{tikzpicture}\relax}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -300,8 +305,9 @@
 \newcommand*\@@EE[2]{\times\!10^{-#2}}
 
 \NewDocumentCommand\pfrac{omm}{\left(\frac{#2}{#3}\right)\IfValueT{#1}{^#1}}
-\NewDocumentCommand\diff{O{\dd}omm}{\IfValueTF{#2}{\frac{#1^#2#3}{#1#4^#2}}{\frac{#1#3}{#1#4}}}
-\NewDocumentCommand\pdiff{omm}{\diff[\partial][#1]{#2}{#3}}
+\NewDocumentCommand\gdiff{O{\dd}omm}{\IfValueTF{#2}{\frac{#1^#2#3}{#1#4^#2}}{\frac{#1#3}{#1#4}}}
+\NewDocumentCommand\diff{omm}{\gdiff[\dd][#1]{#2}{#3}}
+\NewDocumentCommand\pdiff{omm}{\gdiff[\partial][#1]{#2}{#3}}
 
 \newcommand*\diracdelta[1][]{\qopname\relax o{\ifx\\#1\\\mathrm{\delta}\else\mathrm{\delta}^{(#1)}\fi}}
 \newcommand*\Kallen    [1][]{\qopname\relax o{\ifx\\#1\\\mathrm{\lambda}\else\mathrm{\lambda}^{#1}\fi}}
@@ -337,7 +343,8 @@
 \numberwithin{equation}{section}
 
 \urlstyle{englishfonttt}
-\DeclareTextFontCommand{\Emph}{\bfseries}
+\DeclareTextFontCommand{\textbfsf}{\bfseries\sffamily}
+\DeclareRobustCommand{\Emph}{\@ifstar\textbfsf\textbf}
 
 \newcommand\package[2][\relax]{\texttt{#2}\ifx#1\relax\relax\else~\texttt{#1}\fi}
 
