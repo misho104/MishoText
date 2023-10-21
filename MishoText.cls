@@ -1,4 +1,4 @@
-% Time-Stamp: <2023-10-19 22:00:18>
+% Time-Stamp: <2023-10-21 11:43:20>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoText}[2022/11/23 Sho Iwamoto]
 
@@ -561,6 +561,7 @@
   {\csname\@lst @SetFirstNumber\endcsname}
   {\csname\@lst @SaveFirstNumber\endcsname}
 \def\mintinline#1{\code}
+\newcommand\inputminted[3][]{\lstinputlisting[#1]{#3}}
 \fi
 
 %\DeclareUnicodeCharacter{02BC}{'}
