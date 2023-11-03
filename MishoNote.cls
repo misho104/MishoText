@@ -1,4 +1,4 @@
-% Time-Stamp: <2023-10-21 11:43:20>
+% Time-Stamp: <2023-11-02 10:44:01>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -93,8 +93,6 @@
 \else
   \usepackage[hyperref,rgb]{xcolor}
 \fi
-
-\def\url#1{\href{#1}{\texttt{#1}}}
 
 \def\title@cr{}
 \def\title@ce{}
