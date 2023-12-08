@@ -1,4 +1,4 @@
-% Time-Stamp: <2023-11-02 10:43:59>
+% Time-Stamp: <2023-12-06 13:05:03>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -226,6 +226,30 @@
 \newcommand\GREEN{\@colored{pGreen}}
 \newcommand\C    {\@ifstar{\@colored{AltDefB}}{\@colored{AltDefA}}}
 
+\let\misho@C\C
+%\def\C#1{\@ifnextchar_{\misho@C@d{#1}}{\misho@C@x{#1}}}
+%\def\misho@C@d#1_#2{\@ifnextchar^{\misho@C@du#1_#2}{\misho@C{{#1}_{#2}}}}
+%\def\misho@C@du#1_#2^#3{\misho@C{{#1}_{#2}^{#3}}}
+%\def\misho@C@x#1{\@ifnextchar^{\misho@C@u{#1}}{\misho@C{#1}}}
+%\def\misho@C@u#1^#2{\@ifnextchar_{\misho@C@ud#1^#2}{\misho@C{{#1}^{#2}}}}
+%\def\misho@C@ud#1^#2_#3{\misho@C{{#1}^{#2}_{#3}}}
+%\def\C#1{\@ifnextchar_{\misho@C@d{#1}}{\@ifnextchar'{\misho@C@p{#1}}{\misho@C@x{#1}}}}
+%\def\misho@C@d#1_#2{\@ifnextchar^{\misho@C@du#1_#2}{\misho@C{{#1}_{#2}}}}
+%\def\misho@C@du#1_#2^#3{\misho@C{{#1}_{#2}^{#3}}}
+%\def\misho@C@x#1{\@ifnextchar^{\misho@C@u{#1}}{\misho@C{#1}}}
+%\def\misho@C@u#1^#2{\@ifnextchar_{\misho@C@ud#1^#2}{\misho@C{{#1}^{#2}}}}
+%\def\misho@C@ud#1^#2_#3{\misho@C{{#1}^{#2}_{#3}}}
+%\def\misho@C@p#1'{\@ifnextchar_{\misho@C@pd#1'}{\misho@C{#1'}}}
+%\def\misho@C@pd#1'_#2{\misho@C{#1'_{#2}}}
+\def\C#1{\@ifnextchar_{\misho@C@d{#1}}{\@ifnextchar'{\misho@C@p{#1}}{\misho@C@x{#1}}}}
+\def\misho@C@d#1_#2{\@ifnextchar^{\misho@C@du#1_#2}{\misho@C{#1}_{\misho@C{#2}}}}
+\def\misho@C@du#1_#2^#3{\misho@C{#1}_{\misho@C{#2}}^{#3}}
+\def\misho@C@x#1{\@ifnextchar^{\misho@C@u{#1}}{\misho@C{#1}}}
+\def\misho@C@u#1^#2{\@ifnextchar_{\misho@C@ud#1^#2}{\misho@C{#1}^{#2}}}
+\def\misho@C@ud#1^#2_#3{\misho@C{#1}^{#2}_{\misho@C{#3}}}
+\def\misho@C@p#1'{\@ifnextchar_{\misho@C@pd#1'}{\misho@C{#1'}}}
+\def\misho@C@pd#1'_#2{\misho@C{#1'_{#2}}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -313,7 +337,7 @@
 \newcommand*\pmat[1]{\begin{pmatrix}#1\end{pmatrix}}
 \newcommand*\spmat[1]{\left(\begin{smallmatrix}#1\end{smallmatrix}\right)}
 
-\newcommand\unit[1]{\,\mathrm{#1}\xspace}
+\newcommand\unit[1]{\StrLeft{#1}{1}[\unit@firstchar]{\IfStrEq{\unit@firstchar}{/}\relax\,}\mathrm{#1}\xspace}
 \newcommand\eV {\unit{eV}}
 \newcommand\keV{\unit{keV}}
 \newcommand\MeV{\unit{MeV}}
