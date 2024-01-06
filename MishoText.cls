@@ -1,4 +1,4 @@
-% Time-Stamp: <2023-12-06 13:05:03>
+% Time-Stamp: <2024-01-06 16:45:49>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoText}[2022/11/23 Sho Iwamoto]
 
@@ -273,6 +273,8 @@
 \fi #1}}%
 \pagestyle{plain}
 
+\newcommand\SetHead[2]{\expandafter\gdef\csname head@#1\endcsname{#2}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\@headframebox#1{
@@ -370,6 +372,7 @@
 \newcommand\BLUE {\@colored{pBlue}}
 \newcommand\PINK {\@colored{pPink}}
 \newcommand\GREEN{\@colored{pGreen}}
+\newcommand\RED  {\@colored{AltDefA}}
 \newcommand\C    {\@ifstar{\@colored{AltDefB}}{\@colored{AltDefA}}}
 
 \let\misho@C\C
@@ -704,7 +707,7 @@
 
 \newcommand\package[2][\relax]{\texttt{#2}\ifx#1\relax\relax\else~\texttt{#1}\fi}
 
-\newcommand{\TODO}[1]{{\color{red}{$\spadesuit$\texttt{TODO:}#1$\spadesuit$}}}
-\newcommand{\TOCHECK}[1][needs proofreeding]{{\color{red}{$\spadesuit$#1$\spadesuit$}}}
+\newcommand{\TODO}[1]{\RED{$\spadesuit$\texttt{TODO:}#1$\spadesuit$}}
+\newcommand{\TOCHECK}[1][needs proofreeding]{\RED{$\spadesuit$#1$\spadesuit$}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
