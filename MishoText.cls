@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-01-06 16:45:49>
+% Time-Stamp: <2024-02-04 12:37:45>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoText}[2022/11/23 Sho Iwamoto]
 
@@ -266,7 +266,7 @@
   \let\@oddhead\@evenhead
 }
 \def\chaptermark#1{\markboth{\ifnum \c@secnumdepth >\m@ne \if@mainmatter
-  Chapter~{\thechapter}\hskip1em
+  \@chapapp\space\thechapter\hskip1em
 \fi \fi #1}{}}
 \def\sectionmark#1{\markright{\ifnum \c@secnumdepth >\z@ %
   {\thesection}\hskip1em
@@ -291,10 +291,16 @@
   \vskip28mm%
 }
 
+\def\definechapterhead#1#2#3{%
+  \gdef\@chapapp{#1}%
+  \gdef\thechapter{#2}%
+  \gdef\@chapterhead@x{#3}}
+\definechapterhead{Chapter}{\@arabic\c@chapter}{26mm}
+
 \def\@makechapterhead#1{\@headframebox{%
   \node[fill=lightgray!50,anchor=south west,xshift= 5mm,yshift=17mm]
-    {\fontsize{16}{16}\selectfont Chapter\kern8mm\strut};
-  \node[fill=lightgray!50,anchor=south west,xshift=26mm,yshift=14.5mm]
+    {\fontsize{16}{16}\selectfont \@chapapp\kern8mm\strut};
+  \node[fill=lightgray!50,anchor=south west,xshift=\@chapterhead@x,yshift=14.5mm]
     {\fontsize{40}{40}\selectfont \thechapter\strut};
   \node[anchor=south west,xshift= 5mm,yshift=3mm]
     {\headfont\bfseries\fontsize{22}{22}\selectfont #1\strut};
