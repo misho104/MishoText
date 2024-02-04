@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-01-06 16:45:49>
+% Time-Stamp: <2024-02-04 12:39:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -565,6 +565,7 @@
 \usepackage{fancyvrb,ifplatform,listings}
 \lstset{columns=[l]fullflexible,basicstyle=\ttfamily\small,xleftmargin=15mm,frame=L,keepspaces=true}
 \CustomVerbatimCommand{\code}{Verb}{}
+\CustomVerbatimCommand{\filepath}{Verb}{formatcom=\color{pGreen}\bfseries}
 \ifshellescape
 \usepackage{minted}
 \def\minted@formatter{lib/minted_formatter.py -x}
