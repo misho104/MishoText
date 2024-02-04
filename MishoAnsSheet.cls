@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-01-06 16:45:49>
+% Time-Stamp: <2024-02-04 17:19:40>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -122,14 +122,15 @@
 \def\misho@font@math{STIXTwoMath-Regular.otf}
 
 \usepackage[quiet]{fontspec}
-\usepackage[luatexrenderer=OpenType]{polyglossia}
-    % no particular reason to avoid Harfbuzz
 \newfontfamily{\englishfont}[Ligatures={TeX}]{\misho@font@english}
 \newfontfamily{\englishfontsf}[Scale=0.91]{\misho@font@sf}
 \newfontfamily{\englishfonttt}[Scale=0.85]{\misho@font@tt}
 \newfontfamily{\japanesefont}  [BoldFont=\misho@font@jabf,ItalicFont=\misho@font@ja,  ItalicFeatures={FakeSlant}]{\misho@font@ja}
 \newfontfamily{\japanesefontsf}[BoldFont=\misho@font@jabf,ItalicFont=\misho@font@jasf,ItalicFeatures={FakeSlant}]{\misho@font@jasf}
 \newfontfamily{\japanesefonttt}[BoldFont=\misho@font@jabf,ItalicFont=\misho@font@jasf,ItalicFeatures={FakeSlant}]{\misho@font@jasf}
+% Polyglossia must be loaded after newfontfamily (/ -> 2215 bug)
+\usepackage[luatexrenderer=OpenType]{polyglossia}
+    % no particular reason to avoid Harfbuzz
 \ifmisho@japanese
   \setdefaultlanguage{japanese}
   \setotherlanguages{english}
