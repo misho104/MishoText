@@ -514,8 +514,8 @@
 
 \newenvironment{problems}{%
   \begin{tcolorbox}[myprobbox]
-   \list{}{\labelwidth\z@ \itemsep4mm \leftmargin10mm \itemindent-\leftmargin%
-     \let\makelabel\descriptionlabel}
+   \list{}{\labelwidth2.5em\leftmargin2.5em\itemsep4mm\labelsep.7em\itemindent\z@%
+    \let\makelabel\descriptionlabel}%
 }{\endlist\end{tcolorbox}}
 
 \newenvironment{quizzes}{%
