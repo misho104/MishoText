@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-02-04 17:19:40>
+% Time-Stamp: <2024-02-10 18:14:49>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -299,6 +299,8 @@
 \NewDocumentCommand\norm {sm}{\IfBooleanTF{#1}{\left\lVert#2\right\rVert}{\lVert#2\rVert}}
 \NewDocumentCommand\vnorm{sm}{\IfBooleanTF{#1}{\left\lVert\vc{#2}\right\rVert}{\lVert\vc{#2}\rVert}}
 \NewDocumentCommand\mean {sm}{\IfBooleanTF{#1}{\left\langle#2\right\rangle}{\langle#2\rangle}}
+
+\NewDocumentCommand\then{s}{\IfBooleanTF{#1}{\quad\Longrightarrow\quad}{\hskip.5em\Longrightarrow\hskip.5em}}
 
 \newcommand*{\wdiag}{^{\text{diag}}}
 
