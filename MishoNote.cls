@@ -159,6 +159,7 @@
   % fine tuning of some letters
   % https://tex.stackexchange.com/questions/364310/
   \setmathfont{latinmodern-math.otf}[range={\mupUpsilon,\mitUpsilon,\mbfUpsilon,\mbfitUpsilon}]
+  \setmathfont{texgyreschola-math.otf}[range={\hat,\tilde,\bar}]
   \setmathfont{\misho@font@math}[range=\int]
   \AtBeginDocument{\renewcommand*\Upsilon{\mupUpsilon}}
 
