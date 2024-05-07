@@ -16,6 +16,7 @@
 \DeclareOption{pdfa}{\misho@cmykfalse\misho@pdftype=2\def\misho@hropt{bookmarks=True}}
 \DeclareOption{a4paper}{\def\misho@papersize{a4paper}}
 \DeclareOption{a5paper}{\def\misho@papersize{a5paper}}
+
 \newif\ifmisho@japanese\misho@japanesefalse
 \DeclareOption{ja}\misho@japanesetrue
 \DeclareOption{en}\misho@japanesefalse
@@ -35,11 +36,6 @@
 \else
   \LoadClass[\misho@papersize,\misho@font@size,\misho@isdraft]{article}
 \fi
-
-\usepackage{geometry}
-\geometry{left=10mm,right=10mm,top=15mm,bottom=10mm}
-\setlength{\columnseprule}{0.4pt}
-\pagestyle{empty}
 
 \usepackage[final,pdfversion=1.6,\misho@hropt]{hyperref}
 \usepackage{hyperxmp}
@@ -193,10 +189,121 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand*\@convertto[2]{\strip@pt\dimexpr #2*65536/\number\dimexpr 1#1}
+\newcommand*\ShowLength[1]{\@convertto{em}{#1}em = \@convertto{mm}{#1}mm} % for debugging
+\ExplSyntaxOn
+\str_if_eq:VnTF{\misho@papersize}{a4paper}{
+  \setlength\textwidth{160mm}  % 25mm margin
+  \setlength\textheight{237mm}  % 30mm margin
+}{
+  \setlength\textwidth{118.5mm}  % 12mm margin
+  \setlength\textheight{180mm}  % 15mm margin
+}
+\ExplSyntaxOff
+\setlength\headheight{18pt}
+\setlength\headsep{16pt}
+
+\newdimen\@tempdima
+\newdimen\@total@leftsep
+\newdimen\@total@headsep
+
+\@tempdima\paperheight
+\advance\@tempdima -\textheight
+\divide\@tempdima by 2
+\@total@headsep\@tempdima
+
+\advance\@tempdima -\headheight
+\advance\@tempdima -\headsep
+\advance\@tempdima -1in % the one-inch
+\topmargin\@tempdima
+
+\@tempdima\paperwidth
+\advance\@tempdima -\textwidth
+\divide\@tempdima by 2
+\@total@leftsep\@tempdima
+\advance\@tempdima -1in % the one-inch
+\oddsidemargin\@tempdima\relax
+\evensidemargin\oddsidemargin\relax
+
+% baselineskip = 1.242em = 4.77988mm
+\parskip=0mm plus .5mm
+\parsep=1mm plus .5mm minus 1mm
+
+\abovedisplayskip=12pt plus 3pt minus 9pt
+\belowdisplayskip=12pt plus 3pt minus 9pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[hhmmss]{datetime}
+\newdateformat{mydate}{\THEDAY-\shortmonthname-\THEYEAR}
+
+%\newdimen\head@colwidth
+%\head@colwidth\textwidth
+%\advance\head@colwidth -11em % for datetime region
+%\divide\head@colwidth by 2
+
+\def\leftmark{\expandafter\@leftmark\firstmark\@empty\@empty}
+\def\rightmark{\expandafter\@rightmark\botmark\@empty\@empty}
+
+\def\head@hrule{\lower1mm\null\vadjust{{\color{lightgray}\hrule height .7mm}\vskip-2mm}}
+\def\head@h{\ifnum \c@secnumdepth >\z@ \leftmark\fi}
+\def\head@j{\mydate\today~\currenttime}
+\ifmisho@lastpage
+  \usepackage{lastpage}
+  \def\head@p{\thepage/\NoHyper\pageref{LastPage}\endNoHyper}
+\else
+  \def\head@p{\thepage}
+\fi
+
+\def\head@hstyle{\fontsize{9}{12}\selectfont\color{lightgray}\sffamily}
+\def\head@jstyle{\fontsize{9}{12}\selectfont\color{dimgray}\texttt}
+\def\head@pstyle{\fontsize{12}{12}\selectfont\sffamily\bfseries}
+\def\ps@plain{%
+  \def\@evenfoot{} % {\reset@font\hfil\thepage\hfil}
+  \let\@oddfoot\@evenfoot
+  \def\@evenhead{%
+    \kern2mm{\head@hstyle{\head@h}}\hfil{\head@jstyle{\head@j}}%
+    \makebox[3em][r]{\head@pstyle\head@p}\kern2mm%
+    \aftergroup\head@hrule}%
+  \let\@oddhead\@evenhead
+}
+\AtBeginDocument{
+  \markboth{\@title}{\relax}
+}
+\def\sectionmark#1{\markright{\ifnum \c@secnumdepth >\z@ %
+  {\thesection}\hskip1em
+\fi #1}}%
+\pagestyle{empty}
+
+\newcommand\SetHead[2]{\expandafter\gdef\csname head@#1\endcsname{#2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \def\TopLRBox#1#2{\begin{tikzpicture}[remember picture,overlay]%
   \node[xshift=8mm,yshift=-8mm,anchor=north west] at (current page.north west){#1};%
   \node[xshift=-8mm,yshift=-8mm,anchor=north east] at (current page.north east){#2};%
 \end{tikzpicture}\relax}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\headfont\Large\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\headfont\large\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\headfont\normalsize\bfseries}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                    {2\parsep}%
+                                    {-1em}%
+                                    {\headfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+                                       {2\parsep}%
+                                       {-1em}%
+                                      {\headfont\normalsize\bfseries}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
