@@ -497,6 +497,7 @@
 
 \newtcbtheorem{theorem}{Theorem}{mytheobox}{thm}
 \newtcbtheorem[use counter from=theorem]{definition}{Definition}{mytheobox}{def}
+\newtcbtheorem[use counter from=theorem]{claim}{Claim}{mytheobox}{clm}
 
 \newtcbtheorem[use counter from=theorem]{example}{Example}{
   reset,enhanced,frame hidden,interior hidden,
@@ -539,6 +540,21 @@
 \NewDocumentCommand\Problem{som}{\new@problem{\IfBooleanTF{#1}{Problem}{Problem\*}}{#2}{#3}}
 
 \newenvironment{miniitemize}{\itemize\@topsep=\parsep\parskip=0mm}{\enditemize}
+
+\newcommand\UseSimpleTheoremStyle{
+  \tcbset{mytheobox/.style={%
+    reset,theorem style=standard,breakable,sharp corners,enhanced,
+    separator sign={~~~},detach title,before upper={\makebox[30mm][l]{\raisebox{1.5mm}{\tcbtitle}}},
+    fonttitle=\sffamily\bfseries\upshape,coltitle=black,boxrule=0.25mm,
+    boxsep=1.5mm,top=0mm,left*=3mm,right*=3mm,
+    interior code={
+      \path[draw=black,fill=white](interior.south west) rectangle (interior.north east);
+      \path[draw=black,line width=0.25mm]
+        ([xshift=00mm,yshift=-5.5mm]interior.north west)
+      --([xshift=28mm,yshift=-5.5mm]interior.north west)
+      --([xshift=28mm,yshift=0mm]interior.north west);
+    },
+}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
