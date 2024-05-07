@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-02-10 18:14:49>
+% Time-Stamp: <2024-05-07 11:02:08>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoText}[2022/11/23 Sho Iwamoto]
 
@@ -85,13 +85,13 @@
       /DestOutputProfile \the\pdflastobj\space 0 R
       /OutputConditionIdentifier (sRGB)
       /Info (sRGB) >>]}
-  \hypersetup{pdfa,pdfapart=2,pdfaconformance=u,pdftrapped=True}
+  \hypersetup{pdfapart=2,pdfaconformance=u,pdftrapped=True}
 \fi
 
 \ifmisho@cmyk
-  \usepackage[hyperref,cmyk]{xcolor}
+  \usepackage[cmyk]{xcolor}
 \else
-  \usepackage[hyperref,rgb]{xcolor}
+  \usepackage[rgb]{xcolor}
 \fi
 
 \def\title@cr{}
@@ -180,6 +180,9 @@
 
 % More math fonts (but not ever used)
 % \usepackage{wasysym}
+% yhmath is INCOMPATIBLE!
+%\DeclareSymbolFont{yhlargesymbols}{OMX}{yhex}{m}{n}
+%\DeclareMathAccent{\yhwidehat}{\mathord}{yhlargesymbols}{"62}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
