@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-05-07 11:02:08>
+% Time-Stamp: <2024-05-15 12:33:57>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -21,6 +21,8 @@
 
 \newif\ifmisho@lastpage\misho@lastpagefalse
 \DeclareOption{lastpage}{\misho@lastpagetrue}
+\newif\ifmisho@minititle\misho@minititlefalse
+\DeclareOption{minititle}{\misho@minititletrue}
 
 \ExecuteOptions{11pt,final,pdf0,en}
 \ProcessOptions
@@ -167,9 +169,9 @@
 \let\JA\relax
 \let\EN\relax
 \ifmisho@japanese
-  \def\EN#1{\english{#1}\endenglish}
+  \def\EN#1{{\english{#1}\endenglish}}
 \else
-  \def\JA#1{\japanese{#1}\endjapanese}
+  \def\JA#1{{\japanese{#1}\endjapanese}}
 \fi
 
 % Logical fonts
@@ -248,13 +250,23 @@
 \fi
 
 \def\head@hstyle{\fontsize{9}{12}\selectfont\color{lightgray}\sffamily}
-\def\head@jstyle{\fontsize{9}{12}\selectfont\color{dimgray}\texttt}
+\def\head@jstyle{\fontsize{9}{12}\selectfont\color{dimgray}\ttfamily}
 \def\head@pstyle{\fontsize{12}{12}\selectfont\sffamily\bfseries}
+\def\head@minititleheadstyle{\fontsize{9}{12}\selectfont\color{gray}\ttfamily}
 \def\ps@plain{%
   \def\@evenfoot{} % {\reset@font\hfil\thepage\hfil}
   \let\@oddfoot\@evenfoot
   \def\@evenhead{%
     \kern2mm{\head@hstyle{\head@h}}\hfil{\head@jstyle{\head@j}}%
+    \makebox[3em][r]{\head@pstyle\head@p}\kern2mm%
+    \aftergroup\head@hrule}%
+  \let\@oddhead\@evenhead
+}
+\def\ps@minititle{%
+  \def\@evenfoot{} % {\reset@font\hfil\thepage\hfil}
+  \let\@oddfoot\@evenfoot
+  \def\@evenhead{%
+    \hfil{\head@minititleheadstyle{\@author, \head@j}}%
     \makebox[3em][r]{\head@pstyle\head@p}\kern2mm%
     \aftergroup\head@hrule}%
   \let\@oddhead\@evenhead
@@ -307,26 +319,32 @@
                                       {\headfont\normalsize\bfseries}}
 
 \def\link@ifurl#1#2{\IfStrEq{#1}{}{#2}{\href{#1}{#2}}}
-\def\maketitle{%
-\begin{titlepage}%
-  \IfStrEq{\title@cr}{}{\setlength\@tempdimb{6mm}}{\setlength\@tempdimb{7.5mm}}
-  \setcounter{page}{0}
-  \let\footnoterule\relax
-  \let\footnote\thanks
-  \@headframebox{%
-    \node[fill=lightgray!50,anchor=south west,xshift= 5mm,yshift=15.7mm]
-      {\normalfont\fontsize{24}{24}\selectfont\bfseries\strut\@title};
-    \node[anchor=south west,xshift=85mm,yshift=\@tempdimb]
-      {\headfont\fontsize{16}{16}\selectfont \@author\strut};
-    \advance\@tempdimb -4.5mm%
-    \node[anchor=south west,xshift=85mm,yshift=\@tempdimb]
-      {\ttfamily\mydate\today~\currenttime\strut};
-    \IfStrEq{\title@cr}{}{}{%
-      \node[anchor=south west,xshift=85mm,yshift=-1mm]{%
-        \link@ifurl{\title@lu}{\sffamily\small\color{gray}\copyright\title@cr}\strut};
-    }
-}}
-\def\endmaketitle{\par\vfil\null\end{titlepage}}
+\def\maketitle{\ifmisho@minititle%
+  \thispagestyle{minititle}%
+  \newpage\global\@topnum\z@\newpage%
+  \begin{flushleft}%
+  {\headfont\LARGE\bfseries \@title\par}%
+  \end{flushleft}\@afterheading\ignorespaces%
+\else
+  \begin{titlepage}%
+    \IfStrEq{\title@cr}{}{\setlength\@tempdimb{6mm}}{\setlength\@tempdimb{7.5mm}}
+    \setcounter{page}{0}
+    \let\footnoterule\relax
+    \let\footnote\thanks
+    \@headframebox{%
+      \node[fill=lightgray!50,anchor=south west,xshift= 5mm,yshift=15.7mm]
+        {\normalfont\fontsize{24}{24}\selectfont\bfseries\strut\@title};
+      \node[anchor=south west,xshift=85mm,yshift=\@tempdimb]
+        {\headfont\fontsize{16}{16}\selectfont \@author\strut};
+      \advance\@tempdimb -4.5mm%
+      \node[anchor=south west,xshift=85mm,yshift=\@tempdimb]
+        {\ttfamily\mydate\today~\currenttime\strut};
+      \IfStrEq{\title@cr}{}{}{%
+        \node[anchor=south west,xshift=85mm,yshift=-1mm]{%
+          \link@ifurl{\title@lu}{\sffamily\small\color{gray}\copyright\title@cr}\strut};
+    }}%
+\fi}
+\def\endmaketitle{\ifmisho@minititle\relax\else\par\vfil\null\end{titlepage}\fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
