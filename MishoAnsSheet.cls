@@ -1,6 +1,17 @@
-% Time-Stamp: <2024-05-26 17:00:00>
+% Time-Stamp: <2024-06-15 00:15:41>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
+
+\usepackage{luacode}
+\begin{luacode*}
+function unit(t)
+  tex.sprint(t:sub(1, 1) == "/" and "" or "\\,", "\\mathrm{", t, "}\\xspace")
+end
+function removeLF(t)
+  tex.print(({t:gsub("\\textLF.*", "")})[1])
+end
+\end{luacode*}
+\def\IfEmpty#1#2#3{\if1\directlua{tex.sprint(\luastring{#1} == "" and "1")}\relax#2\else#3\fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -100,7 +111,7 @@
 \def\title@ce{}
 \def\title@cu{}
 \def\title@lu{}
-\define@key{Hyp}{pdfcopyright}{\hyxmp@pdfstringdef\@pdfcopyright{#1}\def\title@cr{#1}}
+\define@key{Hyp}{pdfcopyright}{\hyxmp@pdfstringdef\@pdfcopyright{#1}\def\title@cr{\directlua{removeLF(\luastringN{#1})}}}
 \define@key{Hyp}{pdfcontactemail}{\hyxmp@pdfstringdef\@pdfcontactemail{#1}\def\title@ce{#1}}
 \define@key{Hyp}{pdfcontacturl}{\hyxmp@pdfstringdef\@pdfcontacturl{#1}\def\title@cu{#1}}
 \define@key{Hyp}{pdflicenseurl}{\hyxmp@pdfstringdef\@pdflicenseurl{#1}\def\title@lu{#1}}
@@ -452,7 +463,7 @@
 \newcommand*\pmat[1]{\begin{pmatrix}#1\end{pmatrix}}
 \newcommand*\spmat[1]{\left(\begin{smallmatrix}#1\end{smallmatrix}\right)}
 
-\newcommand\unit[1]{\StrLeft{#1}{1}[\unit@firstchar]{\IfStrEq{\unit@firstchar}{/}\relax\,}\mathrm{#1}\xspace}
+\newcommand\unit[1]{\directlua{unit(\luastring{#1})}}
 \newcommand\eV {\unit{eV}}
 \newcommand\keV{\unit{keV}}
 \newcommand\MeV{\unit{MeV}}
@@ -470,7 +481,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{subcaption,booktabs,wrapfig,slashed,xspace,xstring,braket,cancel}
+\usepackage{subcaption,booktabs,wrapfig,slashed,xspace,braket,cancel}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
