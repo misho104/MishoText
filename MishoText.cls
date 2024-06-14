@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-05-07 11:02:08>
+% Time-Stamp: <2024-05-26 17:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoText}[2022/11/23 Sho Iwamoto]
 
@@ -167,9 +167,9 @@
 \let\JA\relax
 \let\EN\relax
 \ifmisho@japanese
-  \def\EN#1{\english{#1}\endenglish}
+  \def\EN#1{{\english{#1}\endenglish}}
 \else
-  \def\JA#1{\japanese{#1}\endjapanese}
+  \def\JA#1{{\japanese{#1}\endjapanese}}
 \fi
 
 % Logical fonts
@@ -248,7 +248,7 @@
 \fi
 
 \def\head@hstyle{\fontsize{9}{12}\selectfont\color{lightgray}\sffamily}
-\def\head@jstyle{\fontsize{9}{12}\selectfont\color{dimgray}\texttt}
+\def\head@jstyle{\fontsize{9}{12}\selectfont\color{dimgray}\ttfamily}
 \def\head@pstyle{\fontsize{12}{12}\selectfont\sffamily\bfseries}
 \def\ps@plain{%
   \def\@evenfoot{} % {\reset@font\hfil\thepage\hfil}
@@ -487,6 +487,13 @@
 \def\OutputNote{\NoteBoxStack\global\def\NoteBoxStack{}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% paragraph continuation after tcolorbox
+% https://tex.stackexchange.com/questions/568782/
+\tcbset{%
+  after={\ifx\tcb@drawcolorbox\tcb@drawcolorbox@breakable\else\@endparenv\fi}%
+}
+\appto\tcb@use@after@lastbox{\@endparenv\@doendpe}
 
 \tcbset{mytheobox/.style={%
   reset,theorem style=standard,breakable,sharp corners,enhanced,

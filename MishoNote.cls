@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-05-15 12:33:57>
+% Time-Stamp: <2024-05-26 17:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -490,6 +490,13 @@
 \def\OutputNote{\NoteBoxStack\global\def\NoteBoxStack{}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% paragraph continuation after tcolorbox
+% https://tex.stackexchange.com/questions/568782/
+\tcbset{%
+  after={\ifx\tcb@drawcolorbox\tcb@drawcolorbox@breakable\else\@endparenv\fi}%
+}
+\appto\tcb@use@after@lastbox{\@endparenv\@doendpe}
 
 \tcbset{mytheobox/.style={%
   reset,theorem style=standard,breakable,sharp corners,enhanced,
