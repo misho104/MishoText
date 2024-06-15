@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-06-15 00:15:41>
+% Time-Stamp: <2024-06-15 23:04:34>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -432,8 +432,10 @@ end
 \newcommand\coco[1]{\mathrm{c}^2_{#1}}
 \newcommand\sisi[1]{\mathrm{s}^2_{#1}}
 
-\RedeclareMathOperator{\Re}   {\mathrm{Re}}
-\RedeclareMathOperator{\Im}   {\mathrm{Im}}
+\AtBeginDocument{
+  \RedeclareMathOperator{\Re} {\mathrm{Re}}
+  \RedeclareMathOperator{\Im} {\mathrm{Im}}
+}
 \DeclareMathOperator{\arctanh}{\mathrm{arctanh}}
 \DeclareMathOperator{\arccoth}{\mathrm{arccoth}}
 \DeclareMathOperator{\arcsinh}{\mathrm{arcsinh}}
@@ -481,7 +483,7 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{subcaption,booktabs,wrapfig,slashed,xspace,braket,cancel}
+\usepackage{subcaption,booktabs,wrapfig,slashed,xspace,braket,cancel,amsmath}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
