@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-06-15 23:04:34>
+% Time-Stamp: <2024-06-20 12:58:15>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -335,7 +335,7 @@ end
   \newpage\global\@topnum\z@\newpage%
   \begin{flushleft}%
   {\headfont\LARGE\bfseries \@title\par}%
-  \end{flushleft}\@afterheading\ignorespaces%
+  \end{flushleft}\par\@afterheading\@afterindentfalse\ignorespaces%
 \else
   \begin{titlepage}%
     \IfEmpty{\title@cr}{\setlength\@tempdimb{6mm}}{\setlength\@tempdimb{7.5mm}}
