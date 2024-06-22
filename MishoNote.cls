@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-06-20 12:58:15>
+% Time-Stamp: <2024-06-22 15:44:26>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -355,7 +355,7 @@ end
           \link@ifurl{\title@lu}{\sffamily\small\color{gray}\copyright\title@cr}\strut};
     }}%
 \fi}
-\def\endmaketitle{\ifmisho@minititle\relax\else\par\vfil\null\end{titlepage}\fi}
+\def\endmaketitle{\ifmisho@minititle\relax\else\@thanks\par\vfil\null\end{titlepage}\fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
