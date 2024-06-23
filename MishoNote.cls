@@ -530,12 +530,12 @@ end
   boxsep=0mm,sidebyside gap=0mm,middle=0mm
 },myprobbox/.style={%
   reset,enhanced,sharp corners,
-  boxrule=.7mm, colframe=pLightOrange,colback=pLightOrange!30,
+  boxrule=.5mm, colframe=pLightOrange,colback=pLightOrange!15,
   boxsep=4.3mm,top=0mm,bottom=0mm,right=0mm,left=0mm,
   before skip balanced=24pt plus 3pt minus 21pt,
 },myquizbox/.style={%
   reset,enhanced,boxrule=0pt,frame hidden,
-  borderline west={2mm}{\z@}{pLightOrange},colback=pLightOrange!30,
+  borderline west={2mm}{\z@}{pLightOrange},colback=pLightOrange!15,
   left skip=15mm, left=4mm,
 }}
 
@@ -562,12 +562,14 @@ end
 \newenvironment{QuizBox}   {\begin{tcolorbox}[myquizbox]}{\end{tcolorbox}}
 
 \newenvironment{problems}{%
+  \advance\@enumdepth\@ne
   \begin{tcolorbox}[myprobbox]
    \list{}{\labelwidth2.5em\leftmargin2.5em\itemsep4mm\labelsep.7em\itemindent\z@%
     \let\makelabel\descriptionlabel}%
 }{\endlist\end{tcolorbox}}
 
 \newenvironment{quizzes}{%
+  \advance\@enumdepth\@ne
   \begin{tcolorbox}[myquizbox]
    \list{}{\labelwidth\z@ \itemsep4mm \leftmargin0mm \itemindent-\leftmargin%
      \let\makelabel\descriptionlabel}
