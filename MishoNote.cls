@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-06-22 15:44:26>
+% Time-Stamp: <2024-06-23 13:40:25>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -282,6 +282,14 @@ end
     \aftergroup\head@hrule}%
   \let\@oddhead\@evenhead
 }
+\def\ps@titlepage{%
+  \def\@evenfoot{} % {\reset@font\hfil\thepage\hfil}
+  \let\@oddfoot\@evenfoot
+  \def\@evenhead{%
+    \hfil\makebox[3em][r]{\head@pstyle\head@p}\kern2mm%
+    \aftergroup\head@hrule}%
+  \let\@oddhead\@evenhead
+}
 \AtBeginDocument{
   \markboth{\@title}{\relax}
 }
@@ -331,15 +339,15 @@ end
 
 \def\link@ifurl#1#2{\IfEmpty{#1}{#2}{\href{#1}{#2}}}
 \def\maketitle{\ifmisho@minititle%
-  \thispagestyle{minititle}%
   \newpage\global\@topnum\z@\newpage%
+  \thispagestyle{minititle}%
   \begin{flushleft}%
   {\headfont\LARGE\bfseries \@title\par}%
   \end{flushleft}\par\@afterheading\@afterindentfalse\ignorespaces%
 \else
   \begin{titlepage}%
+    \thispagestyle{titlepage}%
     \IfEmpty{\title@cr}{\setlength\@tempdimb{6mm}}{\setlength\@tempdimb{7.5mm}}
-    \setcounter{page}{0}
     \let\footnoterule\relax
     \let\footnote\thanks
     \@headframebox{%
@@ -355,7 +363,7 @@ end
           \link@ifurl{\title@lu}{\sffamily\small\color{gray}\copyright\title@cr}\strut};
     }}%
 \fi}
-\def\endmaketitle{\ifmisho@minititle\relax\else\@thanks\par\vfil\null\end{titlepage}\fi}
+\def\endmaketitle{\ifmisho@minititle\relax\else\@thanks\par\vfil\null\end{titlepage}\fi\stepcounter{page}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
