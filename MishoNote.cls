@@ -564,7 +564,7 @@ end
 \newenvironment{problems}{%
   \advance\@enumdepth\@ne
   \begin{tcolorbox}[myprobbox]
-   \list{}{\labelwidth2.5em\leftmargin2.5em\itemsep4mm\labelsep.7em\itemindent\z@%
+   \list{}{\labelwidth2.5em\leftmargin2.5em\itemsep4mm\labelsep.5em\itemindent\z@%
     \let\makelabel\descriptionlabel}%
 }{\endlist\end{tcolorbox}}
 
@@ -720,6 +720,7 @@ end
 \DeclareMathOperator{\Order}  {\symcal{O}}
 \DeclareMathOperator{\sign}   {\mathrm{sign}}
 \DeclareMathOperator{\Br}     {\mathrm{Br}}
+\newcommand*\defeq{\coloneq}
 
 \newcommand*\EE{\@ifnextchar-{\@@EE}{\@EE}}
 \newcommand*\@EE[1]{\ifnum#1=1 \times\!10 \else \times\!10^{#1}\fi}
