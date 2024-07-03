@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-06-15 23:04:34>
+% Time-Stamp: <2024-07-03 17:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -201,7 +201,7 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand*\@convertto[2]{\strip@pt\dimexpr #2*65536/\number\dimexpr 1#1}
-\newcommand*\ShowLength[1]{\@convertto{em}{#1}em = \@convertto{mm}{#1}mm} % for debugging
+\newcommand*\ShowLength[1]{\@convertto{em}{#1}em = \@convertto{mm}{#1}mm = \@convertto{pt}{#1}pt} % for debugging
 \ExplSyntaxOn
 \str_if_eq:VnTF{\misho@papersize}{a4paper}{
   \setlength\textwidth{160mm}  % 25mm margin
