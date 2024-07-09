@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-07-03 17:00:00>
+% Time-Stamp: <2024-07-09 14:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoText}[2022/11/23 Sho Iwamoto]
 
@@ -576,19 +576,28 @@ end
 
 \newenvironment{miniitemize}{\itemize\@topsep=\parsep\parskip=0mm}{\enditemize}
 
-\newcommand\UseSimpleTheoremStyle{
-  \tcbset{mytheobox/.style={%
-    reset,theorem style=standard,breakable,sharp corners,enhanced,
-    separator sign={~~~},detach title,before upper={\makebox[30mm][l]{\raisebox{1.5mm}{\tcbtitle}}},
-    fonttitle=\sffamily\bfseries\upshape,coltitle=black,boxrule=0.25mm,
-    boxsep=1.5mm,top=0mm,left*=3mm,right*=3mm,
-    interior code={
-      \path[draw=black,fill=white](interior.south west) rectangle (interior.north east);
-      \path[draw=black,line width=0.25mm]
-        ([xshift=00mm,yshift=-5.5mm]interior.north west)
-      --([xshift=28mm,yshift=-5.5mm]interior.north west)
-      --([xshift=28mm,yshift=0mm]interior.north west);
-    },
+\newcommand\UseSimpleTheoremStyle{\tcbset{
+  mytheobox/.style={%
+  reset,theorem style=standard,breakable,sharp corners,enhanced,
+  separator sign={~~~},detach title,before upper={\makebox[30mm][l]{\raisebox{1.5mm}{\tcbtitle}}},
+  fonttitle=\sffamily\bfseries\upshape,coltitle=black,boxrule=0.25mm,
+  boxsep=1.5mm,top=0mm,left*=3mm,right*=3mm,
+  interior code={
+    \path[draw=black,fill=white](interior.south west) rectangle (interior.north east);
+    \path[draw=black,line width=0.25mm]
+      ([xshift=00mm,yshift=-5.5mm]interior.north west)
+    --([xshift=28mm,yshift=-5.5mm]interior.north west)
+    --([xshift=28mm,yshift=0mm]interior.north west);
+  }%
+},myprobbox/.style={
+  reset,enhanced,sharp corners,
+  boxrule=.5mm, colframe=black!30,colback=white,
+  boxsep=4.3mm,top=0mm,bottom=0mm,right=0mm,left=0mm,
+  before skip balanced=24pt plus 3pt minus 21pt,
+},myquizbox/.style={%
+  reset,enhanced,boxrule=0pt,frame hidden,
+  borderline west={2mm}{\z@}{black!30},colback=white,
+  left skip=15mm, left=4mm,
 }}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
