@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-07-03 17:00:00>
+% Time-Stamp: <2024-07-11 14:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -449,7 +449,9 @@ end
 \DeclareMathOperator{\Order}  {\symcal{O}}
 \DeclareMathOperator{\sign}   {\mathrm{sign}}
 \DeclareMathOperator{\Br}     {\mathrm{Br}}
-\newcommand*\defeq{\coloneq}
+
+\newcommand*\deq{\coloneq}
+
 
 \newcommand*\EE{\@ifnextchar-{\@@EE}{\@EE}}
 \newcommand*\@EE[1]{\ifnum#1=1 \times\!10 \else \times\!10^{#1}\fi}
