@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-07-11 14:00:00>
+% Time-Stamp: <2024-10-01 00:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -207,7 +207,7 @@ end
   \setlength\textwidth{160mm}  % 25mm margin
   \setlength\textheight{237mm}  % 30mm margin
 }{
-  \setlength\textwidth{118.5mm}  % 12mm margin
+  \setlength\textwidth{124.5mm}  % 12mm margin
   \setlength\textheight{180mm}  % 15mm margin
 }
 \ExplSyntaxOff
@@ -450,8 +450,8 @@ end
 \DeclareMathOperator{\sign}   {\mathrm{sign}}
 \DeclareMathOperator{\Br}     {\mathrm{Br}}
 
-\newcommand*\deq{\coloneq}
-
+\let\eqdef@orig\eqdef
+\let\eqdef\coloneq
 
 \newcommand*\EE{\@ifnextchar-{\@@EE}{\@EE}}
 \newcommand*\@EE[1]{\ifnum#1=1 \times\!10 \else \times\!10^{#1}\fi}
