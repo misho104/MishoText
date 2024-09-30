@@ -1,3 +1,8 @@
+# rye
+/*.lock
+/.python-version
+
+
 *.aux
 *.log
 *.fls
