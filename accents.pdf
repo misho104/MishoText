@@ -1,1348 +1,0 @@
-%PDF-1.6
-%ÌÕÁÔÅØĞÄÆ
-7 0 obj
-<< /Type /Metadata /Subtype /XML  /Length 61667 >>      
-stream
-<?xpacket begin="ï»¿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-<x:xmpmeta xmlns:x="adobe:ns:meta/">
-  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <rdf:Description rdf:about=""
-                     xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
-                     xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/"
-                     xmlns:dc="http://purl.org/dc/elements/1.1/"
-                     xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/"
-                     xmlns:xmp="http://ns.adobe.com/xap/1.0/"
-                     xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
-                     xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
-                     xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/"
-                     xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/"
-                     xmlns:pdfx="http://ns.adobe.com/pdfx/1.3/"
-                     xmlns:prism="http://prismstandard.org/namespaces/basic/3.0/"
-                     xmlns:jav="http://www.niso.org/schemas/jav/1.0/"
-                     xmlns:xmpTPg="http://ns.adobe.com/xap/1.0/t/pg/"
-                     xmlns:stFnt="http://ns.adobe.com/xap/1.0/sType/Font#"
-                     xmlns:Iptc4xmpCore="http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/"
-                     xmlns:pdfaExtension="http://www.aiim.org/pdfa/ns/extension/"
-                     xmlns:pdfaSchema="http://www.aiim.org/pdfa/ns/schema#"
-                     xmlns:pdfaProperty="http://www.aiim.org/pdfa/ns/property#"
-                     xmlns:pdfaType="http://www.aiim.org/pdfa/ns/type#"
-                     xmlns:pdfaField="http://www.aiim.org/pdfa/ns/field#">
-      <pdfaExtension:schemas>
-        <rdf:Bag>
-          <rdf:li rdf:parseType="Resource">
-            <pdfaSchema:schema>Adobe PDF Schema</pdfaSchema:schema>
-            <pdfaSchema:prefix>pdf</pdfaSchema:prefix>
-            <pdfaSchema:namespaceURI>http://ns.adobe.com/pdf/1.3/</pdfaSchema:namespaceURI>
-            <pdfaSchema:property>
-              <rdf:Seq>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>Trapped</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>internal</pdfaProperty:category>
-                  <pdfaProperty:description>Indication if the document has been modified to include trapping information</pdfaProperty:description>
-                </rdf:li>
-              </rdf:Seq>
-            </pdfaSchema:property>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <pdfaSchema:schema>XMP Media Management Schema</pdfaSchema:schema>
-            <pdfaSchema:prefix>xmpMM</pdfaSchema:prefix>
-            <pdfaSchema:namespaceURI>http://ns.adobe.com/xap/1.0/mm/</pdfaSchema:namespaceURI>
-            <pdfaSchema:property>
-              <rdf:Seq>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>DocumentID</pdfaProperty:name>
-                  <pdfaProperty:valueType>URI</pdfaProperty:valueType>
-                  <pdfaProperty:category>internal</pdfaProperty:category>
-                  <pdfaProperty:description>UUID based identifier for all versions and renditions of a document</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>InstanceID</pdfaProperty:name>
-                  <pdfaProperty:valueType>URI</pdfaProperty:valueType>
-                  <pdfaProperty:category>internal</pdfaProperty:category>
-                  <pdfaProperty:description>UUID based identifier for specific incarnation of a document</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>VersionID</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>internal</pdfaProperty:category>
-                  <pdfaProperty:description>Document version identifier</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>RenditionClass</pdfaProperty:name>
-                  <pdfaProperty:valueType>RenditionClass</pdfaProperty:valueType>
-                  <pdfaProperty:category>internal</pdfaProperty:category>
-                  <pdfaProperty:description>The manner in which a document is rendered</pdfaProperty:description>
-                </rdf:li>
-              </rdf:Seq>
-            </pdfaSchema:property>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <pdfaSchema:schema>PRISM Basic Metadata</pdfaSchema:schema>
-            <pdfaSchema:prefix>prism</pdfaSchema:prefix>
-            <pdfaSchema:namespaceURI>http://prismstandard.org/namespaces/basic/3.0/</pdfaSchema:namespaceURI>
-            <pdfaSchema:property>
-              <rdf:Seq>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>complianceProfile</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>internal</pdfaProperty:category>
-                  <pdfaProperty:description>PRISM specification compliance profile to which this document adheres</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>publicationName</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>Publication name</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>aggregationType</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>Publication type</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>bookEdition</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>Edition of the book in which the document was published</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>volume</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>Publication volume number</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>number</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>Publication issue number within a volume</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>pageRange</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>Page range for the document within the print version of its publication</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>issn</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>ISSN for the printed publication in which the document was published</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>eIssn</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>ISSN for the electronic publication in which the document was published</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>isbn</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>ISBN for the publication in which the document was published</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>doi</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>Digital Object Identifier for the document</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>url</pdfaProperty:name>
-                  <pdfaProperty:valueType>URL</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>URL at which the document can be found</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>byteCount</pdfaProperty:name>
-                  <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
-                  <pdfaProperty:category>internal</pdfaProperty:category>
-                  <pdfaProperty:description>Approximate file size in octets</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>pageCount</pdfaProperty:name>
-                  <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
-                  <pdfaProperty:category>internal</pdfaProperty:category>
-                  <pdfaProperty:description>Number of pages in the print version of the document</pdfaProperty:description>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <pdfaProperty:name>subtitle</pdfaProperty:name>
-                  <pdfaProperty:valueType>Text</pdfaProperty:valueType>
-                  <pdfaProperty:category>external</pdfaProperty:category>
-                  <pdfaProperty:description>Document's subtitle</pdfaProperty:description>
-                </rdf:li>
-              </rdf:Seq>
-            </pdfaSchema:property>
-          </rdf:li>
-        </rdf:Bag>
-      </pdfaExtension:schemas>
-      <pdf:Producer>LuaHBTeX, Version 1.18.0 (TeX Live 2024)</pdf:Producer>
-      <pdf:Keywords></pdf:Keywords>
-      <pdf:PDFVersion>1.6</pdf:PDFVersion>
-      <dc:format>application/pdf</dc:format>
-      <dc:title>
-        <rdf:Alt>
-          <rdf:li xml:lang="x-default">Sample for MishoText</rdf:li>
-        </rdf:Alt>
-      </dc:title>
-      <dc:date>
-        <rdf:Seq>
-          <rdf:li>2024-06-15T22:16:47+08:00</rdf:li>
-        </rdf:Seq>
-      </dc:date>
-      <dc:type>
-        <rdf:Bag>
-          <rdf:li>Text</rdf:li>
-        </rdf:Bag>
-      </dc:type>
-      <dc:creator>
-        <rdf:Seq>
-          <rdf:li>Sho Iwamoto</rdf:li>
-        </rdf:Seq>
-      </dc:creator>
-      <dc:source>accents.tex</dc:source>
-      <xmp:CreateDate>2024-06-15T22:16:47+08:00</xmp:CreateDate>
-      <xmp:ModifyDate>2024-06-15T22:16:47+08:00</xmp:ModifyDate>
-      <xmp:MetadataDate>2024-06-15T22:16:47+08:00</xmp:MetadataDate>
-      <xmp:CreatorTool>LaTeX with hyperref</xmp:CreatorTool>
-      <xmpMM:DocumentID>uuid:54c46cef-d7f7-4f75-9bb6-205413959000</xmpMM:DocumentID>
-      <xmpMM:InstanceID>uuid:8dc9b1dc-4c90-4054-a2b6-c4c4626c95fd</xmpMM:InstanceID>
-      <xmpMM:VersionID>1</xmpMM:VersionID>
-      <xmpMM:RenditionClass>default</xmpMM:RenditionClass>
-      <prism:complianceProfile>three</prism:complianceProfile>
-      <prism:byteCount>88257</prism:byteCount>
-      <prism:pageCount>1</prism:pageCount>
-      <xmpTPg:Fonts>
-        <rdf:Bag>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>LMRoman10-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>LM Roman 10</stFnt:fontFamily>
-            <stFnt:fontName>LMRoman10-Regular</stFnt:fontName>
-            <stFnt:versionString>2.004;PS 2.004;hotconv 1.0.49;makeotf.lib2.0.14853</stFnt:versionString>
-            <stFnt:fontFileName>lmroman10-regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>LMRoman10-Bold</stFnt:fontFace>
-            <stFnt:fontFamily>LM Roman 10</stFnt:fontFamily>
-            <stFnt:fontName>LMRoman10-Bold</stFnt:fontName>
-            <stFnt:versionString>2.004;PS 2.004;hotconv 1.0.49;makeotf.lib2.0.14853</stFnt:versionString>
-            <stFnt:fontFileName>lmroman10-bold.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-BoldItalic.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Bold</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Bold</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Bold.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Italic</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Italic</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Italic.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Bold</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Bold</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Bold.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Italic</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Italic</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Italic.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-BoldItalic.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-BoldItalic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Bold</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Bold.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Italic</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Italic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Bold</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Bold.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Italic</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Italic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-BoldItalic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Regular</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Regular</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Regular</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-BoldItalic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Bold</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Bold.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Italic</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Italic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Regular</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Bold</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Bold.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Italic</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Italic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-BoldItalic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Harano Aji Mincho</stFnt:fontFace>
-            <stFnt:fontFamily>Harano Aji Mincho</stFnt:fontFamily>
-            <stFnt:fontName>HaranoAjiMincho-Regular</stFnt:fontName>
-            <stFnt:versionString>HaranoAjiMincho-Regular version 20231009;ttx 4.43.1</stFnt:versionString>
-            <stFnt:fontFileName>HaranoAjiMincho-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Harano Aji Mincho</stFnt:fontFace>
-            <stFnt:fontFamily>Harano Aji Mincho</stFnt:fontFamily>
-            <stFnt:fontName>HaranoAjiMincho-Regular</stFnt:fontName>
-            <stFnt:versionString>HaranoAjiMincho-Regular version 20231009;ttx 4.43.1</stFnt:versionString>
-            <stFnt:fontFileName>HaranoAjiMincho-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Harano Aji Mincho</stFnt:fontFace>
-            <stFnt:fontFamily>Harano Aji Mincho</stFnt:fontFamily>
-            <stFnt:fontName>HaranoAjiMincho-Regular</stFnt:fontName>
-            <stFnt:versionString>HaranoAjiMincho-Regular version 20231009;ttx 4.43.1</stFnt:versionString>
-            <stFnt:fontFileName>HaranoAjiMincho-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Harano Aji Gothic Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Harano Aji Gothic</stFnt:fontFamily>
-            <stFnt:fontName>HaranoAjiGothic-Bold</stFnt:fontName>
-            <stFnt:versionString>HaranoAjiGothic-Bold version 20231009;ttx 4.43.1</stFnt:versionString>
-            <stFnt:fontFileName>HaranoAjiGothic-Bold.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Harano Aji Gothic</stFnt:fontFace>
-            <stFnt:fontFamily>Harano Aji Gothic</stFnt:fontFamily>
-            <stFnt:fontName>HaranoAjiGothic-Regular</stFnt:fontName>
-            <stFnt:versionString>HaranoAjiGothic-Regular version 20231009;ttx 4.43.1</stFnt:versionString>
-            <stFnt:fontFileName>HaranoAjiGothic-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Harano Aji Gothic</stFnt:fontFace>
-            <stFnt:fontFamily>Harano Aji Gothic</stFnt:fontFamily>
-            <stFnt:fontName>HaranoAjiGothic-Regular</stFnt:fontName>
-            <stFnt:versionString>HaranoAjiGothic-Regular version 20231009;ttx 4.43.1</stFnt:versionString>
-            <stFnt:fontFileName>HaranoAjiGothic-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Harano Aji Gothic</stFnt:fontFace>
-            <stFnt:fontFamily>Harano Aji Gothic</stFnt:fontFamily>
-            <stFnt:fontName>HaranoAjiGothic-Regular</stFnt:fontName>
-            <stFnt:versionString>HaranoAjiGothic-Regular version 20231009;ttx 4.43.1</stFnt:versionString>
-            <stFnt:fontFileName>HaranoAjiGothic-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-BoldItalic.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Bold</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Bold</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Bold.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Italic</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Italic</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Italic.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Bold</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Bold</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Bold.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Italic</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Italic</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Italic.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-BoldItalic.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-BoldItalic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Bold</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Bold.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Italic</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Italic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Bold</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Bold.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Italic</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Italic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-BoldItalic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Regular</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Regular</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Regular</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-BoldItalic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Bold</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Bold.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Italic</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Italic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Regular</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Bold</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Bold.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Italic</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Italic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Bold Italic</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-BoldItalic</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-BoldItalic.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontName>cmmi10</stFnt:fontName>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontName>cmmi7</stFnt:fontName>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontName>cmmi6</stFnt:fontName>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Math Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Math</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoMath-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoMath-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>LatinModernMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Latin Modern Math</stFnt:fontFamily>
-            <stFnt:fontName>LatinModernMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.959</stFnt:versionString>
-            <stFnt:fontFileName>latinmodern-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>LatinModernMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Latin Modern Math</stFnt:fontFamily>
-            <stFnt:fontName>LatinModernMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.959</stFnt:versionString>
-            <stFnt:fontFileName>latinmodern-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>LatinModernMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Latin Modern Math</stFnt:fontFamily>
-            <stFnt:fontName>LatinModernMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.959</stFnt:versionString>
-            <stFnt:fontFileName>latinmodern-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>LatinModernMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Latin Modern Math</stFnt:fontFamily>
-            <stFnt:fontName>LatinModernMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.959</stFnt:versionString>
-            <stFnt:fontFileName>latinmodern-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>LatinModernMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Latin Modern Math</stFnt:fontFamily>
-            <stFnt:fontName>LatinModernMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.959</stFnt:versionString>
-            <stFnt:fontFileName>latinmodern-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>LatinModernMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Latin Modern Math</stFnt:fontFamily>
-            <stFnt:fontName>LatinModernMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.959</stFnt:versionString>
-            <stFnt:fontFileName>latinmodern-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>TeXGyreScholaMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>TeX Gyre Schola Math</stFnt:fontFamily>
-            <stFnt:fontName>TeXGyreScholaMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.533</stFnt:versionString>
-            <stFnt:fontFileName>texgyreschola-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>TeXGyreScholaMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>TeX Gyre Schola Math</stFnt:fontFamily>
-            <stFnt:fontName>TeXGyreScholaMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.533</stFnt:versionString>
-            <stFnt:fontFileName>texgyreschola-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>TeXGyreScholaMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>TeX Gyre Schola Math</stFnt:fontFamily>
-            <stFnt:fontName>TeXGyreScholaMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.533</stFnt:versionString>
-            <stFnt:fontFileName>texgyreschola-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>TeXGyreScholaMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>TeX Gyre Schola Math</stFnt:fontFamily>
-            <stFnt:fontName>TeXGyreScholaMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.533</stFnt:versionString>
-            <stFnt:fontFileName>texgyreschola-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>TeXGyreScholaMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>TeX Gyre Schola Math</stFnt:fontFamily>
-            <stFnt:fontName>TeXGyreScholaMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.533</stFnt:versionString>
-            <stFnt:fontFileName>texgyreschola-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>TeXGyreScholaMath-Regular</stFnt:fontFace>
-            <stFnt:fontFamily>TeX Gyre Schola Math</stFnt:fontFamily>
-            <stFnt:fontName>TeXGyreScholaMath-Regular</stFnt:fontName>
-            <stFnt:versionString>1.533</stFnt:versionString>
-            <stFnt:fontFileName>texgyreschola-math.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Mono Regular</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto Mono</stFnt:fontFamily>
-            <stFnt:fontName>RobotoMono-Regular</stFnt:fontName>
-            <stFnt:versionString>3.000</stFnt:versionString>
-            <stFnt:fontFileName>RobotoMono-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>STIX Two Text Regular</stFnt:fontFace>
-            <stFnt:fontFamily>STIX Two Text</stFnt:fontFamily>
-            <stFnt:fontName>STIXTwoText-Regular</stFnt:fontName>
-            <stFnt:versionString>2.12 b168</stFnt:versionString>
-            <stFnt:fontFileName>STIXTwoText-Regular.otf</stFnt:fontFileName>
-            <stFnt:fontType>opentype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Regular</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Regular.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-          <rdf:li rdf:parseType="Resource">
-            <stFnt:fontFace>Roboto Bold</stFnt:fontFace>
-            <stFnt:fontFamily>Roboto</stFnt:fontFamily>
-            <stFnt:fontName>Roboto-Bold</stFnt:fontName>
-            <stFnt:versionString>2.136; 2016</stFnt:versionString>
-            <stFnt:fontFileName>Roboto-Bold.ttf</stFnt:fontFileName>
-            <stFnt:fontType>truetype</stFnt:fontType>
-          </rdf:li>
-        </rdf:Bag>
-      </xmpTPg:Fonts>
-      <xmpTPg:NPages>1</xmpTPg:NPages>
-    </rdf:Description>
-  </rdf:RDF>
-</x:xmpmeta>
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-                                                               
-<?xpacket end="w"?>
-
-endstream
-endobj
-9 0 obj
-<< /Filter /FlateDecode /Length 2307 >>       
-stream
-xÚ­›Ín#7Çïy
-¿€UQß6±S`{*šÛ¢§~Ú=´—¾~©IQ²EÅÂğÄ;â”4ä_f"OÿÁéÏí=]ığ´_I¡ê§éº|>¾÷¦Ï_ŞŸ¾{ğ'/œãOï¿?A¥£Öœ¼ÍéıÛéë')µÇ×‹”ß%¾k|SqÿY|¹üşùùŒ—ŸòOørG¿æët§{şùıËĞctKá•ÁGe~YPÂÄ@ƒbê¼éû»“s}ú»Zòhİ¹“w^€‚Ó/ß¶aÆjŒ[ŸĞz0§~;ışô#±Ûºš'Q%o£ÄGo•ÒB+„(:èì.Æ/åÛ›€ÍíïŞB7 ŒÖd¸»|ÎÃ osF¸@†)7£Ù $î‚vØëÛuFK3ip¯`°Ş+6©:ÜÛgEˆv9:E4º‹”3\Àû£^Î\yÓá`Šsè¦Y.HáÑ©.j¡Â¾vA>Î
-ÕmÌ‹ÔSœÇ§V-GAxã:œ™à´4Â ìk·‚óƒèÌk˜â&¬}«hí¸8-SÊ‰]tn†×|ç„·ıV™F'3¬>@8ßãf9L+…ù9®ã<Nf¿U^¦¸ b7+sœ’ÂÇ>º×N;a‚YÇa³Ğá.3œQB,ãĞK	¶Ã]§¸ <èe–;ıdÎ*‚¶ø˜ûà¼è–àrJ‹B­×ÂÂ„6«Ú¥Ô×i˜h}·r ¦8Ô‚ÛC®„ÅÆÅ9% tOÌêö
-qësép_ên£À´øğ!z©:Ø4=c´İœ0`¸+]›¦çˆSiÖ3
-zÙç½LÓsÄ©ëù½×?t³ôl°’C\ŸL¬ä!vùjz¾§Û%JÚtü‘i_›ªÛ¯¨Ùí³M—:Éw|Á—Ç×%}Æ”óÕ"ç›ÃIÕâ2
-,‚x8ùú3şÇ¯øú‚‡êßíÖo'|¬Å«¿N?áQe;Ì~Ã/¿åqÇ-@ó°ÂYà9P¬ŞFDT)š3xPÇä£G~9´|Ôï*ÉÆà
-8æ
-«Ä8€Š^kË› §˜üj´å«ßˆôÀaüj??ˆ?ÕC7Jğz€GÉ¯,+|‹uÕóğÕhË7#¾Û Ûú;7‹_rÈVÊÉ¢q@ã-1
-P?{x<x'JÕ*™7r +	9™d«ÄÑàøT*X)( o£ÿy„G‰6ƒ¯Qh&?[%¼ŒˆÛÎf<‘]nF[şë€G"»mVFJEÅ¯F[şeÀ×i[9^
-ĞÜıW¶üAÔF
-)™5Ø*füÕhËñÑ¬^üÜé¯6<* ¶x‹^2Ìp3ÚòaÄwÂ9Çã§Ã-_Œ¶üAÔ.}ıŒ+•ìh3yş³U«Ä=r •Í–«p\ø¿Àjµu`PµGˆòÌ_¶üQòXYkàiW3w@5ÚòGÕ
-X®çÆ_¶üQŠ²j ¯ôd,wT«­£
-Sa›ÖNS°gÎ@µÚ:0=”)Ç'{r!}Wíê¡Ìåf
-óôÕg6SğÙ»¨+¯›ÒcvSlŠrß§\\>ZQ§›±®F—»)d«›‚gùåèr7…âXİ°ËÑån
-Å±º)1¯]>nï¦P«›bõrt¹›Bq¬nŠR{t+8?ˆÙM	iÍíö(Wº)4:V7³Ò2nï¦P«›¢âêƒPº)Çê¦„uÚŞL¡4V3ÅùÕYš)Çj¦D»Û›)Çj¦(µŒËÍŠc5SúÜ7Ååf
-Å±š)á¸­™BF±š)z½üäf
-¥qš)aµ·R(ŒÕJÙp‹'>ÃÆåV
-Å±Z)j}&s+…âX­”à¶V
-…±Z)q=ŸäV
-Å±Z)v=ŸäV
-Å±Z)q}_æV
-ÅqZ)J®Ofn¥PÜTµc	
-£sXW]ÑD¨Ösß$õO¿wÒšYPïÍ¸‹–LõŞ[Pï.à)M+âĞØâ}1¸"ŞÛa|ñ¾\Ñî„ÆÖî‹ÁíNplíÁ)p|\ÖîÇÖî‹ÑíNplí–nçÑ-hw¬Wµ;‰­İWqY»[»/=UºWº/Â²r'0¶r_Û–U¹[¹¯â²r'8¶r_ÄåNplå¾ˆ+ÊàØÊ}·+÷v_¹/Ò²r'4¦r_eeåN`låÚ8ªÀÆåNplå¾]QîÇVî‹¸]¹[¹¯Â²r'8¶r_ÄåNplå¾ˆ+ÊàØÊ}—•;ÁÍ”;Äô»€è¦ÁÇÀÕïÛÁeå¾«ö3ØOÒë×|ßØMRmyùIªËëóvQôöQ]o…×D|/¿vymo*bº1ŸÄôÙ*›­+y¼Gå}˜X/j¶±ÔìÙÚâ»–7Åy³¤”İ­‡2ĞzMîÊr’˜×½yÓLÒ)¦-™×pÏû¢çóEÏÕ›±i"ÂöW0c[U¬W]{J3ˆzj++1b‹ø…º+}“òpªÌ"¦>·w¡¨J¿†11•E1õò|V ÷ÅóÎíBçÜnİ$FÎÛJ–ìŠ;\å.º½¨ÓXyÏ¨‰ö¶‹T»Úİ•J–Ú¦UbŒ÷*ªÒî
-Å	g÷*rØpVî¹ş.ä°•ÛóñÙÆê½½åÌc†T>o¸îùU"ñë%9QY#yIKáÁQÈ:3ÍYşâhş˜º®n’º4Yÿp-İ>Ì]Gó‡Ô•¬?L]­—Üu´~H]ÉúÃÔ…Öá–¹.ãÌÕ×½ñ;‰+—öë%q­ßÍ[Z¢
-wLÕ¼Õ:z'mMLå´Õšº“µ®MM[­©;Ykb*§­ÖÔ-k]º¬Uví!kİÖë–µ.]ÖªoY?¢YëöÑ¬•Îs·¿ñ¡ñ”¬ÕÄsKZÉ’´ÒG4i]º¤µ9ÿ(i%`L[%iµnÕœ•¬sV—Bd‘~‘yKé·dN”ĞÕ¸õí£S¿¤<ZÂÄ“3Æ Mx·?kÄìuœ&ffïÿ­qûÙõıé?ø‘
-endstream
-endobj
-6 0 obj
-<< /Type /Page /Contents 9 0 R /Resources 8 0 R /MediaBox [ 0 0 595.276 841.89 ] /Parent 17 0 R >>
-endobj
-10 0 obj
-<< /D [ 6 0 R /XYZ 69.866 791.723 null ] >>
-endobj
-13 0 obj
-<< /D [ 6 0 R /XYZ 70.866 756.85 null ] >>
-endobj
-8 0 obj
-<<  /ColorSpace 3 0 R /Pattern 2 0 R /ExtGState 1 0 R  /Font << /F117 11 0 R /F120 12 0 R /F112 14 0 R /F88 15 0 R /F109 16 0 R >> /ProcSet [ /PDF /Text ] >>
-endobj
-1 0 obj
-<<>>
-endobj
-2 0 obj
-<<>>
-endobj
-3 0 obj
-<<  /pgfprgb [/Pattern /DeviceRGB] >>
-endobj
-30 0 obj
-[ 609 [ 0 ] 3374 [ 0 ] 3376 [ 0 ] ]
-endobj
-32 0 obj
-<< /Subtype /CIDFontType0C /Filter /FlateDecode /Length 673 >>        
-stream
-xÚ…RÛOÓPîaeè¦2—x0h4²‰Æˆá–#ãæ
-!F.e;[›•v¶lxyÀ'-fKPÈj4²xKìÅ˜.&&$ò/ødâ-[x31‡sN¾ó}¿ïü¾ü †ã  šjò¶û®§P_kJDÁ#pt;-3®ë(šàhÑ ù5¨U+D•æÄ´J Ui'MÚ1¼p“0}$ğßf§Vé´9¥?‹+1ü8dìê§ÕCœÒ¯E9¢Æ@vˆÓXI°jŒ5 tƒ^0ğ?ÿ^$J¬ÀCy©¾Ş+ÄS"edx¡ÎsFR(	%<BC;©8œ‚Í$l£C1aLŠ±µ°‹„AYG\h<ƒ46.–æ÷ßáYİd14BD/Û’î£¢ˆKçHH1¬Ç1õSD¢%†	>ŒD(3¶ö)Ø"ğ2°!ÄKº\PB2²op»åD”Ä¨;¢S$7wÀ‘Ü†ÌÕÒÙA¹~¯¯#è#å¤¼ßZÉ4ËIä?³1>ùwïMaaùÃˆ—Y9…ééÓVÒZgÒc×á àÇ½oö|¶_ıÚÎ*ØkT·L\Ûq¬¶zJtSõ€+ÚwG÷§ÀŠÿƒ?ê¾a™Š7^­¿^Ë­qëüFÜb¿ªxßRñ®ÍŠ½¼º’·O^İmpší‰‘[2§$”ÑùäS‹½vd‘Í2Ê„rÿáÄƒÁ{ÉhªÓ’7Û™¥—ÏsÊ3eñöÂ]‹}riômê’Qf&3,ù'ï³_,6c k'ˆ3úaÍÆ<}®Ø½|t·ßqgN‹Ì©’’3¾©æ’ª6Šs¥ÓD™B”o—å¦¦ÓÓéÙe‚Ø._N¿˜™Mg¦Ò³S	«BØş Q€°
-endstream
-endobj
-31 0 obj
-<< /Type /FontDescriptor /FontName /TACMEH+TeXGyreScholaMath-Regular /Flags 4 /FontBBox [ -882 -2019 3612 2539 ] /Ascent 796 /CapHeight 722 /Descent -204 /ItalicAngle 0 /StemV 93 /XHeight 466 /FontFile3 32 0 R >>
-endobj
-33 0 obj
-<< /Filter /FlateDecode /Length 380 >>        
-stream
-xÚRÁjƒ@½ïWLö`İhé!¡MÒÖCÚCéÕìN’İ•u=ø÷]c
-¥
-Ê>ç½™yO'7›"z’fQzÏa‹­é¬Àh±.6™,èjÔîQ¢«í6ÖˆÜ.òe®•»#r®EÕIY“ñ¨ôÅÏÛ~E»§ÅzõÑñµ·Xˆ“©ÊuéNÑ]UÚˆ{ùN¹ŠdÿT ÕàBãO´­2zÓ{Î9½Xi¹0µ7ß²øl âÑÒAiiÏ.`ï=±iR	wFá)jJÑ‹‹¾uXçú`Ø|1MV­³}ğqÇâ+Ñ*}$|eY"]ÓTèÎ²$håø^Ö±O&—TU®¿Ñx×7IÀÓÁ‚0Û¦hK}D6§Xxóº2†ZşªóAµ?ã1+âTZê“<N©OùCFh™¬””ò¥ÙĞ"hü4åÅ¥è¬%‹!ï°¾_\i¼|’Æ4^îğ-Ç_Î£öŠ öÅ
-endstream
-endobj
-16 0 obj
-<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /TACMEH+TeXGyreScholaMath-Regular /DescendantFonts [ 34 0 R ] /ToUnicode 33 0 R >>
-endobj
-34 0 obj
-<< /Type /Font /Subtype /CIDFontType0 /BaseFont /TACMEH+TeXGyreScholaMath-Regular /FontDescriptor 31 0 R /W 30 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
-endobj
-35 0 obj
-[ 732 [ 0 ] 742 [ 0 ] 1224 [ 569 ] 1395 [ 573 1002 ] 1405 [ 573 1002 ] 1754 [ 523 ] 3326 [ 555 518 414 556 424 577 503 ] 3334 [ 274 ] 3336 [ 431 ] 3338 [ 533 278 830 565 486 598 517 412 386 338 565 ] 3350 [ 504 ] 3352 [ 727 ] 3354 [ 559 510 493 ] ]
-endobj
-37 0 obj
-<< /Subtype /CIDFontType0C /Filter /FlateDecode /Length 3709 >>       
-stream
-xÚ…˜yXç¾ÇÂ;ALReª¡¶Z½nèÕÖŠVmQqGÁ\Ø!²'VEÂ¾o!l¢hTQJÑVíé‚âÒå¨÷Ø§ïàËSïÛszzûÜ?2Ofò¾¿ßw~Ûg&l–£#‹ÍfoòÙ±Ó{¶ïº]¾zù¦@dî6q˜V¨²ÿ¼‘~›–Ê#é),z*›&y,šr )íæ¸œÇéà9ş:e$g
-5Åù0•Åbëß°/MœÂŸÊ›Æ|àÎ{×~å,o:Ë‰qç–øÕğÏàÿíuá¼İí×İÖÈ£4j·À¨·±Sf[ Jì¦Q†ˆ#Uj7y¨›¯Dì¶.J­	×h5bû…Õ2q°F(ÛúúT¬v[%«Ôs˜-Áó>‘+bTáaÛBw÷sº/\0fîOÎ½Ur)³ßm•V#‘«ÔnF¡^®‘hƒæË#¿
-msŒµ¯ÿ§Nûm–«"e«BäAâu!â(Fa‹Årø›Ã#Ç `qØ=Şo¼W|ŸÍwàsø|ŒïÄwæçóø|¾€ÿ"ß…óßä»ò'ñE|‚?…Ãb3vXÓXÓ˜oÇY¬—ìdvû–Ã‡=ÙœÉœ8Î-ÇpÇË`1Æ¶`í\n²“Óıqï«w~ËYå|ü’ñı¼E¼>¾„ÿP0£-¿ YK—4Şá’İ±ú¬üråO%»¼õæÃkøKı-¾Ü<úÍo›¹tíá¨nä­Ãz´G˜Ï…l¸ø.|OôbQû¬k¶-İS¤©'ñEyIn…ÿ¢hÖ±ŠêªÊº{[%ËH4qB‘«HÉÅ_6İEa®ZªUDH‹4-%åõ¤`ô+ºÎõ½ä2Ê…6¼d!](D,8¬ÃÍ-ğ?xÉ?fûZkwl÷Q½Ë¨+¼7¹¸
-ÅfÍä©­î½;XìOUaY¥ÙåŸÕ\"ğ¦.[Í%HHÑÑ³¡O£|úÀ0„·ÓĞQmTKÃˆ¸Äã'ræ¤R¸¦Æ‚ô¼c•¢F£mr¦¯$?ÅÓ>@ƒ!2(¸©Åi¹eY	±Æ”èTMı|ƒ5Â…àF=t‚^·‰²LƒFPÎ˜k÷F±àPRJL¬(Òu~°u ©’$ÒVÅN¥8ô }Uˆ,ĞøaÈ‚|K”° Î‡Åh>Ğ¯—½Œã¼Œc–ÊÇ–ªo®’6Âù´É¾,‘~ØÒ®waìáMtûˆ¿Pb”¨×MóéB&(||6›¨
-ÌšÛPqå×Ë>c¢ò¢ùÌ`ewñ Çzíµ³pSìFét"À3»ì¿¨V´½Qº‘@ã—!®ªÄ®_«ÿ™h0ë¢öÁbœD@Ñ½³]D	|LĞ¶BW6Ü]9ğ.l–UJ¥RUHp•²¥¥¢ÎF.vl‹*—i‚$u²†Ææš@mîÛ0@Ol>¨w97÷á¹ôaZ&ÜáÖ°½ «ÕE–í Ğ[h""ÑzäÔá;x¹»áz•‰á²”˜d“Q$-66^m;ÕÛFê-À%‰ b“çZ2JS© ¨Êâ?Ö{“¸õı¨ı^ÄîÈ²ÇPÔÉg.ëªÛ¿ƒl6·ÑS» MS8Ğ!ì†]@;–p%7µ(íDqşA­9%úp2‰Àè] :×a¾BÀ5Ïá¸ò6]Z¶# Ê?€Š^,<[rúj/ÑŞ$]€ælCÎh|`TyN%@šoĞ“­.•ßÂ½?¬ü_Â7„bYˆ|±ugñ¯Ğ©Î€õf#…?–+EÚ¼¸rÒTTßúù®êè]Äc>Kg´{@ÖÃÏ»zORÍïácÄ»4Ã !ü]9²]ÈhŸò»öœÚ“Á”“JJÑ2‚U¨¥–}¢c“äqÛnw_nì9OÇpã!æ&Í"Y‰®õFÓõÓuöˆF›Ò¦I2òr3jR©º„ø¹Š}{Ö~²òGĞµN{~¥zO …c’–*W’4ß|N¯‘uìêïM8ÂİÁ¾Æ½„Whİs*—² g|Stg}N Z€8hšïQ;ï¬yx•Dyp‚ğiÑè|›¨ÍÑKæ¸oAà %8„´õô«“0¢†ıŠå½”±½&ï°õ£“Áºx%Z²ClŞB(M:¹¤"´N=5CyÔeøø;vÌÁrn‚ï-İDyšZu”Ò¥gÇT%E–šSáµ›íİ£¤4Aæíf'Á
-¤µÑğLL­Ë¡»)ÃËîÁuÃñk´‰ñŠD^›©Îğ'k‰ç;+ÚÅZ*‘‹W™öÆø‰d…1…ñd2oŞ¨ß*Ş ÚÒ¹¾}9DâµĞÕí]<Fâ×‡³ Ëù"›é¤¶’LçŞO x3âæ	ı·ÍzæbgC©µ”¼a‚îq"¼NE¯~(ÙèµM{vàç¶Ï._)ßíÅ„şÊ~zbã×íÒy?åW¦Êä´‚©ü9r^iU±q†S*¹ qŞÉZƒHRÓÚ×ÒuÎfOxL¬<<œ0'ËÍË¨fÆØ“§tœĞ]*•juá’ÒèÚÚŠâÆÕL¤µğÿYì¬W¬­U¡¯X×v[ ‹¥ç„[âÃĞº]!Õ|¹Y¥WÚÑ#* èIöŞúO=p"4ëueR©qTcµ–1ö&ô‡êèÍp¿Íå$·Ã¬×şGwæTdĞÄ¥RI<9şÂdÜx¥àí7³vw:eSº< ÓjáDdB‰ÕD­‚+!çïÖÚºêş´Éé E`)*P^’¤3%Ä›ÌrGoƒ$L€.2a…6vç0çßç§V5ÄÅ¦Ä¦’óGCÀ§‰í_Ã©üs8ğèï4
-it¡g}‡ßã2ú=×zH\ú°	ráÚkcÑTR¸uÚ'%¿æHÇÍ1Ø;3V-•¼ÆWº_ÒKcøÊ´ãËdÛıÎ‡hòŠ †^½àHÆñÖQcœm7ÂŞGo/³CßsFşkEi¹åÇFû¤ğÀ±N¸‚óOá‚¾1A±IšÃ)”9(+ÊÍI`ú×­ÀÇÃ1öé]8ÆU•4œ0%1ÂÒìÂB.ÿ…«ïÿÎUÜ×.‰&õ'²¾–°tL‚¬xƒVèuëOhÍµ£õŸ!ù­ólô’vå#˜ñˆCÀóB8şÃëï3óÅÍBóg]Ä ú¿¡#¤à2Ò=[ˆ>^X3×úoÁµß<ºZ¾a)(BŠ*¸şMt”Yô.tô|V#…0³
-xèªÊòÒ
-Ó²©rèÌÅ-¦zº3F]¡7tÚÔµ|g |»?•„áŸçİÑ~½c*{™[*OĞ<œx8‘D8S£p']-Ä‡»«[/ôµçusçš™nò‹lBŠjèÕG¿eçâÉaü}¢?†?	3P,	/Ûn‡"&£õ3›?º—õäÈO7&z¢+ zbÕÀ;®ÀV—J¥Ñ»…³‡Î‡\­ğ[Ml‰n¼ßıºşx¾E²‰“G‰aÿƒï˜,ÖÓ<.†9ÂOÌ‰êŒøè˜$er¹
-=ßcµĞà5­ùaÄgŞ“ZOTVnQExlAs½"ÓÛãèj]ß|ômb9şœĞja4¦T0Ê4‡ï Ü÷m_»é¬ädÕÖ(Ù.Ú¡Û»Vyæ~©Â”Lï–båU KÌkÖ]' hé»ÒÖp†ÚvWc›¨¦ÄÖÉ ²Ûê÷Q:UÎ´i"Ó¦ ÅåÂğBX€ß€ÌUC‰áßï^¤Ro&ë&]ÆÖ¢¯Á¡„¤HƒHV¤m»×v»¥ÆŞPû$:caJÉ>QiM¥ºax1E>èÙÿÑÏ¤â‹¡Øw¯jƒPXœ_ŞĞ@äe~jK615iñAzlJ”*E¡I÷5œ:ĞLfa¸Ÿa½1xh¿5¡ª§édïiRg©¡;Ãb“²[U§’ƒğX‚E"f X¦kĞ8´l¡9XP^œiÀUWaÓÁG
-D5ÆÏıkBU¤`å^ZØÈ<úİüV^ÀïÀ=Ì¤GïÅ97µ6=¿ğ˜É ?¨N‰'õ+@|`üÑG5^Ï ×SçxûMÙù}:ƒQAîïQ¯ÍÛŠf£©›§;Ûs/dÙHüÎYèpæ˜—Oõuc~üú ñn£IZ"Fb°Ä(Fü%„ÿÛ(üû6¦nşC/5ØáøÃÆ8‘OÅ¾>¸êşkeEQæÇ(ã…¨+®5f¶3#Şv=“”»ËÁîGÉz—2:?ûa‡03w˜.FŸVWO62Å"¹©–ô|²ïH¢êƒj÷IøÆO¦Ÿ˜ÃÉ>Ç ÎÕj£V¯²¨O]µí¬§z_€£XÅ€g­Ï+Ÿ!úÛúO×Pº|¦ˆÖ+	™¾é±œÒõ÷üªòòÊrËò‰ª¢²òjs¾Ø;ØÏ_A	Ö Å%¸ZGokÎdÆÇú+„Â»Bó×ëµÍNŒ¬iñ Š›Z’–×“á·/“ìF¿€ ¹ÑÚøbBj“·}ÕÃ¼«á©ÎÁËCtÂïÔ_ÌioRZC£Œ1:R|yDTP«CHÄE›@"và,N„÷n°si	‡^W
-¥ØÚXOÍKÇàš}´
-Œ:`ah¨Ã¾(>QØKÀR0ôbÔ!9
-Ğ0ıÏ€	4Á›Á¼Ì³fÙ_ì=]Œ:<¿¢øVn^Áñ\[>†Ìî1só·ãkrx¼o³xü‘7é¯„ÿ §¥¹
-endstream
-endobj
-36 0 obj
-<< /Type /FontDescriptor /FontName /BMSVWP+STIXTwoMath-Regular /Flags 4 /FontBBox [ -978 -1641 3072 2627 ] /Ascent 762 /CapHeight 657 /Descent -238 /ItalicAngle 0 /StemV 82 /XHeight 473 /FontFile3 37 0 R >>
-endobj
-38 0 obj
-<< /Filter /FlateDecode /Length 543 >>        
-stream
-xÚ…”Ánâ0†ïy
-ï‰Rì[¡H)ZÔ n¯!h$p"'ÑŠ·_ÛCjvµİEñ™Ì?gôm—û+QÀ)y…¶îU	~¼-o4Jê²¿€ìˆá´}";U—9tdgI&«îAg²<÷†¨¿­áTIbCÆ{x÷×ÛüíÇÎÏ÷Ùûşg½-ºÿNı¹P>5‰ûª;ë„ÿÆ@¾ ¶Ø¨¶ªåa”RR)âúb¬¶ŞäÖ.™•êÖ39ˆ¨Êî¦ìoyÑ33Éùµíà’Écí-—d¢Ÿ\µºÚŞ¼É‹ *y"ã¯ÛÔayß4g0-êEpÔÕõ¼‹‰™C&ôiÕ]ÿ1—¶¿6@«¶]ÖÚ¦(AòŞR‚Fd¹ÑŸÈ)ş8§˜u8¢ÔÃß0ÊBéBAëB4¤AdTÊQ…FMã…V£©Q³yhÎ‚˜£šş¦«t1«Ò;Å“•©„62Ş˜³dÎ’xš"Ù8²1$±æÌ(æC8 		‘L™"áp$GæHV,¬ù$vd…$qdÄ9ÅHœÓYb	»sš"¹sŠÓ`Î)Çi0ç”ã4˜sÊqÌ9å8æœrœsNù‰sÊq>Ì9åówÉîY;s>½ì•Ò[n/›İc³Á•„ÏûØÔÉ²_{‘‡·‹Q/ï\%Yß
-endstream
-endobj
-15 0 obj
-<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /BMSVWP+STIXTwoMath-Regular /DescendantFonts [ 39 0 R ] /ToUnicode 38 0 R >>
-endobj
-39 0 obj
-<< /Type /Font /Subtype /CIDFontType0 /BaseFont /BMSVWP+STIXTwoMath-Regular /FontDescriptor 36 0 R /W 35 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
-endobj
-40 0 obj
-[ 255 [ 480 522 ] 258 [ 539 464 ] 262 [ 577 285 ] 267 [ 283 ] 269 [ 576 514 ] 273 [ 380 ] 275 [ 315 ] 277 [ 481 749 ] 1852 [ 315 ] ]
-endobj
-42 0 obj
-<< /Subtype /CIDFontType0C /Filter /FlateDecode /Length 1821 >>       
-stream
-xÚu•kX×ÇgXfOP\ãC|˜Ù 1ÚD BÈ)•‹1Ö¢-YwØ]öÆâ…€ÀB@bS\.»(°Èä^Ğ$`¼6Bl£}´©fmk¦I“hÒ¾#‡hgiÒ§ıĞóá<sŞyßóÿıÿ_Ixz$I²I›·'%&½¿31O›¨´×lSªLÙiz÷ïXáY! Ò›üÁŸ8oBà=…$Ò[2îíù8nÎËZ2ÛMùY±Ø½÷-ñC‘Şâ'jô^á®´{?G<åAK(ˆRâññˆxLJÿ¿rğÚ à@w]£ÕŠ4M†bş(ö)ÒôJ…QŸ–¡ÌIÓgÚ}ŠDµR¯13&£Ò]Ø˜­ÜkÔgîMËı÷Q«ÉÜkPlÔ¨25J¥Şğ¢8²wm´V—¯ÏT©ŠàÀÀ 5ÁÁAó×ı—øV½v¿8¯ˆ2ÕZ½A¡6u†pU¦QmJ_»W›#êêLéânÙçîÿ§Ûâ{CÿSŒÊĞ¦+ã3”8Ÿ×’ =H	)%¹\DÊÈ%$M2¤Z/c×bb±;Àjò2ßc¡G†ÇuÉ
-ÉÏ%7=YÏBÏw© êumGĞ405.·ï„„77|Ş(rèú§LĞ³:aG2³[æ>y¼Ï²Œ`şnzÎ,…ZdHù÷ıfİØê•1ÛÂwŸ4vsô#]KS]O«0íñíjs^R¯çğZ,Ù‡}|s=Ûß„c˜¾¦–î.s»zŸI—µÿ¤q—½\r>éŠ°¼K>p/öÏäzå=A%=8Ù×>|–?&¥õ)oÛŒ£,=ŞÒôNÈA:|¸ÈÂšTó‡¾I“˜ŒÛ°¿ùPc»ÃŞuÅÖtñJçşu\
-¢‡Ctxc.^æûêHò8Xñ%£ÍTÜÏ¦jºŞûønÛ´“—¥>¿…u­•yçóä·]pxšvÿ£$3jŠşR‹*k«oÿ‚›»Œ
-Z.éşÄÿõg>±3«âv¤¦©ùr¸,Å=[NŒö³;ô–¨‚_LÊiqZx™¡øF²ÙÙ&¬úA¥ç/PâŠ¸M×Bj1C×nøp| wÀmwÇ†Dï(tJé—
-a©“j3£}¶	^ø\‡°\äqŠ@UÇy$…ÃÏ”!GNvu‹åËWâ0^¼/½´
-(îì&tÏà@~ñ7w?èÈH¯æq2¨u»YÙª¢›°§†ä½·#î€ş3ú[¨,b¾sõVo©§Ò²²UálØO¦ÀïM>’‚ÂıGL²ØkMÀ!÷×7O—Á‡Ìô¯Æ?b¯÷ÄF½ÅËê+;¿Él~å‚líÎùt Í…'ÏñŒ>±<Ä(iqëf®.è¤Ø÷ûëªmÍV57w%äïà4×b¬	ìhìİ¾†AöNML£PrY^§A2ÜUÙ.ìÊû;Pò{ }ŞEß›O;Š³Ú/ñÂ’\10-¥A•5Uõö²Tw£måã8-¢¿J¸Èœnníê4µªÕ¦Üœlgn//Ã=¢ïNÎ#¿rI Nä¶Ö‹—=Ğ#¼LMéP¥½ªáTÃ›éÜ\J(;ïÆ¨)ü'Ëóä[‰'Oú
-	dºè)aÂSÒp‡t(õj Gÿ~sŠ*y;_&¥‡Ş¡è£Ó7¦­ª¡Í^¬âp/J(? bB~;Š.‡é)°¡¶Îş¾÷Ù±³ìÍãxwËOE'²]ECBÈ Ù{êg$PSÄ€ÏÌ=X«B§±?fƒWãçpèİ PğÇ†˜Š]×àÇ¾°t|òÖ_Ç^Æ‹ñK)Éaœ¿ZÙÀã•[¯µvŠ>î„»è
-èío°Ø®ò´,h¨¥{ÄÉÒk3{ØæfÇ@¯¥9#9Gµ“/—ÒG"ºÂ ¥íøéJëÎ¼±¯2_4ÓJŞ˜	-º,,!gÄdÏ|ÊhõYlÆ‘–ë<œjS GªĞœİ»5OÏã«(¨Cum²©óıANVú0Ì,$uÈ@…UB5†h¼ Ğj8QÊĞ,,¥&õƒlÖ z°¯Éj:XúF…•ÁfóªTj¹
-ª´¾¬¶Î×Qw|ëÀ*úumák­<¬[DÉ`Ké?Cæe@Öï@	Da/ğ¢	}¥¬×°ÏkD‰gûO–ZX‹ë±1ïuQ#ÿR8h)«½¬¾Ö×Q{|@ÔPjĞ¨½xS_“7™_§JÄ®uK•Ú­5ó$CbW–»käG"É)xÁ(uLú<J‰ÁfŠ“œ a¦°i’¹ßŞ§Ö{¥ø€ËİéüıÑ˜K~V—Ö„½N)Xm8Î†oœ@Ãf
-W˜—u2
-endstream
-endobj
-41 0 obj
-<< /Type /FontDescriptor /FontName /VLUVTV+STIXTwoText-Regular /Flags 4 /FontBBox [ -948 -373 1297 1047 ] /Ascent 762 /CapHeight 657 /Descent -238 /ItalicAngle 0 /StemV 82 /XHeight 473 /FontFile3 42 0 R >>
-endobj
-43 0 obj
-<< /Filter /FlateDecode /Length 432 >>        
-stream
-xÚ…’]kÛ0†ïı+Î.é…kËiã­Ãê$`ØÚR{¡·t’	bÉÈ2[şı$¸…²n<Ö{¾^iöé©¿
-½ÇxqÂ3z4ãò{ÛG³ÙZó±CeŠiu¸ƒ'£yæeµ®”´WN\)~Nª¿‹îñ(Õ›Ä×yƒ/ñîÛ]³‹ë¦zi~éÛøã©5qêiO.à¿ZpøX !ÙÍ µºv¦©û±Q¢Ôuˆ’K»L¤æÒ3ìıË@Hn/¼sùàú<Xì*uĞÑj‰«,kÎ¡÷«(y4TG˜Ü¦“ÕcßŸĞ·iT ğà²;¿Ú!ñ>TÂ­J{ş‡!oaÍ¹GÈ3j›kCßr4­:b´rV¤¬¶î*"TâİzJQû¡LŸìfZâ?[ã¹à^KV8b!­£Œ(#º!Zİ-‰>åD_ˆî‰J¢5Ñ†hC´ÄX œê1ªS=vK´$¢zyî)_”²uAÓ…i¼~g_­ç£1Î÷°ıÁYï©TøzBzİû¨p‡£5wOÛèi,
-^
-endstream
-endobj
-14 0 obj
-<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /VLUVTV+STIXTwoText-Regular /DescendantFonts [ 44 0 R ] /ToUnicode 43 0 R >>
-endobj
-44 0 obj
-<< /Type /Font /Subtype /CIDFontType0 /BaseFont /VLUVTV+STIXTwoText-Regular /FontDescriptor 41 0 R /W 40 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
-endobj
-45 0 obj
-[ 22 [ 573.7 ] ]
-endobj
-47 0 obj
-<< /Filter /FlateDecode /Length 6136 >>       
-stream
-xÚ¥Y	xÕÙşÎ™37wÎ\ Á À™Â’!@Â"P¶$$$&a­Vê
-Qq«­Š-Z-ù-.—ü]Üjiİwûk[«X”!,"â‚Iş÷Üs¥hëóôş›çïÌ™™3ç|Ëû}gBŒˆ´‰*œ3/wä}oíÚ‰WŠªU•wn›öË"Jí]µ¶ÙÍü¡øÑÀB\Ÿ¾¬aùªòpÿÀÍ¸ç©åu–µıé¥·ˆ‚E85áÊjö\ë""g:îÏ¯AGâ6yÎ7á|pÍªæõş—©çà|d]}U¥qğãüœç­ª\ßÀg+ˆ\ô‘»ºrUø—«î›„æ0"1º¡1Ü±6?CUà}ÃÉ­ü)2‰Ì»ÍQèq´4şLË8PĞ¿Hv—w%š:Ÿ6gÎ4r‰º»}ÔE´,ánS¶]]f'.4„@ÉÁ¤ôFVÎXìÜ IdÏ&aa6	47öR‹zĞé^zˆ¦?Ğóô cÔÅz±$–Î†²<6•³åì‡ì¶=Ï¢¬›÷ãé|oækøüş$ÊXg\i´7·÷ãqãmãC‘.rE±˜#–Šz±AÜ ¶‹Å.ñ„x]üM|,>3™™h2s<=è³ æÏN^¼6xwp{ğ“`·ÓÇä;³œK2g¡³Ø¹Âùµó”ó¬óªó–ó³×ép9'¯.×r“İ>îPw¼;Õá.qËİËÜ­î=îN÷iwuºÇ=æÏ³¼s¼~^š7ÄËôr¼‘Ş8o–·Å»Õ»=ÄC¾P¯PïĞ€P0”šª…§¥¿<ôXæœÌò¬+s&ïøÙí­[[on}¸uWk÷ƒ9;Ëw†òSÏœöuewuwwvwÇÌ§uêB§÷A§ĞnzŞ¤è8u³DÖ›aÃØ6ŸU°v%û	»—½ÀÚ9ñ>„Ÿ®åwñŸñ§øïÆ5ĞéVãvã~c—ñ„ñã¸"òÄTQ"ªDƒØ(n÷Š_‰6ñ¤xC¼#‰S&7“Ìà€È ôu‡ó‚‚…ÁMÁë‚Û‚÷O8ä¤8®3İ)‰ë´ÜÙäüÖù½ó¼óšóWç}ççˆsÂ9åtÂ©$tÚ×ÍuÏw§¹@§n³{‹{¯ûû^\§š1öõ‚^º—qF§sÎÒiÒY:­éô@æìÌYÙì(„N	:½¥5Òú9tš·³ú(ƒN©Ë…N¿†Ná¬İ_uŞ½ß?¹û~÷ŸˆüÃÁ ¼ÙÉ@ßî~¸;Ù:ŞÈ³wıÆíú5QW[ÂÖ®]Ê<¾Z_’][€+€ Ğ…gºÎğ\"Ø¼¸•¨ó3àøÁ†¹DG–•=”~úHÙş>DÔq²ãDÇñ£‡;u|Üq°ã@Ç~ôïŞmwüµ½´ãÏo¶Ïl¿ }æ¡hûDí;®oßÑØÙ>¼ïjOkOhgÑÎè©èGÑÑıÑhôİè;Ñÿ!Š¾}%úbtwôÑè#ÑÖèè˜2£YÑÌèà¨í³ïË}ûöíı0´÷ò÷+ß5şşå;_şí®ò{Ê·•O)/(³äÓÅÏ-|váîşé‰áÀp+Ñ?1aŠæ†oÿ“a^¬ØzŞŒ]}7v<×øÍ<çÉÇÄd!“r<Ïw€„zù@) m7wO{€ãúiÒòÛsùîù™~Œ)|ÏµÄïœ¤ïù}ßÿ¿Ÿÿcÿ!ÿa‡ÿˆÿ(]åßïÿÒÿ•ÿ´ÿk§¿‹®¦küİYÌâ–A×Òu–°LËg%X~Ë¢ëi³•lõ±úZı¬«?m¡k€•j´YAºÁßN7ÒMş´ÕšeÍ¶æX%ÖEÖ\ºÙšgÍ·.¶.±.µJ­2kİB·Z­EÖbk‰UnUX•tİn-µª¬j+l-³–Óék­µÎÚhıÀºÜºÂÿ‘ÿ Ícõ(EhµÑÛ†ÜHïÑÛ³Cvš=ØN·‡ØCíaô>ıCÎ°‡Ûv¦egÓ^úÀÎ±sıÇ,iİaıÄú©u§Õl­±Ö[èCÚgO·gP”Úi?²ÉGtĞ.c³Øl{ÍøpÁ3y–½góëk°>µNò<>Â:m}muò‘V—ÕÍGI’ŒŸ+9-/…4ùyÒÇÇğ±2Aú¥%¥´e@ö=ù™(“x‘ìÅ‹ùT>Oç3ø|¦ìÍ/ä³ä92Yö‘}e?>›Ïá%ü"{‘½˜—ó
-{‰]nWğJ¾Ô®´—ÚUv5¯âÕ<Ì—ñårLá5²?¯•dª(ñ|%¯“,‘._%=¾Z†d¯—ƒy¿Œ7ÊtäMrˆ*‡Éá2CfÊ,•#e¶Ìá›øøUüj™Ë¯á×òëd¿oæ[x‹Áo#å(~£<—ß$GË‹d>¿SÇï’cäXY Çñ»ù6~/çÊó‘~Î·Ë#rœÏæğGyD^,/‘¥òRÙÁŸáÏòçøóüyTã/ò—øËüY&ğWùküuş†<.?‘å"•ír±\"OÈOåaåíòcyH–Ë
-YÉ÷óü#~ÌñÃ¼Cî—ø~”“ur¥\%WËzÙ /ãÇù'²Q6Éf¹F®•ëäz¹A~$Êëåf~‚ÊOòÏäIù?%·ÈS†ÏH0ü†eHÃ6F;l/³—Û5¨†ˆ¡b˜œ%g‹á"Ã¾Ù¾EdŠ,‘-rd‘,–{äûòr¯ü@~(Î£E¾8OŒcE'Æ‹óÅ„À/÷E¡˜x(ğpà‘À£×D£h’Så4Ñ,ÖˆµbXd£øœ.Ï‹äçâEñ’xY¼"^¯‰×å>qŠ%±£Ã’Æ7òQ‚I>ÔX~Ô’lÔ°=¨'õ¢DJ¢Şt%SêKı(…úÓ J¥4ˆ‚ä jğ(Di¨ØÒi¥a4œ2(“²(›r(—òh¤Qt.¦|:ÆĞX* q4Î§	4‘
-iM¦)TDÅ4•¦ÑtšAĞLºfÑlšC%tê¾y4Ÿ.¦KèR*¥2Z@i-¦%TNTIK©
-Œ&ó÷Ÿ “u·Lp–|•`Y–mõ°VO«—•d%Z½­sÀ_}Á`ı¬ş`°T°¸K¬ F
-Ó2Z!êh=]GT'NÒZZiN¦«ès"5™SÌ"ª¡uf9ŞÇ‹ÍBZE—Ã
-×Sı•w½94'ñ´š®ş}àÙ§b2±D”‹eb9ªË*ÚbNµk«¸U¬œ‘)VÒQ-jD#xùS°óIÿ'şSşÏı_ø?SÌŒ~¥8ÙßM[Ù:v]Æ¶°vmd[Ùl=,†_¯gãùqÎÙÉ2^¬+å=âP>‚Ú•µòB-ƒä}ÀC v`ßüQÈG€? Ànà9•W Ÿã*ààô«üù¦†µıø+Ú_BşP;”«¿ï£_U¦ÿ P“ ©-›ÉRó<ÇõÀGÀ1ôÛÇãÀî‰>N¡5}| ~"õ¾Nô«¬ÚÇ ŞÇz¡ßLÔ@&#–¤œF¬7®ë46Dƒn‚ªœGµË‹ídˆĞ U—ŒP«Y³ ÇhĞÍcu-cÍƒÄNŒMFÿ-S€è_¯sf¢ÿ6È‹Ğ¿TíŠ <ï"6(G?j¦vo•h¯…T÷…ÑŞ¹@=è‡Î˜º¶¶ †}»ãü2äYb?~¦íÍ~®aÃgÔ>NAª1á#LÙ+ƒ­üÂ†˜Ò²³Úí*½A?ö†ì(pLÛ˜×X'ƒ½êVu2ƒİØçÚövc°™ê}¥áÇóì´†öcˆûYwÄ]µğ ?úU{óT´×ëšÂB¢ç°¹zšÃÿ9ì‹:€8lË±×µ¡{~®®	¾Í×hØ¨9ôËQ#²È»4ì2È»mè‡­ù=öHè’?©cûê¤ÿ÷Åuè_¹QÃFÌ? `WjØğã 1Á³!¯Ó° ?ãzºß@-è?¯eú5à‹üÈ‚ìø‡®èÎ€½­ÓñºàğYk2°qblÓPz1°&ëQÉÇø¹†Ò“±]CÂÆ½|4ä}şcÜ¯ÁU½ı ğKôÃgŒqb´jHä¢1cü
-ˆ ?»#ãqô@>¡!Uÿ¤Ÿ¯ß¡_‰x6ÖàˆMã1o€»ø0/†|AC"Ö—Ğ˜3^^Gÿ9à3;>ò-àmØ{	ã/€ò©¹z¿`À&1i(œÄ=K • {ø4àãüÙVm¥wø0¯ÒT¬ á'‚iÈ”øŞàˆ]ahHø·¼Ü­¾øHø» Çğ"_ĞğuÑCC–Ä÷(€„ï‹^|•ŞŸ(HÄ¬HÒàğO½è@† “5x=d‰=®è¨ØC^ı5dºŞÉ(HÄœHÕàMzï#0DÌ‰4`°7‘®!áçB]ËÕ1'ò4$8A€_…ŠÏMê–†Ä}¾%à/±"ÆjHõ|E`ßÌ'b‚†TcLÔàÈ|,ÀÅş/&kpÄ˜¢!ñ>Q¤ÁÁÿ¢XCª÷OT|#ÎD‰†_‹8¤š×\Åb†„Ï‹ùŠGÄÅ 8Fbœ"j^‹4äxÈÅR·DCbm>'*5ßˆ¥ü+”oÁV1)”m.C¿z# x</”~ÁER½½†Ä<Äy)$øI@Oñ'nÔJ·¢ÿHpŒ ¿Hğ½ ÇpG<	µf¬Oª5©õ(N|ü!o n„šŸŠwÔ
-ñ.v¢ë¨Aæ(ÁÏµ‡xm¥ğÀ\$âL´àş.ä“ò0$x@€¸z TìƒÏb_ü	m¥35oÄ9GŞ¯ ˜—Tí× Ä>W:DìÔ+Réõ|$ş®!ë ßÕ+!‘ÿò˜T1…F(~PkD]%ğ~©t /Hğ½ 7ğ‚DÈ}¹O*_OÔ-\­\,Àò¤.Õ83™†Dc‚'LÄ/ÇXf’†T÷ ~MÄ£^5‹&ò úÀDLš¹ú;È ès€âJp‚J“ƒgáÚ äÙAİ:&q;Õ»ã‚xWõş	¢ş	"_	 ˆ¼ÌD?êœ` âçAÄa~jÃW‚ˆ¿ âN¢¾	"î‚*ÇÁ‚ˆç rœT×‘ß‚ğz"ÿ·k.ÂO‚àX‰<„^‚Ÿ¢˜B/A¥·=Ğ[°[s¨p”ëøÉÁâH`Öé ~‰úËºƒ5§b×¿kN™F ã;5xÆY¬@Ü;ğ!ç
-´§é/òj¢ j.ç· ü/€¹;ğAçš‡øƒz=ğHäş@.tàoÎšÄ€ƒ€ï;¨—øS öqP?9{579ğ+ñPï:Ç49Ğ‰ƒµà×lïÀ~õø‘£|hº.ù]•'P‡¸Ğ…›¬¹Çí£!áƒ.øÜ…}êJ7W#€9º°£;Bó‡®tQHèÁ…®İqè‡»ã5¤zlî*~¼:rQ÷W®z·â/ØÙ-×`à‚£\p”€Ş\5ÖVÍ.êcõ‡x>àB{÷~	ŸwQW¸Š;À9îN‰˜s¡G÷iÇ.téîÑ±èF5êV÷ †@ì»Ç5Äı¯OåcÄ¦gh¨ö€OÇ±giØÃ;GCÀ&tè¡.àCÁã©<‡q½t÷Şì'ÉCìx™š¼ÅŞHÅŞ8ÚÁ›¥!`cùÇÛ¢ùÂ»UÃDñn×01~ˆk˜ğÃO»V
-õÒ01nœR|û…h`K¡ vÄÊÔÀN˜BÓ5LäÎP…öÎÂ¾1¤8¹spš†	ÿLYÃ„O…~‡ÂoMøE&êªL¬ÁD¾ÌDİœ	0‘§²0^øÁDfÃçs0¶‰œ´ïŞ¿0aËÛ5|XÊGj…Ïø°–Ö›5¨ÛZá?­È#>¼»±ÔŠÜáƒ½[¡ëVp…v|0GÃNÙ	?ß‰9øK;±–XKj”£ğ…£ĞalvêğÌA§¡Ïp`¬õK‚úFß­‘ vÃNİ°OÂDl}V È	Ğe`—ñ v¥³©{Ç‡°§~›.'Œ@É]”Œ}…kxØbP2òm¢¡d_
-õa;(É·›zúöêËE(kfÄ*)İÅØÖ²ÇX÷µ‘¢A»,£|Iv„e¹nqmQ„UdGxV„exÙ#Ë1Ò§Î-M+s[Ü–Õ-îT·¦²:"ÒcÂ-e¹n„æ•Öâ8¿Ô‹–¥i†ËÊ
-²#B#bÃ´”a€ñVÄÀóÙ3k¦1†””^TÙT”),*Kõ<·8²»¤4²»(Õ++ËøÎÌòŠÚ=Û„¬ˆ/#;â×#Ì+¦F¨¬¥EŸ¥y‘M--©-XÁ7ç»¿}ş£ïvİ?Æ6•Ä®lJóRUGš—æa†eEÙ+kæ¼ÒbLÑÃeV$Tœ±³"i¬]CÙf·e^éã…(Ş«óÓæù¥SÈ8ØP–IÃàîæÇéLŸZe¬HáæÇ\ZPº+ŠR§4ã`QY6:¼ÌÛä#‹Ô‹J`ÒâÒÏMİÅS&”ÅN'˜PÖ†]ARï±m¦	Zøc""÷´tGİÁ#=÷äğ¼$ÏHb,‰Í<cXçxşl~×Ñ®'X ]]Œwvš‘¯0:¯àëN'ñõKø’Í|‰ş¦¤vhÙ†è¹™˜ù¯sCí·ŠÜ]‹ÈÌRïÔ“emÜP½±Y˜£ÓG^×Ş®V¾ĞV~çÌ7«úJDå½ÆFıı±OYÏOŠıçíÃú}ÑÖù—Äş&Ükùg´úGq]v:‰'¾h;½-qã¿|åØW«zô?şµÆsÿWÅŞÚ> ¾t	%ÄçĞS}ŸÀ®Ú;À&œ™[.}óı–ájn¼ÍáI£ãmƒlo‹³Ú&CEñ¶ı—ÆÛ	HíKãmW®Š·mlÙ7ÇÛ<{[¼İƒrè—gæ™Ao©ÿÄ«$-¡Îx›Q€-Œ·9ùÙòxÛ ¾¬>ŞgµMÂ®·}èßo'P!ûc¼ïæ,Ş¶Áo=âí á^¼İƒñiñvOšÏïŸRß°¡±vyM³;2oÄwZ}ıòº°;cuU;©®Î«.5¹sÃMáÆµáêœ¹õKë›ë'××Uë–«š—„›jëW»#sFŒÊ§Ê×W³Ïº±¶É­t›+«Ã«*WºõËâïÊÑ"~RU¿jJMcmSsmåjO†››êW_X[^İ®v×¬®7ºÍ5awRCeDüJ–ûÏ9äÕ477äæ®[·.§2vWN}ãòÜ:}gSî…3¦ÏWœ;i
-ÕSm Fª¥åTCÍ0õÈØ‡öhMÃÕzô×Qg3h5UÁ´.MBOäÜ3O5ÅÎÂaŒµÇjÜ9O/šÉ@zÏîsÏô^{®	ãÕã-j9˜Á(Ê§qgf”ÿ­g³¿gÄÚØ\*fŒX‰ëaZÙH+ÑWOË¾³®œo}ûJÚ« £š˜~š0b-FZ[«z§š³Z»šó…¸V…Õ1Tã5hWÇîQs©‰ép´]‰ûôÙ·ŸÉBÏ¿ÓC^LÃÍx² áœKëb9çŸcåàşFÌ;3?{Ì&ô\ËM¡b”ópÌ‰¼ÈŒP&µ1›gÒïØˆaNßäÏü/*Èr{«–q¦OÜºnQAšj™k+fæR-_º“’d«VÂäüŒ`ì	An(¥—jYùYñ–\8³ £¿jÙ§_»·±-jØ	x»NÈmy=YS[$‡’DÖÜ¶IÙš¶‰Éè+W‡+Õ!7æ¨C½:Ü¬ªC·:8Éú‰5ê‰5ê‰5m½RğX}Š:U­cêà¤àæru¸YŞP‡nu˜¨îË P‡\‡‰8ü/«í÷
-endstream
-endobj
-46 0 obj
-<< /Type /FontDescriptor /FontName /LXLRVZ+Roboto-Bold /Flags 4 /FontBBox [ 0 -213 1000 750 ] /Ascent 750 /CapHeight 711 /Descent -213 /ItalicAngle 0 /StemV 150 /XHeight 528 /FontFile2 47 0 R >>
-endobj
-48 0 obj
-<< /Filter /FlateDecode /Length 355 >>        
-stream
-xÚu’ÁŠÂ0†ïyŠÙƒ ‡ÚTa"…UW(¸*VDöÖ&S7Ğ&%M}ûM¢UXİBJ'ÿ?Óo&¼íÓàƒ«ƒé˜ÂÕj†Áò+«É`°R¬­Pš-"GŞ«ÍöZ±—É*‘ÂŒ¬9‘¬l9ö®×¦^„|XÜ`xÄs°9o§ïà reT°P%¨K8
-SZã¿°<à“O¨¡ä¢1¥Ôn|J¾T•k©!áÂ´’ëä”Dà‚™[äß¬²³qÉi×¬Y(2ŸCx°bctçYG$ÜiZÈŸñ¬œ¶u]¢CJâ8¶ªÇ6«B×oÂ­*L÷¢ñ‡ıØÕGWL¦86uÆPgò‚dn[§1Ì×ö‰	JşG§×¬¼¸†ÖĞF½Â~2íêDï¶¥Ó(¾Úü¾«èFrgg­ÖÜÏÍ#:8!ñ>ÚZÕ.Ë/&ı…pÑnM~sØ×m
-endstream
-endobj
-12 0 obj
-<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /LXLRVZ+Roboto-Bold /DescendantFonts [ 49 0 R ] /ToUnicode 48 0 R >>
-endobj
-49 0 obj
-<< /Type /Font /Subtype /CIDFontType2 /CIDToGIDMap /Identity /BaseFont /LXLRVZ+Roboto-Bold /FontDescriptor 46 0 R /W 45 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
-endobj
-50 0 obj
-[ 11 [ 600.1 ] 41 [ 600.1 ] 48 [ 600.1 ] 54 [ 600.1 600.1 600.1 ] 58 [ 600.1 600.1 600.1 ] 97 [ 600.1 ] 103 [ 600.1 ] ]
-endobj
-52 0 obj
-<< /Filter /FlateDecode /Length 3275 >>       
-stream
-xÚ­W	xTÕ>ç7“}L&@ˆ“73ÌDHÈ6$$CVd… û¦d›$hÂ¤!@l¡¶Š*‚-"
-® KQ–*VpAQA H&€X[¥(‹¨™™73À„Æ~ıÚŞûwÿ»¼sÏïy÷ A°äŠqÉi+_{«•[6²TÖ4U5oX}`; † TÖ7Î¯³Íı»¤õ¶ªZL_ÁÜ´r½˜ëıšZÛBÆ‹®óx8Øh¯©²nÌjËWêMUmÍpZÂ£¸.Ïªj²-{øÓ‰\Ìú¯4·ØšÔË–D%r HÒ~|T ªß©,lUœ·¤P'À“zywÈÓ­J½¨¢¢ò!Ôí¬vfû«E‚øt³—¬ªvÏ8e%5ÄÅOô”R@9—æRÃ0…dÈbMS¡î‚{p>ŠÏ`;G·è'†ˆ)b—xW¼/>‰¨…“‘î§eô(=Cí´Ş§è ‘LR²4Bªª%»4Oúµô‘Ô!uJ—T¨ŠPEêP—§[ªûVwA÷CÜ(9XÖÊ:Ù ›åÙ"[ål¹Pn•Éëåäz•>R­7èÍú$ıíaPÂ7´†ƒÎ`(6Tl¦}—ßv¹İN·›¹„2×°BLƒ*X k™ÃZÜÌ~}|ŞaG™\ã°„9<DÑ:ÚB;h` ™¥i¤4Fª‘š¥6é7ÒÇÒQé”tY%Tèru‹ukußé.2#åŞ²,›˜CšœuÃ:æ°¡‡i>šnj}ºÜnœÎ,Ô î·Xv*ûëÚ£<‘}ªİVçhà¶,‹\³]-®&Wƒk-w—)ãœ‡':ßsîeü+–,Í,ì¥.Ef2fü"şÌ— gŞaÙsúø)ø’ã6G¾£àÔYGQçîÎm'·| 3­ÓÔi<Ùâ¸½3ÄápäœœëH8Ñê¸Åarô=1ô„á„áø‚ ç¨H”y<k7Ëq–³,çà"»^»`=Šx“Øê•ëÉÛ'vˆ#ü<çm#^Í2—eËzöè$–\–±Êå)Mõ–&JS¥©ş%IÓ¡‡$•ÂÏ%dï¹VÂXX«àh…9ğÜ3 ¿ß²gUÃ¸–Âmğ$Ì…ûa¬†:œ
-mğÌ‡§Äl˜ã`<KàaøVÁ£0ï€ßˆVxo‡pûè0œ†wÂï¡ëø»+ÄF	# n‡ga¬…àxŠaü6Ã«ğØoÂ[üÅn‡ƒĞŸÂaøÀ"øü¾„¯àopFÁDp‚Õ(A	a†¡oB=ŞŒq(C9&ã`LÁ4´²g-ÆL,ÆB‰E8FãX‡¬G‚—06b°˜#æÂËØ^ás†Â6ÔB;†ÃVŒ„×±7lÁØ‰}aöóDìÂxcáOØŞÅş°°uğámlÂYh‡÷Ğï£*`ÆÃ‡8 >À[`?Ÿ³a|Œ‰p “à$æÃkÇpÂTø3 ÊàæÀIÌ†NÌ…3X §1Na¸G,†³8¾Àağ-†sXÅpGÁ7X
-ÿÀr¸€cà{WàGœ]8~ÂÉØG1¾ÆxUğ"ÀqÌÂéX‹3°«±oÃlÃùâŞ%‹#¢àİâ„8)¸PtŠSx8-Îà"ñ.gñ^ñ¥ø+şR|…¿Â%âoâïâkñ8'ş!Î‹oñ!qA\Ä‡Åwø.çë1|Wàâ®ÄU4Pü„«E>%œÂ%Ü|x¯Á§q-	J ÂgHÂgIEj\G¸ŸÃç)_à³-ˆ‚)„B)ŒÂñEŠ İ„À­øGÜF‘ø¾Û)
-wàNÜ…"-¾AÑÔß¤>¸›úR"ÅàÔ?¤Xº™t‡ûñ#ü˜dDzüàA:DI”ŒìÄSxšR(/àEúŒÑ§t/áeü¯Ğa:‚?à´Ÿÿid¡7i7ş„]ÔAGÑ‰.z‹şÌÿ(„ !Ñ`J§·ieĞê¤S´—Ş*¡¦wé= E/: ‚D0}LŸP&e‘U„ˆP:I&Âé/tœÿDûès:!"hÒH*¢b*¡R¡7Ñô!Í J)¢¨Šªé4Zª¡/¨–lp	ÇÂwXñVø'òi;“ÎŠTh„&˜%ÒÀÍğx–ƒMX †Ş¢ ş›³¤ÚıµÍÿá~\Ñ¨ÕjµÑ`7›ãÑÑ½££-iC22†hhŠˆïoj–_o2%Ğ®^¥¹9/ÔÙ6äå•U{Wp®}àÀÔñæ†Ûº,kîˆÜœ—mtIÑ¿‰Ï²Òhˆ°X4Š6Kš¢Y«±h+3=³Ä7m´èL“-C§ÉqòöôÔÔ&äı"EÎêÊNc´F÷½96.®¶Ø9Aln|ÊbIA£¬Í2¬õòØÊ<â$+Äè-£?•t®F]%Có^Ü>H×¿:7ıÖØØXešû'Üñl†díºbª¹9Öhh,–:Î%33}ÊG–³î|Õ^èa¨²N^»ÊÚëª32Lƒ§§¾Î±wd”ßŠbT”VÊÏÏÎÙÜlßœ“ŸŸ“ÓnoŞ”ï0ĞhVPc0”’ÕyÙ•SR/Ş¾A8áÒÒQ£JK;pmx £¤¬¬¼´¤£=&­ïÅºß§Æ0›MöbŞ¹&µ?Õß^‚[b'„óš|¢ü¥xoùO¥×UZ“†ÔáÎÏp¡ªıĞKËÊVÖmïO‚j3}º=”îÏÏâÇGë¡€Z)ÁiÂû†Ô˜M‰9YYÏÕ7+|vûï,ÉaĞ£cb&æ»Œ+ñÅìù¹¹‹
-&=‘‘Sœ“³nzá¬xóÀFãŒŒÄqIÉ³Šœç–z¢?¤z¶5Â”6¢VÏba“ØùVïu¶ŠUÛ?èÚ‚¯èğ+z·+¼Éµ	Ç®Of:“=û¿“÷¨‚ßOˆìq£ÉÊø;ôu†‘Ìúüã}“ûõ4²ÑdŠ7ŒuÃæ¬Ğ´Uäæ¬™Òº1+33;3s­­¢-a€¨pjÅ1s´!$$4-!qnaÙ]	‰É‹ï¶­JKK+)ÈµaÖÖü¼‘æ¾¸Ä@xí2©¶@<ÿC=k*´Ú¨Lá•õn¡LgN÷tÑäˆÕ—'.œ˜_`}¹ÙşRVVVŠÅ²¦)mZü-…1ê‚¼ì×—D|7¼V¯—™FmAf]||’Æj6OVm™4q¡kí¶Iw|ZQ<utáğ­uS6cM«Ü6,¯Ì™œ<?¿xAbbZºÅ²¢27©¼_?s÷74RšÁĞÀ¥ÎV³É?,%ÅEåeÅ%ÅWË6ë­c†fO©> ìÓ1‘Jâ}%ÖÇt½–:œ$RW­òì¡÷ÀiFxö%ôà=ç5IJyìhŞ†.•ó°º(°Úsß×Î0ğŞ-¤ı]*×¯ÕEMİN9i??Î÷pşUÃŸ6u«ùÇ‹ËùËãïŠ}z'<ÿ§$~•c§BzÈÙÿCnî–×øå1ÇpnÆ]B÷Ë…~y¬Ï`DÃ}|Ûì¾Ş{aŞ¥ I¹onû|!š#v/&÷a«hôa	Ìb¤« F$ú°ú‹@€R|Ã‡{A¾êÃÁ…k|8ÌØæÃ¡0cH/ãˆú=/fCC`—#‚Ï6[u«{1ñY·Ì‡%¾úìä˜îšıègÇy!ß{q  ×‡{±şbı}|8Øã^âgC¨ß¼a~s…ûéğÓ©áv€Ñ[´p”QÅv–ğC)gBßBìüÙ¹ÅÎ±½f±âûºûk¯•=6î›É÷—¦n¸çÑåÜ[ÏŞÑê‡z9^‰‹_-'±î«o(ÒÊ¾m…dÎó<9‰Ù4³Ôp¯k
-Ózîõ2´±†ÙüœÍ-åÌ}8ß‚FóıiÏ”Æ£S<ö\WË{9‡q-ãÆ­­2ß¨®Ï!ßğN"·LôŒŸÍí
-Ù§{8oá¶Ù¬g&¿¯ôxY+£[¹]]ÄO;ÛÜè±¿†qS·6ÿu’¯­”ìÑ+³VÅÊ.›•=ná¦Ì#êøÙ]wÏ+>–ûê™u£çİ™X<L”üsvtÿúø¡<{ç"FÿÉÌ7Özšm¸'JïYU¯O(k©Îh¼o~ÎÒ1üoİ6^åVÏ®Îñì°İÃX†[®yØlŸÕó<Êˆ9¬ïêŞ(­×WµÎ£½Õãa-~ó6ùfğ:º—¶KşöÑ7
-endstream
-endobj
-51 0 obj
-<< /Type /FontDescriptor /FontName /RRBHQQ+RobotoMono-Regular /Flags 4 /FontBBox [ 0 -213 1000 750 ] /Ascent 750 /CapHeight 711 /Descent -213 /ItalicAngle 0 /StemV 86 /XHeight 528 /FontFile2 52 0 R >>
-endobj
-53 0 obj
-<< /Filter /FlateDecode /Length 413 >>        
-stream
-xÚ…’ÉjÃ0E÷úŠ×E ]¸–Ô†ŒÔ‹tpBéÖ‘^RA,Y^äï«!n¡4Ô`ã£7]]ipõº‰¦\í0İP(±UfÍ×UCƒ…b]Ò<#rä}´}„W­ØçÅ¢Â\ÛäB²cÇ±Ïú;i†!RÜnñ#*ËÙÓÛ[Tª2j­¤ŠJ<tÇJGÔÕm…9ÚüÿRÁÆáb|«wÔ­Pò’J©]XJ>WµÛgKâ³Vˆ{õ{!¹>†“O’¸`æLşËjk˜+ŞœZƒu!÷ŠL&ÛÉ¢5úä•_“øEsÔB`xQ¥ÍÚtMsD§(Ésà¸·Í­WÏU;
-n£Âœ.»ñSµ=5©ç$ˆfŠcÛTu%H&ÖšÃdeŸœ ä¿â4TíömBÿ›$}ˆ}VÚ7šÙF”§¹£ôÁS¶ô4¢îneì¢§»@I û@i i q 0atî2”yÊ’@azz¦‹<höİöÜi}ûÉ:­­™şH½_Î)!ñûÔÕ¸*ÿúëÒ_`G/+ò\ Ñ
-endstream
-endobj
-11 0 obj
-<< /Type /Font /Subtype /Type0 /Encoding /Identity-H /BaseFont /RRBHQQ+RobotoMono-Regular /DescendantFonts [ 54 0 R ] /ToUnicode 53 0 R >>
-endobj
-54 0 obj
-<< /Type /Font /Subtype /CIDFontType2 /CIDToGIDMap /Identity /BaseFont /RRBHQQ+RobotoMono-Regular /FontDescriptor 51 0 R /W 50 0 R /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> >>
-endobj
-17 0 obj
-<< /Type /Pages  /Count 1 /Kids [ 6 0 R ] >>
-endobj
-55 0 obj
-<< /Names [ (Doc-Start) 13 0 R (page.1) 10 0 R ] /Limits [ (Doc-Start) (page.1) ] >>
-endobj
-56 0 obj
-<< /Dests 55 0 R >>
-endobj
-57 0 obj
-<< /Type /Catalog /Pages 17 0 R /Names 56 0 R /PageMode/UseOutlines/Metadata 7 0 R /OpenAction 4 0 R >>
-endobj
-58 0 obj
-<< /Author(\376\377\000S\000h\000o\000\040\000I\000w\000a\000m\000o\000t\000o)/Title(\376\377\000S\000a\000m\000p\000l\000e\000\040\000f\000o\000r\000\040\000M\000i\000s\000h\000o\000T\000e\000x\000t)/Subject()/Creator(LaTeX with hyperref)/Producer(LuaHBTeX, Version 1.18.0 (TeX Live 2024))/Keywords() /CreationDate (D:20240615221647+08'00') /ModDate (D:20240615221647+08'00') /Trapped /False /PTEX.FullBanner (This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)) >>
-endobj
-5 0 obj
-<< /Type /ObjStm /N 1 /First 4 /Filter /FlateDecode /Length 45 >>         
-stream
-xÚ3Q0à²±QĞVĞwÏÉWĞwQˆV0S0PRĞwË,QˆU°³ã —,
-endstream
-endobj
-59 0 obj
-<< /Type /XRef /Index [ 0 60 ] /Size 60 /W [ 1 3 1 ] /Root 57 0 R /Info 58 0 R /ID [ <0266FFDF18FAF4C4F2B9E43DE74518D2> <0266FFDF18FAF4C4F2B9E43DE74518D2> ] /Filter /FlateDecode /Length 200 >>        
-stream
-xÚĞ»Aà³+½]{qA¡¥H\öVv‰F!4Ş‚D£ÒRé<„x 
-¥Hô•DçšõÿS|9g&9óÏˆH,Tä[à‘‘¨"š(Jo€ö½b€Ï<|V&Nı=hŞÙ¨ò+`U:W°ô$NLb›8$A’$EÒDó$<3Ğód"%òúh*0¼÷ì5ÈnS¹%(TÈÔÇ ˜<UiÍ€Û^Èê
-Ú™~B¸×’)ã)
-Õ7¤
-endstream
-endobj
-startxref
-87800
-%%EOF

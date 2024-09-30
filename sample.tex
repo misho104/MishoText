@@ -16,43 +16,47 @@
   pdfpubstatus={AO},
 }
 
-
+\newcommand\CMD[1]{\texttt{\textbackslash#1}}
+\newcommand\PKG[1]{\texttt{#1}}
 \begin{document}
 \maketitle
 
 \chapter{Basic information}
 \label{cha:basic-information}
 
-This is a sample file.
-
+This is a sample file. The dimension is given by
 \begin{itemize}
  \item Baselineskip: \ShowLength{\baselineskip}
  \item TextWidth: \ShowLength{\textwidth} among 210mm
  \item TextHeight: \ShowLength{\textheight} among 297mm
 \end{itemize}
-
+We can use \CMD{ShowLength} to display the length. For example, \CMD{@total@headsep} is displayed by:
 \makeatletter\ShowLength{\@total@headsep}\makeatother
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
-And Hyperlink:~\ref{cha:basic-information} and \url{https://www.misho-web.com/} \cite{hogehoge}.
+\section{Hyperref}\label{sec:beginning}
+\PKG{hyperref} package is used to provide links: Chapter~\ref{cha:basic-information}, Section~\ref{sec:beginning}, URLs such as \url{https://www.misho-web.com/} or \href{https://www.google.com/}{Google}, and for citations \cite{hogehoge}.
 
-Color samples: \BLUE{abc}\PINK{abc}\GREEN{abc}\C{$\int x$ and y}\C*{$\gamma$ not true}
-
-(orange!30) \colorbox{pLightOrange!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}\C*{$\gamma$ not true}}
-
-(purple!30) \colorbox{pLightPurple!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}\C*{$\gamma$ not true}}
-
-(green!30) \colorbox{pLightGreen!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}\C*{$\gamma$ not true}}
-
+\section{Colors}
+\begin{tabbing}
+Color samples:\qquad\quad\= abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}\\
+(\texttt{pLightOrange!30}) \> \colorbox{pLightOrange!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}}\\
+(\texttt{pLightPurple!30}) \> \colorbox{pLightPurple!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}}\\
+(\texttt{pLightGreen!30})  \> \colorbox{pLightGreen!30}{abc\BLUE{def}\PINK{ghijk}\GREEN{lmnop}\C{$\int x$ and y}}\\
+\end{tabbing}
+The command \CMD{C} is used to give alternative definitions with {\color{AltDefA}AltDefA} (=\CMD{red}\footnote{\texttt{\#ff3300} instead of pure red.}). It penetrates into math expressions:
+\begin{align*}
+\C x && \C x^2 && \C ax^2 && \C f_x^2 && \C f^2_x && \C a'_x && \C a_x' && \C a''_x
+\end{align*}
+Historically, \CMD{C*} is prepared with {\color{AltDefB}AltDefB} color but it is unused and hidden.
 \chapter{Fonts and Symbols}
 
-\section{Font families for Latin}
+\section{Font families}
+\subsection{Latin: serif, sans-serif, and typewriter}
 
 \def\w#1{#1\textsf{#1}\texttt{#1} }
 \w a\w b\w c\w d\w e\w f\w g\w h\w i\w j\w k\w l\w m\w n\w o\w p\w q\w r\w s\w t\w u\w v\w w\w x\w y\w z\w 1\w 2\w 3\w 4\w 5\w 6\w 7\w 8\w 9\w0 \w+\w-
 
-\section{Greek letters}
-\subsection{Unicode text}
+\subsection{Greek: Unicode-text version (and Chinese/Japanese)}
 \begin{itemize}
   \item normal: αβγδϵζηθικλμνξoπρστυϕχψω
   \item italic: \textit{αβγδϵζηθικλμνξoπρστυϕχψω}
@@ -61,7 +65,7 @@ Color samples: \BLUE{abc}\PINK{abc}\GREEN{abc}\C{$\int x$ and y}\C*{$\gamma$ not
   \item Chinese letters: \japanese{東東东, 万萬万, 愛愛爱, 楽樂乐, 嬢孃娘, 豊豐丰, 単單单}\endjapanese
 \end{itemize}
 
-\subsection{Big math and Math symbols}
+\subsection{Greek: Math-symbol version}
 \[
   \text{normal: }\Gamma \Delta \Theta \Lambda \Xi \Pi \Sigma \Upsilon \Phi \Chi \Psi \Omega
   \alpha \beta \gamma \delta \epsilon \zeta \eta \theta \iota \kappa \lambda \mu \nu \xi \pi \rho \sigma \tau \upsilon \phi \chi \psi \omega
@@ -84,14 +88,28 @@ Color samples: \BLUE{abc}\PINK{abc}\GREEN{abc}\C{$\int x$ and y}\C*{$\gamma$ not
   \alpha \beta \gamma \delta \epsilon \zeta \eta \theta \iota \kappa \lambda \mu \nu \xi \pi \rho \sigma \tau \upsilon \phi \chi \psi \omega
   \varphi\varepsilon\varsigma
 }}\]
+\subsection{Accents for Math symbols}
+\begin{align*}
+\text{bar}:&\quad\let\Q\bar      \Q a\Q b\Q c\Q d\Q e\Q f\Q g\Q h\Q i\Q j\Q k\Q l\Q m\Q n\Q o\Q p\Q q\Q r\Q s\Q t\Q u\Q v\Q w\Q x\Q y\Q z\\
+\text{overline}:&\quad\let\Q\overline \Q a\Q b\Q c\Q d\Q e\Q f\Q g\Q h\Q i\Q j\Q k\Q l\Q m\Q n\Q o\Q p\Q q\Q r\Q s\Q t\Q u\Q v\Q w\Q x\Q y\Q z\\
+\text{hat}:&\quad\let\Q\hat      \Q a\Q b\Q c\Q d\Q e\Q f\Q g\Q h\Q i\Q j\Q k\Q l\Q m\Q n\Q o\Q p\Q q\Q r\Q s\Q t\Q u\Q v\Q w\Q x\Q y\Q z\\
+\text{tilde}:&\quad\let\Q\tilde    \Q a\Q b\Q c\Q d\Q e\Q f\Q g\Q h\Q i\Q j\Q k\Q l\Q m\Q n\Q o\Q p\Q q\Q r\Q s\Q t\Q u\Q v\Q w\Q x\Q y\Q z\\
+\text{wide-hat}:&\quad\let\Q\widehat  \Q a\Q b\Q c\Q d\Q e\Q f\Q g\Q h\Q i\Q j\Q k\Q l\Q m\Q n\Q o\Q p\Q q\Q r\Q s\Q t\Q u\Q v\Q w\Q x\Q y\Q z\\
+\text{wide-tilde}:&\quad\let\Q\widetilde\Q a\Q b\Q c\Q d\Q e\Q f\Q g\Q h\Q i\Q j\Q k\Q l\Q m\Q n\Q o\Q p\Q q\Q r\Q s\Q t\Q u\Q v\Q w\Q x\Q y\Q z\\
+\text{}:&\quad\widehat{abc}\widetilde{abc}
+\end{align*}
 
-\section{Math accents}
+\section{Big math}
 \begin{equation}
  \sqrt{\sqrt{\sqrt{\sqrt{\sqrt{\sqrt{\sqrt{\sqrt{\frac ab}}}}}}}} \bar v=\iiint\overline{v}
 \end{equation}
 \begin{equation}
  \hat{\bar{x}} + \overline{\acute{y}} = ☉♁☾⛢♂
 \end{equation}
+
+\section{Verbatim}
+
+\filepath|filename_test.pdf| has some mini code \code|my $x = $__self__|.
 
 \section{Notes}
 \lipsum[1]
@@ -147,7 +165,7 @@ ClearProcess[];
 topologies = CreateTopologies[1, 1->2, ExcludeTopologies->{Internal}];
 diagrams = InsertFields[topologies, {F[2,{2}]}->{F[2,{2}], V[1]}, ExcludeParticles->{S, V[2|3|4|10]}];
 oneQED = CalcFeynAmp[OffShell[CreateFeynAmp[diagrams],3->q]];
-!$R_{\epsilon''}$! = RotationMatrix[!$\epsilon''$!, {0, 1, 0}];
+!$R_{\epsilon^{\prime\prime}}$! = RotationMatrix[!$\epsilon^{\prime\prime}$!, {0, 1, 0}];
 !$R_{\theta}$!  = RotationMatrix[!$\theta$!, {0, 0, 1}];
 !$R_{\delta}$!  = RotationMatrix[!$\delta$!, {1, 0, 0}];
 \end{minted}
