@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-10-01 00:00:00>
+% Time-Stamp: <2024-10-15 00:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -230,7 +230,7 @@ end
 \oddsidemargin\@tempdima\relax
 \evensidemargin\oddsidemargin\relax
 
-% baselineskip = 1.242em = 4.77988mm
+% baselineskip = 1.242em = 4.77988mm = 13.6pt if 11pt (defined in size11.clo)
 \parskip=0mm plus .5mm
 \parsep=1mm plus .5mm minus 1mm
 
@@ -451,16 +451,21 @@ end
 % invert-rescaling only for margin and padding, not for bar.
 % width = textwidth - trueleftskip
 
+\newlength\BaseShift\setlength\BaseShift{15mm}
+\newlength\BaseTab  \setlength\BaseTab  {2.5em}
+
+\newcommand\TAB[1][1]{\hspace*{#1\BaseTab}}
+
 \newdimen\NoteBoxWidthA
 \NoteBoxWidthA\textwidth
-\advance\NoteBoxWidthA-15mm
+\advance\NoteBoxWidthA-\BaseShift
 
 \DeclareTColorBox[use counter=NoteBox]{NoteBox}{O{}}{%
   reset,enhanced,
   title={\theNoteBox},
   boxrule=0pt,frame hidden,
   borderline west={2mm}{\z@}{gray!50},colback=gray!10,
-  left skip=17.647mm, left=4.706mm, width=1.176\NoteBoxWidthA,
+  left skip=1.176\BaseShift, left=4.706mm, width=1.176\NoteBoxWidthA,
   coltitle=black,fonttitle=\headfont\bfseries,
   scale=0.85,
   before skip=0mm, after skip=0mm,
@@ -473,7 +478,7 @@ end
   title={Remark},
   boxrule=0pt,frame hidden,
   borderline west={2mm}{\z@}{gray!50},colback=gray!10,
-  left skip=15mm, left=4mm,
+  left skip=\BaseShift, left=4mm,
   coltitle=black,fonttitle=\headfont\bfseries,
   attach title to upper,after title={:~},#1
 }
@@ -482,7 +487,7 @@ end
 \DeclareTColorBox[]{DownPara}{}{%
   reset,enhanced,
   interior hidden,frame hidden,
-  left skip=15mm,left=0pt,boxrule=0pt,right=0pt
+  left skip=\BaseShift,left=0pt,boxrule=0pt,right=0pt
 }
 
 \renewcommand\theNoteBox{$\sharp$\@arabic\c@NoteBox}
@@ -526,7 +531,7 @@ end
   left*=3mm,right*=3mm,
 },myproofbox/.style={%
   reset,enhanced,sidebyside,sidebyside align=top,
-  lefthand width=15mm,lower separated=false,
+  lefthand width=\BaseShift,lower separated=false,
   interior hidden,frame hidden,left=0mm,boxrule=0mm,right=0mm,
   boxsep=0mm,sidebyside gap=0mm,middle=0mm
 },myprobbox/.style={%
@@ -537,7 +542,7 @@ end
 },myquizbox/.style={%
   reset,enhanced,boxrule=0pt,frame hidden,
   borderline west={2mm}{\z@}{pLightOrange},colback=pLightOrange!15,
-  left skip=15mm, left=4mm,
+  left skip=\BaseShift, left=4mm,
 }}
 
 \newtcbtheorem{theorem}{Theorem}{mytheobox}{thm}
@@ -547,7 +552,7 @@ end
 \newtcbtheorem[use counter from=theorem]{example}{Example}{
   reset,enhanced,frame hidden,interior hidden,
   borderline west={0.7mm}{0.65mm}{pBlue},
-  left skip=15mm,left=4mm,top=2mm,bottom=2mm,toptitle=1mm,bottomtitle=1mm,
+  left skip=\BaseShift,left=4mm,top=2mm,bottom=2mm,toptitle=1mm,bottomtitle=1mm,
   coltitle=pBlue,fonttitle=\headfont\bfseries,
   underlay unbroken and first={\draw[line width=1pt,dashed,pBlue]
       ([xshift=2.5mm]title.south west)--([xshift=-70mm]title.south east);}}{exa}
@@ -565,7 +570,7 @@ end
 \newenvironment{problems}{%
   \advance\@enumdepth\@ne
   \begin{tcolorbox}[myprobbox]
-   \list{}{\labelwidth2.5em\leftmargin2.5em\itemsep4mm\labelsep.5em\itemindent\z@%
+   \list{}{\labelwidth\BaseTab\leftmargin\BaseTab\itemsep4mm\labelsep.5em\itemindent\z@%
     \let\makelabel\descriptionlabel}%
 }{\endlist\end{tcolorbox}}
 
@@ -609,7 +614,7 @@ end
 },myquizbox/.style={%
   reset,enhanced,boxrule=0pt,frame hidden,
   borderline west={2mm}{\z@}{black!30},colback=white,
-  left skip=15mm, left=4mm,
+  left skip=\BaseShift, left=4mm,
 }}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -640,13 +645,13 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{fancyvrb,ifplatform,listings}
-\lstset{columns=[l]fullflexible,basicstyle=\ttfamily\small,xleftmargin=15mm,frame=L,keepspaces=true}
+\lstset{columns=[l]fullflexible,basicstyle=\ttfamily\small,xleftmargin=\BaseShift,frame=L,keepspaces=true}
 \CustomVerbatimCommand{\code}{Verb}{}
 \CustomVerbatimCommand{\filepath}{Verb}{formatcom=\color{pGreen}\bfseries}
 \ifshellescape
 \usepackage{minted}
 \def\minted@formatter{lib/minted_formatter.py -x} % just in case of customized minted
-\setminted{linenos,xleftmargin=15mm,breaklines,fontsize=\small,frame=leftline,stepnumber=5,framesep=2\fboxsep,escapeinside=!!,mathescape=true}
+\setminted{linenos,xleftmargin=\BaseShift,breaklines,fontsize=\small,frame=leftline,stepnumber=5,framesep=2\fboxsep,escapeinside=!!,mathescape=true}
 %\setminted[console]{xleftmargin=1fboxsep,frame=none}
 \usemintedstyle[wolfram]{mathematica}
 \else

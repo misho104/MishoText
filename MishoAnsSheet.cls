@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-10-01 00:00:00>
+% Time-Stamp: <2024-10-15 00:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -236,7 +236,7 @@ end
 \oddsidemargin\@tempdima\relax
 \evensidemargin\oddsidemargin\relax
 
-% baselineskip = 1.242em = 4.77988mm
+% baselineskip = 1.242em = 4.77988mm = 13.6pt if 11pt (defined in size11.clo)
 \parskip=0mm plus .5mm
 \parsep=1mm plus .5mm minus 1mm
 
@@ -450,8 +450,8 @@ end
 \DeclareMathOperator{\sign}   {\mathrm{sign}}
 \DeclareMathOperator{\Br}     {\mathrm{Br}}
 
-\let\eqdef@orig\eqdef
-\let\eqdef\coloneq
+\newcommand*\deq{\coloneq}
+
 
 \newcommand*\EE{\@ifnextchar-{\@@EE}{\@EE}}
 \newcommand*\@EE[1]{\ifnum#1=1 \times\!10 \else \times\!10^{#1}\fi}
