@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-10-15 00:00:00>
+% Time-Stamp: <2025-01-29 00:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoNote}[2022/11/23 Sho Iwamoto]
 
@@ -435,10 +435,13 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{amsmath}
+\usepackage[capitalize,english]{cleveref}
+\usepackage[inline,shortlabels]{enumitem}
+
 \usepackage[xparse,skins]{tcolorbox}
 \tcbuselibrary{breakable,theorems}
 \tcbsetforeverylayer{
-  parbox=false,
   boxsep=0mm,
   before skip balanced=12pt plus 3pt minus 9pt,
   after skip balanced=12pt plus 3pt minus 9pt
@@ -499,6 +502,33 @@ end
     #1
   \end{tcolorbox}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\theenumi{\@roman\c@enumi}
+\renewcommand\theenumii{\@alph\c@enumii}
+\renewcommand\theenumiii{\@arabic\c@enumiii}
+\renewcommand\theenumiv{\@Alph\c@enumiv}
+\renewcommand\labelenumi{{\sffamily\theenumi.}}
+\renewcommand\labelenumii{{\sffamily(\theenumii)}}
+\renewcommand\labelenumiii{{\sffamily\theenumiii.}}
+\renewcommand\labelenumiv{{\sffamily\theenumiv.}}
+\renewcommand\p@enumii{{\sffamily\theenumi}}
+\renewcommand\p@enumiii{{\sffamily\theenumi(\theenumii)}}
+\renewcommand\p@enumiv{{\sffamily\p@enumiii\theenumiii}}
+
+\DeclareRobustCommand\styleproblem[1]{{\sffamily\bfseries #1}}
+
+%%% To be rewritten
+%\DeclareRobustCommand\misho@ref[4]{%
+%  #1~\ref{#2#3}\if#4\relax\relax\else.{\sffamily\@roman#4}\fi}
+%\newcommand{\thmref}[2][\relax]{\misho@ref{Theorem}{thm:}{#2}{#1}}
+%\newcommand{\defref}[2][\relax]{\misho@ref{Definition}{def:}{#2}{#1}}
+%\newcommand{\exaref}[2][\relax]{\misho@ref{Example}{exa:}{#2}{#1}}
+%\newcommand{\eqnref}[2][\relax]
+%
+%\NewDocumentCommand\keyref{sm}{%
+%  \IfBooleanTF{#1}{{\sffamily\@roman#2}}{{\bfseries\sffamily\@roman#2)}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -564,32 +594,23 @@ end
   \ifmmode $\QED$\else\leavevmode\unskip\penalty9999 \hbox{}\nobreak%
   \hfill\quad\hbox{$\QED$}\fi}
 
-\newenvironment{ProblemBox}{\begin{tcolorbox}[myprobbox]}{\end{tcolorbox}}
-\newenvironment{QuizBox}   {\begin{tcolorbox}[myquizbox]}{\end{tcolorbox}}
+\SetEnumitemKey{ProblemList}{align=left,labelwidth=\BaseTab,itemsep=4mm,labelsep=.5em,labelindent=\z@}
+\SetEnumitemKey{QuizList}   {align=left,labelwidth=\BaseTab,leftmargin=\z@,itemsep=4mm,itemindent=\BaseTab}
 
-\newenvironment{problems}{%
-  \advance\@enumdepth\@ne
-  \begin{tcolorbox}[myprobbox]
-   \list{}{\labelwidth\BaseTab\leftmargin\BaseTab\itemsep4mm\labelsep.5em\itemindent\z@%
-    \let\makelabel\descriptionlabel}%
-}{\endlist\end{tcolorbox}}
-
-\newenvironment{quizzes}{%
-  \advance\@enumdepth\@ne
-  \begin{tcolorbox}[myquizbox]
-   \list{}{\labelwidth\z@ \itemsep4mm \leftmargin0mm \itemindent-\leftmargin%
-     \let\makelabel\descriptionlabel}
-}{\endlist\end{tcolorbox}}
-
-\newcommand*\problem@label[1]{\hspace\labelsep\sffamily\bfseries #1}
 \newcounter{Problem}
-\renewcommand\theProblem{\thesection.\@arabic\c@Problem}
-\@addtoreset{Problem}{section}
-\NewDocumentCommand\new@problem{mmm}{%
-  \stepcounter{Problem}%
-  \item[#1~\theProblem]\IfValueTF{#2}{{\sffamily[$\medblackstar$#2]\kern1em}}{}\relax\relax#3}
-\NewDocumentCommand\Quiz{om}{\new@problem{Quiz}{#1}{#2}}
-\NewDocumentCommand\Problem{som}{\new@problem{\IfBooleanTF{#1}{Problem}{Problem\*}}{#2}{#3}}
+%\renewcommand\theProblem{\thesection.\@arabic\c@Problem}
+%\@addtoreset{Problem}{section}
+\newenvironment{problems}{%
+  \begin{tcolorbox}[myprobbox]\stepcounter{Problem}%
+  \begin{enumerate}[ProblemList,start=\value{Problem},label=\styleproblem{Problem~\Alph*}]%
+}{\end{enumerate}\end{tcolorbox}\setcounter{Problem}{\value{enumi}}}
+\newenvironment{quizzes}{%
+  \begin{tcolorbox}[myquizbox]\stepcounter{Problem}%
+  \begin{enumerate}[QuizList,start=\value{Problem},label=\styleproblem{Quiz~\Alph*}]%
+}{\end{enumerate}\end{tcolorbox}\setcounter{Problem}{\value{enumi}}}
+\NewDocumentCommand\new@problem{+m}{\refstepcounter{Problem}\item}
+\let\Problem\new@problem % should be customized in each style
+\let\Quiz\new@problem    % should be customized in each style
 
 \newenvironment{miniitemize}{\itemize\@topsep=\parsep\parskip=0mm}{\enditemize}
 
@@ -616,31 +637,6 @@ end
   borderline west={2mm}{\z@}{black!30},colback=white,
   left skip=\BaseShift, left=4mm,
 }}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\renewcommand\theenumi{\@roman\c@enumi}
-\renewcommand\theenumii{\@alph\c@enumii}
-\renewcommand\theenumiii{\@arabic\c@enumiii}
-\renewcommand\theenumiv{\@Alph\c@enumiv}
-\renewcommand\labelenumi{{\sffamily\theenumi.}}
-\renewcommand\labelenumii{{\sffamily(\theenumii)}}
-\renewcommand\labelenumiii{{\sffamily\theenumiii.}}
-\renewcommand\labelenumiv{{\sffamily\theenumiv.}}
-\renewcommand\p@enumii{{\sffamily\theenumi}}
-\renewcommand\p@enumiii{{\sffamily\theenumi(\theenumii)}}
-\renewcommand\p@enumiv{{\sffamily\p@enumiii\theenumiii}}
-
-\DeclareRobustCommand\misho@ref[4]{%
-  #1~\ref{#2#3}\if#4\relax\relax\else.{\sffamily\@roman#4}\fi}
-\newcommand{\thmref}[2][\relax]{\misho@ref{Theorem}{thm:}{#2}{#1}}
-\newcommand{\defref}[2][\relax]{\misho@ref{Definition}{def:}{#2}{#1}}
-\newcommand{\exaref}[2][\relax]{\misho@ref{Example}{exa:}{#2}{#1}}
-
-\NewDocumentCommand\keyref{sm}{%
-  \IfBooleanTF{#1}{{\sffamily\@roman#2}}{{\bfseries\sffamily\@roman#2)}}}
-
-\DeclareRobustCommand\Advanced{\BLUE{$\clubsuit$}~}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -772,18 +768,18 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{subcaption,booktabs,wrapfig,slashed,xspace,braket,cancel,amsmath}
+\usepackage{subcaption,booktabs,wrapfig,slashed,xspace,braket,cancel}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[capitalize,english]{cleveref}
-
 \renewcommand\thefootnote{*\arabic{footnote}}
 \numberwithin{equation}{section}
+\newcommand\hrefFN[2]{\href{#1}{#2}\addnote{\url{#1}}}
 
 \urlstyle{englishfonttt}
 \DeclareTextFontCommand{\textbfsf}{\bfseries\sffamily}
 \DeclareRobustCommand{\Emph}{\@ifstar\textbfsf\textbf}
+\DeclareRobustCommand\Advanced{\BLUE{$\clubsuit$}~}
 
 \newcommand\package[2][\relax]{\texttt{#2}\ifx#1\relax\relax\else~\texttt{#1}\fi}
 

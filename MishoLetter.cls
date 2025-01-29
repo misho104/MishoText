@@ -1,4 +1,4 @@
-% Time-Stamp: <2023-11-04 13:35:08>
+% Time-Stamp: <2023-11-04 14:18:43>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoLetter}[2023/11/03 Sho Iwamoto]
 
@@ -30,14 +30,14 @@
 %      \vspace{\baselineskip}\noindent\RECIPIENT%
 %    \end{textblock}%
     \else%
-    \node[RightTitleBox] at (current page.north east) (rtb) {\fontsize{10}{12}\selectfont\flushright\TITLELINES\par\vspace{\baselineskip}\@date\par\endflushright};%
-      \node[below=\baselineskip of rtb] (rcp) {\noindent\RECIPIENT};
+    \node[RightTitleBox] at (current page.north east) (rtb) {\fontsize{11}{12}\selectfont\flushright\TITLELINES\par\vspace{\baselineskip}\@date\par\endflushright};%
+      \node[below=1.5\baselineskip of rtb] (rcp) {\noindent\RECIPIENT};
     \fi
   \end{tikzpicture}\relax%
-  \vspace{30mm}\par
+  \vspace{36mm}\par
 }%
 
-\newenvironment{Signature}{\hfill\begin{tabular}{l@{}}\hspace*{-1em}Best regards,\\}{\end{tabular}}
+\newenvironment{Signature}{\par\vspace{\baselineskip}\par\hfill\begin{tabular}{l@{}}\hspace*{-1em}Best regards,\\}{\end{tabular}}
 
 \def\HEADLINE{\@title~~~\@date~~~}
 \def\head@hrule{\relax}
@@ -46,6 +46,12 @@
 \def\head@p{Page~\thepage~of~\NoHyper\pageref{LastPage}\endNoHyper\kern-2mm}
 \def\head@jstyle{\fontsize{9}{12}\selectfont\sffamily\itshape}
 \def\head@pstyle{\fontsize{9}{12}\selectfont\sffamily\itshape}
+
+\ifmisho@japanese%
+  \relax%
+\else%
+  \setlength\parskip{.5\baselineskip plus .2\baselineskip minus .1\baselineskip}%
+\fi
 
 
 %-------------------------------------------------------------------------------

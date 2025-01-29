@@ -1,4 +1,4 @@
-% Time-Stamp: <2024-10-15 00:00:00>
+% Time-Stamp: <2025-01-29 00:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -376,6 +376,9 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{amsmath}
+\usepackage[capitalize,english]{cleveref}
+\usepackage[inline,shortlabels]{enumitem}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -486,18 +489,18 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{subcaption,booktabs,wrapfig,slashed,xspace,braket,cancel,amsmath}
+\usepackage{subcaption,booktabs,wrapfig,slashed,xspace,braket,cancel}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[capitalize,english]{cleveref}
-
 \renewcommand\thefootnote{*\arabic{footnote}}
 \numberwithin{equation}{section}
+\newcommand\hrefFN[2]{\href{#1}{#2}\addnote{\url{#1}}}
 
 \urlstyle{englishfonttt}
 \DeclareTextFontCommand{\textbfsf}{\bfseries\sffamily}
 \DeclareRobustCommand{\Emph}{\@ifstar\textbfsf\textbf}
+\DeclareRobustCommand\Advanced{\BLUE{$\clubsuit$}~}
 
 \newcommand\package[2][\relax]{\texttt{#2}\ifx#1\relax\relax\else~\texttt{#1}\fi}
 
