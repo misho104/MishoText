@@ -1,4 +1,6 @@
-.PHONY: clean sample.pdf
+.PHONY: clean all sample.pdf
+
+all: sample.pdf sample_note.pdf sample_en.pdf sample_ja.pdf
 
 sample.pdf:
 	latexmk -shell-escape sample
