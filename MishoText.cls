@@ -312,12 +312,13 @@ end
   \gdef\thechapter{#2}%
   \gdef\@chapterhead@x{#3}}
 \definechapterhead{Chapter}{\@arabic\c@chapter}{26mm}
+\def\chapterfont{\englishfont}
 
 \def\@makechapterhead#1{\@headframebox{%
   \node[fill=lightgray!50,anchor=south west,xshift= 5mm,yshift=17mm]
-    {\fontsize{16}{16}\selectfont \@chapapp\kern8mm\strut};
+    {\chapterfont\fontsize{16}{16}\selectfont \@chapapp\kern8mm\strut};
   \node[fill=lightgray!50,anchor=south west,xshift=\@chapterhead@x,yshift=14.5mm]
-    {\fontsize{40}{40}\selectfont \thechapter\strut};
+    {\chapterfont\fontsize{40}{40}\selectfont \thechapter\strut};
   \node[anchor=south west,xshift= 5mm,yshift=3mm]
     {\headfont\bfseries\fontsize{22}{22}\selectfont #1\strut};
 }}
