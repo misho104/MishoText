@@ -1,4 +1,4 @@
-% Time-Stamp: <2025-01-29 00:00:00>
+% Time-Stamp: <2025-03-06 00:00:00>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{MishoAnsSheet}[2023/07/01 Sho Iwamoto]
 
@@ -316,6 +316,11 @@ end
                                        {-1em}%
                                       {\headfont\normalsize\bfseries}}
 
+\renewcommand\maketitle[1][\@title]{%
+  \begin{flushleft}%
+  {\Large #1\par}%
+  \end{flushleft}\par\@afterheading\@afterindentfalse\ignorespaces%
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -380,6 +385,21 @@ end
 \usepackage[capitalize,english]{cleveref}
 \usepackage[inline,shortlabels]{enumitem}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\theenumi{\@roman\c@enumi}
+\renewcommand\theenumii{\@alph\c@enumii}
+\renewcommand\theenumiii{\@arabic\c@enumiii}
+\renewcommand\theenumiv{\@Alph\c@enumiv}
+\renewcommand\labelenumi{{\sffamily\theenumi.}}
+\renewcommand\labelenumii{{\sffamily(\theenumii)}}
+\renewcommand\labelenumiii{{\sffamily\theenumiii.}}
+\renewcommand\labelenumiv{{\sffamily\theenumiv.}}
+\renewcommand\p@enumii{{\sffamily\theenumi}}
+\renewcommand\p@enumiii{{\sffamily\theenumi(\theenumii)}}
+\renewcommand\p@enumiv{{\sffamily\p@enumiii\theenumiii}}
+
+\DeclareRobustCommand\styleproblem[1]{{\sffamily\bfseries #1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
